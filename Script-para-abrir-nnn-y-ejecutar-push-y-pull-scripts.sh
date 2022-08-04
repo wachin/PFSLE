@@ -1,6 +1,6 @@
 #!/bin/sh
 
-gnome-terminal --tab --title="PFSLE" --command="bash -c 'nnn; $SHELL'"
+gnome-terminal --tab --title="PFSLE" --command="bash -c 'nnn auto-push-script.sh; $SHELL'"
 
 
 ## Requerimientos, tener instalado clex y gnome-terminal y abierta la terminal gnome
