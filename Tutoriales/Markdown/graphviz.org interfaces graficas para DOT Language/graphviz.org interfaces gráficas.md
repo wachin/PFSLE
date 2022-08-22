@@ -6,7 +6,10 @@ dot language graphics editor
 
 https://graphviz.org/resources/
 
+el siguiente es uno de los mejores editores:
 
+Graphviz Visual Editor
+http://magjac.com/graphviz-visual-editor/
 
 
 ejemplo de visualizar usando el

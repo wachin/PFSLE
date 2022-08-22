@@ -23,6 +23,7 @@ Mini teclado Genius Luxemate 100 https://youtu.be/Fxw6INyyrzQ?t=140 | Consultia
 
 Lo siguiente lo he testeado con detalle en MX Linux 21 en la configuración del teclado del Sistema Operativo Linux 21 en la distribución: Español Latinoamericano:
 
+
 ' Apóstrofo.- Se aplasta la tecla tílde y se la suelta (es la tecla que Ud aplasta para ejmplo escribir: Aquí) y luego se da espacio una vez
       o sea:  Tecla tílde + Espacio
 ~ Virgulilla.- Con Alt-Gr + 4 
@@ -41,7 +42,9 @@ Lo siguiente lo he testeado con detalle en MX Linux 21 en la configuración del 
 ] Corchete de cierre.- Alt-Gr + 9 
 { Llave de apertura.- Alt-Gr + 7
 } Llave de cierre.- Alt-Gr + 0
-° Símbolo de grados centígrados.- 
+° Símbolo de grados centígrados.-
+
+
 
 
 
