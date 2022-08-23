@@ -2,8 +2,9 @@
 
 
 # MX Linux 21 da problemas con el Wi-Fi en Dell Inspiron 1750 donde algunas veces se desconecta el Internet
+Tengo una Dell Inspiron 1750 donde he instalado MX Linux 21 de 32 bits y siempre en algún momento el Wi-Fi se desconectaba, aquí les dejo dos soluciones, la segunda es la mejor y la que estoy usando. 
 
-Tengo una Dell Inspiron 1750 donde he instalado MX Linux 21 de 32 bits y siempre en algún momento el Wi-Fi se desconectaba, aquí les dejo dos soluciones, la última es la mejor y la que estoy usando. Todo este tutorial podría servirles a ustedes para solucionar algún problema semejante con algún otro driver de WiFi
+Todo este tutorial podría servirles a ustedes para solucionar algún problema semejante con algún otro driver de WiFi
 
 
 # Solución parcial, manual (lo que hacía yo antes)
@@ -93,31 +94,50 @@ y guarde y cierre Gedit. Al reiniciar la laptop se cargará automáticamente el 
 **Nota:** Puede usar otro editor de texto, sólo modifique la línea y ponga el suyo.
 
 # Si es curioso (Opcional)
-Sólo si es curioso, 
+Sólo si es curioso, la interfaz gráfica de "MX Asistente de Redes" lo que hace es modificar los archivos en:
+
+/etc/modprobe.d/
+
+en mi caso de la Dell Inspiron 1750 los driver bloqueados para evitar conflictos con wl fueron:
+
+/etc/modprobe.d/broadcom-sta-dkms.conf
+
+**Nota**: Esto sólo es en mi caso, en el suyo es posible que sea otro archivo.
+
+si gusta puede abrir ese archivo con algún editor de texto.
+
+También si desea ver el driver cargado, en mi caso yo se  que el que me funciona bien se llama b43 y como ya lo he cargado lo puedo ver en el sistema poniendo en una terminal:
+
+    lsmod
+
+así me aparece:
+
+![](vx_images/166672514615708.png)
 
 
-
-
-
-
-
-
-
-
-
-
-Para ver el driver cargado
+También lo puedo ver con:
 
     dmesg | grep firmware
 
+![](vx_images/27653337941459.png)
 
 
+Que Dios les bendiga
 
-
-
+ 
+**CONSULTAS:**
 
 Network configuration/Wireless - ArchWiki
 https://wiki.archlinux.org/title/Network_configuration/Wireless
 
+Kernel module - ArchWiki
+https://wiki.archlinux.org/title/Kernel_module#Automatic_module_loading
+
+14.04 - Automatically load module on system startup - Ask Ubuntu
+https://askubuntu.com/questions/607962/automatically-load-module-on-system-startup
+https://askubuntu.com/a/996571/145772
+
+startup - Which system file is loading the "wl" (wifi) kernel module at boot time? - Unix & Linux Stack Exchange
+https://unix.stackexchange.com/questions/222358/which-system-file-is-loading-the-wl-wifi-kernel-module-at-boot-time
 
 
