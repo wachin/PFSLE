@@ -39,25 +39,31 @@ pero con esta solución igual en algún momento me volvía a quedar sin internet
  pues se desconectaba y tenía que repetir el proceso otra vez.
  
 
-# Nueva  solución mejorada, cargar otro driver y bloquear el anterior
-Lo siguiente es sólo en mi caso, no se para marca o modelo de laptop.
+# Nueva  solución mejorada, bloquear el que no funciona bien, añadir el que si al inicio
+Lo siguiente es sólo en mi caso con la Dell Inpiron 1750, pero lo pueden usar como consulta para tal vez arreglar algún problema parecido en alguna otra laptop.
 
 Yo se que el hardware del controlador del Wi-Fi de mi laptop es Broadcom porque allí mismo dice:
 
 ![](vx_images/138870972937327.png)
 
-así que un día me puse a pensar el tratar de usar otro driver y así lo hice. 
+así que un día me puse a pensar el tratar de usar otro driver y así lo hice con prueba y error (en mi caso probé cada uno de los drivers de mi lista: b43, b43legacy, b44, bcma, brcm80211, brcmsmac, ssb). El siguiente es el driver que me funcionó:
 
-Primero hay que bloquear el driver anterior, así:
+**b43**
+
+Entonces la solución total para mí es  **bloquear** el driver anterior, así:
 
 ![](vx_images/336013314901653.png)
 
+**Nota**: Al dejarlo bloqueado núnca más se volverá a cargar (exepto que lo desbloquee claro).
+
 y seleccionar el driver:
 
-b43
+**b43**
+
+y cargarlo dando clic en "**Load Driver**":
 ![](vx_images/276192110523193.png)
 
-y esperar un momento a que automáticamente se conecte:
+y esperar un momento a que automáticamente se conecte (pueden ser algunos minutos):
 
 ![](vx_images/45443421649029.png)
 
@@ -70,7 +76,7 @@ si desea que se cargue rapido Re-scan:
 
 
 ## Añadir el modulo del driver al inicio
-Si usted como yo tiene una Dell Inspiron 1750 ponga en una terminal para el editor de texto Gedit:
+Ponga en una terminal para el editor de texto Gedit:
 
     sudo gedit /etc/modules
 
@@ -82,7 +88,7 @@ debe quedarle así:
 
 ![](vx_images/317444804826616.png)
 
-y guarde y cierre Gedit
+y guarde y cierre Gedit. Al reiniciar la laptop se cargará automáticamente el modulo y el WiFi funcionará
 
 **Nota:** Puede usar otro editor de texto, sólo modifique la línea y ponga el suyo.
 
