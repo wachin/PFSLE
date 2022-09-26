@@ -1,5 +1,5 @@
 
-
+Cómo insertar teclas compuestas 
 
 Ctrl+Shift+u + 5c   = \ Barra inversa (En Win ejm C:\)
 Ctrl+Shift+u + 7c   = | Pleca o Barra vertical

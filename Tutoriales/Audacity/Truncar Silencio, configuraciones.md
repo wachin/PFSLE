@@ -1,17 +1,13 @@
 
 
 
-‘‘‘
-jlkj
-‘‘‘
-
 
 
 Truncar silencio, por defecto
 
 
 Detectar silencio
-Umbral: -20 db
+Umbral: -35 db
 Duración: 0,5 segundos
 
 Acción

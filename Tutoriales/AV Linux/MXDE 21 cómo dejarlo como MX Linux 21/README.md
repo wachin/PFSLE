@@ -44,3 +44,9 @@ CONSULTAS
 
 How do I set user background for lightDM login screen?
 https://askubuntu.com/questions/1405947/how-do-i-set-user-background-for-lightdm-login-screen
+
+
+# Programas faltantes
+
+
+system-config-printer 

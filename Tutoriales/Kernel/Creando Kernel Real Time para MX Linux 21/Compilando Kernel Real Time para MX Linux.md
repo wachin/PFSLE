@@ -172,7 +172,7 @@ que como hemos parchado el Kernel a RT habilita las siguientes configuraciones p
    [*] High Resolution Timer Support
 
 # Enabled CONFIG_PREEMPT_RT
- -> General Setup
+ -> Processor type and features
   -> Preemption Model (Fully Preemptible Kernel (Real-Time))
    (X) Fully Preemptible Kernel (Real-Time)
 
