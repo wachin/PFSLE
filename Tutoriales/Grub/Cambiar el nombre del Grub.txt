@@ -1,0 +1,36 @@
+
+
+sudo gedit /etc/lsb-release
+
+
+
+PRETTY_NAME="MX 21.2.1 Wildflower"
+DISTRIB_ID=MX
+DISTRIB_RELEASE=21.2.1 
+DISTRIB_CODENAME="Wildflower"
+DISTRIB_DESCRIPTION="MX 21.2.1 Wildflower"
+
+por:
+
+PRETTY_NAME="MXDE 21.2.1 Wildflower"
+DISTRIB_ID=MXDE
+DISTRIB_RELEASE=21.2.1 
+DISTRIB_CODENAME="Wildflower"
+DISTRIB_DESCRIPTION="MXDE 21.2.1 Wildflower"
+
+luego:
+
+sudo gedit /etc/hostname
+
+cambiar:
+
+mx21
+
+por
+
+mxde21
+
+
+luego
+
+sudo grub-update
