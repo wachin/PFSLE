@@ -58,7 +58,6 @@ mkdir build && cd build
 PARALLEL_LEVEL=N cmake -GNinja ..
 
 
-
 How to Build ClickHouse on Linux
 https://clickhouse.com/docs/en/development/build/
 sudo apt update
@@ -76,3 +75,17 @@ To generate Ninja build files, we need to run CMake with the flag -G Ninja. Run 
     cmake -G Ninja
 CMake will generate its own cache/settings files, build.ninja and rules.ninja. This image shows the output files:
 
+www.deb-multimedia dmidiplayer dmo 1.7.0 debian
+https://www.deb-multimedia.org/pool/main/d/dmidiplayer-dmo/dmidiplayer-dmo_1.7.0-dmo1.debian.tar.xz
+/debian/rules
+#!/usr/bin/make -f
+
+%:
+	dh $@ -Scmake+ninja
+
+override_dh_clean:
+	find docs -name index.html -delete
+
+	dh_clean
+
+override_dh_auto_test:
