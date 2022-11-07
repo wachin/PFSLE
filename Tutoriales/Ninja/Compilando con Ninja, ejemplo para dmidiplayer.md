@@ -17,6 +17,7 @@ y abra una terminal allí y ponga:
     cd build    
     cmake -G Ninja ../../dmidiplayer-1.7.0 -DCMAKE_INSTALL_PREFIX:PATH=/usr
     ninja
+    sudo ninja install
     
     
     
