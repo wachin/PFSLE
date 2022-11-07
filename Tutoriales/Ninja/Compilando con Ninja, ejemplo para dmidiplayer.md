@@ -18,8 +18,46 @@ y abra una terminal allí y ponga:
     cmake -G Ninja ../../dmidiplayer-1.7.0 -DCMAKE_INSTALL_PREFIX:PATH=/usr
     ninja
     sudo ninja install
+
     
+Para desinstalar:
+
+    sudo ninja uninstall
+
     
+Log de instalación:
+
+$ sudo ninja install
+[0/1] Install the project...
+-- Install configuration: ""
+-- Installing: /usr/share/man/man1/dmidiplayer.1
+-- Installing: /usr/share/dmidiplayer/haendel_hallelujah.mid
+-- Installing: /usr/share/dmidiplayer/lindaamiga.mid
+-- Installing: /usr/share/dmidiplayer/mozart_aveverum.mid
+-- Installing: /usr/share/dmidiplayer/mozart_diesirae.mid
+-- Installing: /usr/share/dmidiplayer/mozart_konigdernacht.mid
+-- Installing: /usr/share/dmidiplayer/schubert_avemaria.mid
+-- Installing: /usr/share/dmidiplayer/test.mid
+-- Installing: /usr/share/dmidiplayer/Negra_Sombra.kar
+-- Installing: /usr/share/dmidiplayer/twinkle.kar
+-- Installing: /usr/share/dmidiplayer/examples.lst
+-- Installing: /usr/share/icons/hicolor/24x24/apps/dmidiplayer.png
+-- Installing: /usr/share/icons/hicolor/32x32/apps/dmidiplayer.png
+-- Installing: /usr/share/icons/hicolor/48x48/apps/dmidiplayer.png
+-- Installing: /usr/share/icons/hicolor/64x64/apps/dmidiplayer.png
+-- Installing: /usr/share/icons/hicolor/128x128/apps/dmidiplayer.png
+-- Installing: /usr/share/icons/hicolor/scalable/apps/dmidiplayer.svgz
+-- Installing: /usr/bin/dmidiplayer
+-- Installing: /usr/share/dmidiplayer/dmidiplayer_cs.qm
+-- Installing: /usr/share/dmidiplayer/dmidiplayer_de.qm
+-- Installing: /usr/share/dmidiplayer/dmidiplayer_es.qm
+-- Installing: /usr/share/dmidiplayer/dmidiplayer_fr.qm
+-- Installing: /usr/share/dmidiplayer/dmidiplayer_gl.qm
+-- Installing: /usr/share/dmidiplayer/dmidiplayer_it.qm
+-- Installing: /usr/share/dmidiplayer/dmidiplayer_ru.qm
+-- Installing: /usr/share/applications/net.sourceforge.dmidiplayer.desktop
+-- Installing: /usr/share/metainfo/net.sourceforge.dmidiplayer.metainfo.xml
+
     
     
 # Antes:
