@@ -20,6 +20,9 @@ sudo apt install hunspell-es sonnet-plugins
 
 ahora si tenía abierto a Kate cierrelo y vuélvalo a abrir  
 
+
+
+
 ## Activar el corrector ortográfico  
 
 Si desea puede activar la "Corrección ortográfica automática", de clic en:

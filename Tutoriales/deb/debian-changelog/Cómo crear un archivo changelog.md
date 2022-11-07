@@ -1,8 +1,7 @@
 
 
 
-
-Se pone uno en la raíz del proyecto y se pone:
+Cuando no existe el archivo changelog , se pone uno en la raíz del proyecto y se pone:
 
 `dch --create`
 

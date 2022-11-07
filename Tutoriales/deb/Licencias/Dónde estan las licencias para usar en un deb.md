@@ -1,4 +1,12 @@
+en:
 
+/usr/share/debhelper/dh_make/licenses/
+
+esto para usar con dh_make del paquete dh-make
+
+
+
+y otra information
 
 # Licencias para usar en un deb 
 
@@ -40,4 +48,8 @@ file:///usr/share/common-licenses/LGPL-2.1
 file:///usr/share/common-licenses/LGPL-3
 file:///usr/share/common-licenses/MPL-1.1
 file:///usr/share/common-licenses/MPL-2.0
+
+
+
+
 
