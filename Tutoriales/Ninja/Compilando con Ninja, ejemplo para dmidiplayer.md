@@ -1,5 +1,29 @@
 
-# Compilando dmidiplayer 1.7.0
+# Compilando dmidiplayer 1.7.0 con ninja
+En su administrador de archivos en la carpeta:
+
+/dmidiplayer-1.7-ninja
+
+y allí cree una subcarpeta:
+
+/dmidi-ninja
+
+y abra una terminal allí y ponga:
+
+    wget -c https://github.com/pedrolcl/dmidiplayer/archive/refs/tags/v1.7.0.tar.gz
+    tar -xvzf v1.7.0.tar.gz
+    cd dmidiplayer-1.7.0 
+    mkdir build
+    cd build    
+    cmake -G Ninja ../../dmidiplayer-1.7.0 -DCMAKE_INSTALL_PREFIX:PATH=/usr
+    ninja
+    
+    
+    
+    
+# Antes:
+
+## Compilando dmidiplayer 1.7.0
 
 Ahora compilar dmidiplayer 1.7.0 entrando en su administrador de archivos en la carpeta:
 
@@ -20,22 +44,6 @@ y abra una terminal allí y ponga:
     make
     sudo make install
     cd
-
-
-Entonces sería:
-
-    wget -c https://github.com/pedrolcl/dmidiplayer/archive/refs/tags/v1.7.0.tar.gz
-    tar -xvzf v1.7.0.tar.gz
-    cd dmidiplayer-1.7.0
-    
-
-    mkdir build
-    cd build
-
-Este fundiona:
-    
-    cmake -G Ninja ../../dmidiplayer-1.7.0 -DCMAKE_INSTALL_PREFIX:PATH=/usr
-    ninja
     
 
 
