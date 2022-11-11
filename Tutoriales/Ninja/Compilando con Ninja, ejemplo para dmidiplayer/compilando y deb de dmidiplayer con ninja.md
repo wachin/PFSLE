@@ -44,7 +44,7 @@ Debemos descargar la carpeta **debian** que hizo Christian Marillat de deb-multi
 
 el enlace directo es:
 
-[sonivox-dmo_3.6.11-dmo1.debian.tar.xz](https://www.deb-multimedia.org/pool/main/s/sonivox-dmo/sonivox-dmo_3.6.11-dmo1.debian.tar.xz)
+[https://www.deb-multimedia.org/pool/main/s/sonivox-dmo/sonivox-dmo_3.6.11-dmo1.debian.tar.xz](https://www.deb-multimedia.org/pool/main/s/sonivox-dmo/sonivox-dmo_3.6.11-dmo1.debian.tar.xz)
 
 podemos descargar ese archivo dentro de la carpeta principal:
 
@@ -60,7 +60,7 @@ sonivox-dmo_3.6.11-dmo1.debian.tar.xz
 
 pero como puede que en el futuro ya no esté ese archivo he sacado un respaldo:
 
-[dmidiplayer-272-ninja-christian-marillat](https://github.com/wachin/dmidiplayer-272-ninja-christian-marillat)
+[https://github.com/wachin/dmidiplayer-272-ninja-christian-marillat](https://github.com/wachin/dmidiplayer-272-ninja-christian-marillat)
 
 Si luego lo necesiten pueden clonar ese repositorio en la carpeta principal.
 
