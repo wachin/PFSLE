@@ -54,6 +54,10 @@ creando una subcarpeta llamada;
 
 🗀 /deb-multimedia.org/
 
+**Nota:** Si desean también pueden descargar el archivo con wget desde una terminal así:
+
+    wget https://www.deb-multimedia.org/pool/main/s/sonivox-dmo/sonivox-dmo_3.6.11-dmo1.debian.tar.xz
+
 el archivo a esta fecha 2022-11-11 se llama:
 
 sonivox-dmo_3.6.11-dmo1.debian.tar.xz
@@ -62,7 +66,7 @@ pero como puede que en el futuro ya no esté ese archivo he sacado un respaldo:
 
 [https://github.com/wachin/dmidiplayer-272-ninja-christian-marillat](https://github.com/wachin/dmidiplayer-272-ninja-christian-marillat)
 
-Si luego lo necesiten pueden clonar ese repositorio en la carpeta principal.
+Si luego lo necesiten pueden clonar ese repositorio en la carpeta principal y usar mi respaldo.
 
 Después de descargado el archivo usted debe descomprimirlo con clic derecho Extraer aquí:
 
@@ -112,12 +116,28 @@ ahora si debemos instalar los deb:
 /dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox-dev_3.6.11-dmo1_i386.deb
 /dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox3_3.6.11-dmo1_i386.deb
 
-debemos instalarlos si por si pues de lo contrario no habrá información de la dependecia de estos archivos para los siguientes deb que vamos a crear
+en la carpeta donde están:
+
+🗀 /dmidiplayer-1.7-ninja/sonivox-ninja/
+
+abrimos una terminal allí y ponermos:
+
+    sudo dpkg -i *.deb
+
+debemos instalarlos si o si, pues de lo contrario no habrá información de la dependecia de estos archivos para los siguientes deb que vamos a crear
 
 
 
 # Compilando drumstick 2.7.2 con ninja
-Pongo en la terminal:
+Bien, en la carpeta principal:
+
+🗀 /dmidiplayer-1.7-ninja/
+
+creamos una subcarpeta llamada:
+
+drumstick-ninja
+
+abrimos una terminal allí y ponemos:
     
     wget -c https://sourceforge.net/projects/drumstick/files/2.7.2/drumstick-2.7.2.tar.gz
     tar -xvzf drumstick-2.7.2.tar.gz
@@ -129,16 +149,76 @@ Pongo en la terminal:
     sudo ninja install
     cd ..
 
-
-
+y ahora descargamos en la carpeta 🗀 /deb-multimedia.org/ el archivo:
 
 https://www.deb-multimedia.org/pool/main/d/drumstick-dmo/
 https://www.deb-multimedia.org/pool/main/d/drumstick-dmo/drumstick-dmo_2.7.2-dmo1.debian.tar.xz
 
+y descompirmimos el archivo y obtenemos la carpeta 
 
+🗀 /debian/
+
+esta carpeta la copiamos y la pegamos en:
+
+🗀 /dmidiplayer-1.7-ninja/drumstick-ninja/drumstick-2.7.2/
+
+debe quedar así:
+
+🗀 /dmidiplayer-1.7-ninja/drumstick-ninja/drumstick-2.7.2/debian
+
+y abrimos una terminal en:
+
+🗀 /dmidiplayer-1.7-ninja/drumstick-ninja/drumstick-2.7.2/
+
+y ponemos:
 
     dpkg-buildpackage -uc -b
 
+se crearán los deb:
+
+/dmidiplayer-1.7-ninja/drumstick-ninja/drumstick-tools_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/drumstick-tools-dbgsym_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-alsa2_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-alsa2-dbgsym_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-dev_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-file2_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-file2-dbgsym_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt-backends_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt-backends-dbgsym_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt2_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt2-dbgsym_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-widgets2_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-widgets2-dbgsym_2.7.2-dmo1_i386.deb
+
+de estos los dbg cortelos y pongalos en una carpeta aparte, no los borre pues se podria equivocar -es que son muchos- y perder alguno de los deb, es mejor que los corte y los ponga a parte y luego puede revisar si cometió algún error
+
+Ahora debemos desinstalar el drumstick compilado desde codigo fuente. En su administrador de archivos estando ubicados en:
+
+🗀 /dmidiplayer-1.7-ninja/drumstick-ninja/drumstick-2.7.2/build/
+
+abrimos una terminal allí y ponemos:
+
+    sudo ninja uninstall
+
+ahora si debemos instalar los deb:
+
+/dmidiplayer-1.7-ninja/drumstick-ninja/drumstick-tools_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-alsa2_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-dev_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-file2_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt-backends_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt2_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-widgets2_2.7.2-dmo1_i386.deb
+
+en la carpeta donde están:
+
+🗀 /dmidiplayer-1.7-ninja/drumstick-ninja/
+
+abrimos una terminal y ponermos:
+
+    sudo dpkg -i *.deb
+
+debemos instalarlos si o si, pues de lo contrario no habrá información de la dependecia de estos archivos para los siguientes deb que vamos a crear
 
 
 
@@ -147,7 +227,7 @@ En su administrador de archivos en la carpeta:
 
 🗀 /dmidiplayer-1.7-building/
 
-y allí cree una subcarpeta:
+allí cree una subcarpeta:
 
 🗀 /dmidiplayer-ninja/
 
@@ -163,26 +243,7 @@ y abra una terminal allí y ponga:
     sudo ninja install
     cd ..
 
-    
-
-
-    
-Ahora compilar dmidiplayer 1.7.0 entrando en su administrador de archivos en la carpeta:
-
-
-
-y abra una terminal allí y ponga:
-
-    wget -c https://github.com/pedrolcl/dmidiplayer/archive/refs/tags/v1.7.0.tar.gz
-    tar -xvzf v1.7.0.tar.gz
-    cd dmidiplayer-1.7.0
-    mkdir build
-    cd build
-    cmake .. -DCMAKE_INSTALL_PREFIX:PATH=/usr
-    make
-    sudo make install
-    cd
-    
+     
 ahora descargue la carpeta debian de Christian Marillat:
 
 https://www.deb-multimedia.org/pool/main/d/dmidiplayer-dmo/dmidiplayer-dmo
@@ -190,17 +251,31 @@ https://www.deb-multimedia.org/pool/main/d/dmidiplayer-dmo/dmidiplayer-dmo_1.7.0
 
 descomprímala y péguela en:
 
-🗀 /dmidiplayer-1.7-building/dmidiplayer-dev/
+🗀 /dmidiplayer-1.7-ninja/dmidiplayer-ninja/dmidiplayer-1.7.0/
 
+y abra una terminal allí y ponga:
 
+    dpkg-buildpackage -uc -b
 
+se crearán los deb
 
-Para desinstalar:
+Ahora debemos desinstalar el dmidiplayer compilado desde codigo fuente. En su administrador de archivos estando ubicados en:
+
+🗀 /dmidiplayer-1.7-ninja/dmidiplayer-ninja/dmidiplayer-1.7.0/build
+
+abra allí una terminal y ponga el comando para desinstalar:
 
     sudo ninja uninstall
     
+ahora instale el deb que se creó en:
 
+/dmidiplayer-1.7-ninja/dmidiplayer-ninja/dmidiplayer_1.7.0-dmo1_i386.deb
 
+con:
+
+    sudo dpkg -i *.deb
+    
+y quedará instalado entre sus aplicaciones y abralo y funciona
 
 
 CONSULTAS
