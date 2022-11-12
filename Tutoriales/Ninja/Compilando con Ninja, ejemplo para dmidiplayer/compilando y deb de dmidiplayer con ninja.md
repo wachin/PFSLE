@@ -120,7 +120,7 @@ Ahora **debemos desinstalar el sonivox compilado desde codigo fuente**, en su ad
 
 abrimos una terminal allí y ponemos:
 
-    sudo ninja uninstall
+    sudo xargs rm < install_manifest.txt
 
 **ahora si debemos instalar los deb**:
 
