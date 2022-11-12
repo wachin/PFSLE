@@ -9,19 +9,23 @@ Dependencias:
     libuchardet-dev dh-make ninja-build
 
 
-les aconsejo hacer lo siguiente, cree de una carpeta principal, ejemplo yo usaré una llamada:
+les aconsejo hacer lo siguiente, crear de una carpeta principal, ejemplo yo usaré una llamada:
 
-🗀 /dmidiplayer-1.7-ninja/
+🗀 dmidiplayer-1.7-ninja
 
-y dentro cree subcarpetas
+y dentro crear subcarpetas
 
 
 # Compilando sonivox con ninja
 alli dentro de la carpeta principal creo una subcarpeta con el nombre:
 
-🗀 /sonivox-ninja/
+🗀 sonivox-ninja
 
-entro en una terminal allí y pongo los comandos:
+entonces me queda así:
+
+🗀 dmidiplayer-1.7-ninja/sonivox-ninja
+
+en un administrador de archivos entro en esa carpeta y dentro abro una terminal allí y pongo los comandos:
 
     wget -c https://github.com/pedrolcl/sonivox/archive/refs/tags/v3.6.11.tar.gz
     tar -xvzf v3.6.11.tar.gz
@@ -38,56 +42,64 @@ entro en una terminal allí y pongo los comandos:
 
 **Descargando carpeta debian de Christian Marillat**
     
-Debemos descargar la carpeta **debian** que hizo Christian Marillat de deb-multimedia entrando en la siguiente dirección:
+Debemos descargar la carpeta **debian** que hizo Christian Marillat de deb-multimedia.org entrando en la siguiente dirección:
 
 [https://www.deb-multimedia.org/pool/main/s/sonivox-dmo/](https://www.deb-multimedia.org/pool/main/s/sonivox-dmo/)
+
+allí buscar el archivo:
+
+sonivox-dmo_3.6.11-dmo1.debian.tar.xz
 
 el enlace directo es:
 
 [https://www.deb-multimedia.org/pool/main/s/sonivox-dmo/sonivox-dmo_3.6.11-dmo1.debian.tar.xz](https://www.deb-multimedia.org/pool/main/s/sonivox-dmo/sonivox-dmo_3.6.11-dmo1.debian.tar.xz)
 
-podemos descargar ese archivo dentro de la carpeta principal:
+descargue ese archivo estando en la carpeta principal:
 
-🗀 /dmidiplayer-1.7-ninja/
+🗀 dmidiplayer-1.7-ninja
 
-creando una subcarpeta llamada;
+creando una subcarpeta llamada:
 
-🗀 /deb-multimedia.org/
+🗀 deb-multimedia.org
 
-**Nota:** Si desean también pueden descargar el archivo con wget desde una terminal así:
+y allí otra llamada:
+
+🗀 sonivox-dmo
+
+por todo le quedará así:
+
+🗀 dmidiplayer-1.7-ninja/deb-multimedia.org/sonivox-dmo
+
+**Nota 1:** Si desean también pueden descargar el archivo allí con wget abriendo una terminal allí:
 
     wget https://www.deb-multimedia.org/pool/main/s/sonivox-dmo/sonivox-dmo_3.6.11-dmo1.debian.tar.xz
 
-el archivo a esta fecha 2022-11-11 se llama:
-
-sonivox-dmo_3.6.11-dmo1.debian.tar.xz
-
-pero como puede que en el futuro ya no esté ese archivo he sacado un respaldo:
+**Nota 2:** Como puede que en el futuro ya no esté ese archivo he sacado un respaldo (contiene los tres codigos fuentes necesarios):
 
 [https://github.com/wachin/dmidiplayer-272-ninja-christian-marillat](https://github.com/wachin/dmidiplayer-272-ninja-christian-marillat)
 
-Si luego lo necesiten pueden clonar ese repositorio en la carpeta principal y usar mi respaldo.
+pueden clonar ese repositorio en la carpeta principal y usar mi respaldo si en algún momento lo necesitan.
 
-Después de descargado el archivo usted debe descomprimirlo con clic derecho Extraer aquí:
+Después de descargado el archivo usted debe descomprimirlo con clic derecho y Extraer aquí:
 
 y copiar la carpeta: 
 
-🗀 /debian/
+🗀 debian
 
 y la pegarla dentro de la carpeta:
 
-🗀 /dmidiplayer-1.7-ninja/sonivox-ninja/sonivox-3.6.11/
+🗀 dmidiplayer-1.7-ninja/sonivox-ninja/sonivox-3.6.11/
 
 le debe quedar así:
 
-🗀 /dmidiplayer-1.7-ninja/sonivox-ninja/sonivox-3.6.11/debian/
+🗀 dmidiplayer-1.7-ninja/sonivox-ninja/sonivox-3.6.11/debian/
 
 y en la terminal estando ubicados en:
 
-🗀 /dmidiplayer-1.7-ninja/sonivox-ninja/sonivox-3.6.11/
+🗀 dmidiplayer-1.7-ninja/sonivox-ninja/sonivox-3.6.11/
 
-allí ponemos el comando:
-
+abrimos una terminal allí (o si ya estaba abierta allí) y ponemos el comando:
+ 
     dpkg-buildpackage -uc -b
 
 y esperamos un rato, y luego en carpeta anterior, o sea en:
@@ -100,10 +112,9 @@ se crearán los deb:
 /dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox3_3.6.11-dmo1_i386.deb
 /dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox3-dbgsym_3.6.11-dmo1_i386.deb
 
-el archivo debug no lo necesitamos, lo podemos borrar
+Nota: El archivo debug no lo necesitamos, lo podemos borrar.
 
-
-Ahora debemos desinstalar el sonivox compilado desde codigo fuente, en su administrador de archivos estando ubicados en:
+Ahora **debemos desinstalar el sonivox compilado desde codigo fuente**, en su administrador de archivos estando ubicados en:
 
 🗀 /dmidiplayer-1.7-ninja/sonivox-ninja/sonivox-3.6.11/build/
 
@@ -111,7 +122,7 @@ abrimos una terminal allí y ponemos:
 
     sudo ninja uninstall
 
-ahora si debemos instalar los deb:
+**ahora si debemos instalar los deb**:
 
 /dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox-dev_3.6.11-dmo1_i386.deb
 /dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox3_3.6.11-dmo1_i386.deb
@@ -315,12 +326,12 @@ https://www.deb-multimedia.org/pool/main/d/dmidiplayer-dmo/dmidiplayer-dmo_1.7.0
 #!/usr/bin/make -f
 
 %:
-	dh $@ -Scmake+ninja
+ dh $@ -Scmake+ninja
 
 override_dh_clean:
 	find docs -name index.html -delete
 
-	dh_clean
+ dh_clean
 
 override_dh_auto_test:
 
