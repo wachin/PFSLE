@@ -349,9 +349,6 @@ Antes de instalar los deb primero instale las siguientes dependencias:
     libstdc++6 libuchardet0 libqt5network5 \
     libasound2 libpulse0
 
-libc-dev-bin libc6-amd64 libc6-dbg libc6-dev
-
-
 **Nota:** Al hacer esto nos evitamos después el tener que [intentar corregir las dependencias rotas](https://geekland.eu/reparar-paquetes-rotos-linux/)  con: `sudo apt-get install -f`así, nos evitamos el tener que hacerlo.
 
 después si descomprima el archivo tar.gz y extraiga su contenido con clic derecho Extraer aquí y entrando en esa carpeta abra una terminal allí y ponga:
