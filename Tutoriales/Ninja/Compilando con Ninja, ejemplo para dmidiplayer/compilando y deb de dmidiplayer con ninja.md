@@ -113,9 +113,9 @@ y esperamos un rato, y luego en carpeta anterior, o sea en:
 
 se crearán los deb:
 
-/dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox-dev_3.6.11-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox3_3.6.11-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox3-dbgsym_3.6.11-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox-dev_3.6.11-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox3_3.6.11-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox3-dbgsym_3.6.11-dmo1_i386.deb  
 
 Nota: El archivo dbgsym no lo necesitamos, lo podemos borrar.
 
@@ -129,8 +129,8 @@ abrimos una terminal allí y ponemos:
 
 **ahora si debemos instalar los deb**:
 
-/dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox-dev_3.6.11-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox3_3.6.11-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox-dev_3.6.11-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/sonivox-ninja/libsonivox3_3.6.11-dmo1_i386.deb  
 
 en la carpeta donde están:
 
@@ -175,8 +175,8 @@ creamos la carpeta:
 
 y descargamos allí el archivo:
 
-https://www.deb-multimedia.org/pool/main/d/drumstick-dmo/
-https://www.deb-multimedia.org/pool/main/d/drumstick-dmo/drumstick-dmo_2.7.2-dmo1.debian.tar.xz
+https://www.deb-multimedia.org/pool/main/d/drumstick-dmo/  
+https://www.deb-multimedia.org/pool/main/d/drumstick-dmo/drumstick-dmo_2.7.2-dmo1.debian.tar.xz  
 
 y descompirmimos el archivo con clic derecho Extraer aquí y obtenemos la carpeta:
 
@@ -200,19 +200,19 @@ y ponemos:
 
 se crearán los deb:
 
-/dmidiplayer-1.7-ninja/drumstick-ninja/drumstick-tools_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/drumstick-tools-dbgsym_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-alsa2_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-alsa2-dbgsym_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-dev_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-file2_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-file2-dbgsym_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt-backends_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt-backends-dbgsym_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt2_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt2-dbgsym_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-widgets2_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-widgets2-dbgsym_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/drumstick-tools_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/drumstick-tools-dbgsym_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-alsa2_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-alsa2-dbgsym_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-dev_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-file2_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-file2-dbgsym_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt-backends_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt-backends-dbgsym_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt2_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt2-dbgsym_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-widgets2_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-widgets2-dbgsym_2.7.2-dmo1_i386.deb  
 
 de estos los dbg cortelos y pongalos en una carpeta aparte, no los borre pues se podria equivocar -es que son muchos- y perder alguno de los deb, es mejor que los corte y los ponga a parte y luego puede revisar si cometió algún error
 
@@ -226,13 +226,13 @@ abrimos una terminal allí y ponemos:
 
 ahora si debemos instalar los deb:
 
-/dmidiplayer-1.7-ninja/drumstick-ninja/drumstick-tools_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-alsa2_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-dev_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-file2_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt-backends_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt2_2.7.2-dmo1_i386.deb
-/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-widgets2_2.7.2-dmo1_i386.deb
+/dmidiplayer-1.7-ninja/drumstick-ninja/drumstick-tools_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-alsa2_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-dev_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-file2_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt-backends_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-rt2_2.7.2-dmo1_i386.deb  
+/dmidiplayer-1.7-ninja/drumstick-ninja/libdrumstick-widgets2_2.7.2-dmo1_i386.deb  
 
 en la carpeta donde están:
 
@@ -277,8 +277,8 @@ creamos la carpeta:
 
 y descargamos allí el archivo:
 
-https://www.deb-multimedia.org/pool/main/d/dmidiplayer-dmo/dmidiplayer-dmo
-https://www.deb-multimedia.org/pool/main/d/dmidiplayer-dmo/dmidiplayer-dmo_1.7.0-dmo1.debian.tar.xz
+https://www.deb-multimedia.org/pool/main/d/dmidiplayer-dmo/dmidiplayer-dmo  
+https://www.deb-multimedia.org/pool/main/d/dmidiplayer-dmo/dmidiplayer-dmo_1.7.0-dmo1.debian.tar.xz  
 
 y descompirmimos el archivo con clic derecho Extraer aquí y obtenemos la carpeta:
 
@@ -369,14 +369,14 @@ Dios les bendiga
 
 **CONSULTAS**
     
-**How to Use Ninja**
+**How to Use Ninja**  
 https://gist.github.com/jrhemstad/811d1e41af9685670241fa472170ef32
 Configure CMake to create Ninja build files
 mkdir build && cd build
 PARALLEL_LEVEL=N cmake -GNinja ..
 
 
-**How to Build ClickHouse on Linux**
+**How to Build ClickHouse on Linux**  
 https://clickhouse.com/docs/en/development/build/
 sudo apt update
 sudo apt install git cmake ninja-build clang++ python
@@ -385,28 +385,28 @@ mkdir build && cd build
 cmake ../ClickHouse
 ninja
 
-**Build your C projects faster using ninja**
-https://ilyas-hamadouche.medium.com/build-your-c-projects-faster-using-ninja-3d7af9b418fc
-Install
-You can install Ninja using package managers, Linux Debian/Ubuntu: 
-    sudo apt-get install ninja-build
+**Build your C projects faster using ninja**  
+https://ilyas-hamadouche.medium.com/build-your-c-projects-faster-using-ninja-3d7af9b418fc   
+Install  
+You can install Ninja using package managers, Linux Debian/Ubuntu:   
+    sudo apt-get install ninja-build  
 To generate Ninja build files, we need to run CMake with the flag -G Ninja. Run the following command in the terminal:
-    cmake -G Ninja
-CMake will generate its own cache/settings files, build.ninja and rules.ninja. This image shows the output files:
+    cmake -G Ninja  
+CMake will generate its own cache/settings files, build.ninja and rules.ninja. This image shows the output files  
 
 **dmidiplayer deb-multimedia.org | debian development folder**
-www.deb-multimedia dmidiplayer dmo 1.7.0 debian
-https://www.deb-multimedia.org/pool/main/d/dmidiplayer-dmo/dmidiplayer-dmo_1.7.0-dmo1.debian.tar.xz
-/debian/rules
-#!/usr/bin/make -f
-
-%:
- dh $@ -Scmake+ninja
-
-override_dh_clean:
-	find docs -name index.html -delete
-
- dh_clean
-
-override_dh_auto_test:
+www.deb-multimedia dmidiplayer dmo 1.7.0 debian  
+https://www.deb-multimedia.org/pool/main/d/dmidiplayer-dmo/dmidiplayer-dmo_1.7.0-dmo1.debian.tar.xz  
+/debian/rules  
+#!/usr/bin/make -f  
+  
+%:  
+ dh $@ -Scmake+ninja  
+  
+override_dh_clean:  
+	find docs -name index.html -delete  
+  
+ dh_clean  
+  
+override_dh_auto_test:  
 
