@@ -313,7 +313,7 @@ abra allí una terminal y ponga el comando para desinstalar:
 
     sudo ninja uninstall
     
-ahora si** instale el deb de dmidiplayer** que se creó en:
+ahora si **instale el deb de dmidiplayer** que se creó en:
 
 /dmidiplayer-1.7-ninja/dmidiplayer-ninja/dmidiplayer_1.7.0-dmo1_i386.deb
 
@@ -337,12 +337,26 @@ y la he comprimido a tar.gz
 
 y he subido el archivo a mi cuenta de github:
 
+# DESCARGAR DMIDIPLAYER Y DEPENDENCIAS
+Como he subido los debs a mi cuenta de github si alguien los desea usar los puede descargar de allí:
+
+[https://github.com/wachin/dmidiplayer/releases/tag/v1.7.0](https://github.com/wachin/dmidiplayer/releases/tag/v1.7.0)
+
+Antes de instalar los deb primero instale las siguientes dependencias:
+
+    sudo apt install libc6 libgcc-s1 libqt5core5a \
+    libqt5gui5 libqt5printsupport5 libqt5widgets5 \
+    libstdc++6 libuchardet0 libqt5network5 \
+    libasound2 libpulse0
+
+libc-dev-bin libc6-amd64 libc6-dbg libc6-dev
 
 
+**Nota:** Al hacer esto nos evitamos después el tener que [intentar corregir las dependencias rotas](https://geekland.eu/reparar-paquetes-rotos-linux/)  con: `sudo apt-get install -f`así, nos evitamos el tener que hacerlo.
 
+después si descomprima el archivo tar.gz y extraiga su contenido con clic derecho Extraer aquí y entrando en esa carpeta abra una terminal allí y ponga:
 
-    sudo apt install libc6 libgcc-s1 libqt5core5a libqt5gui5 libqt5gui5-gles libqt5printsupport5 libqt5widgets5 libstdc++6 libuchardet0 libqt5network5 libasound2 libpulse0
-
+    sudo dpkg -i *.deb
 
 
 y aquí una imagen representativa:
