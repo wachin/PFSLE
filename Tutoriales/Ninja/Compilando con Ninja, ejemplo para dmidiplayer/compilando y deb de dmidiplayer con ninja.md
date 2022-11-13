@@ -1,13 +1,12 @@
 
 # Creando el deb de dmidiplayer 1.7.0 con ninja
-El siguiente tutorial está hecho en MX Linux 21 de 32 bits (también sirve para 64 bits)
+El siguiente tutorial está hecho en MX Linux 21 de 32 bits (también sirve para 64 bits y generar sus respentivos deb)
 
-
-Actualizar los repositorios
+Primero actualizar los repositorios y actualizar los paquetes:
 
     sudo apt update && sudo apt upgrade
 
-Dependencias:
+Instalar las dependencias
 
     sudo apt install libasound2-dev doxygen libpulse-dev git \
     libfluidsynth-dev qttools5-dev cmake qttools5-dev pandoc \
