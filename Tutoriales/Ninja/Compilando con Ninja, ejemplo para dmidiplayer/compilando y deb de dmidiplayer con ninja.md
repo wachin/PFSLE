@@ -370,31 +370,31 @@ Dios les bendiga
 **CONSULTAS**
     
 **How to Use Ninja**  
-https://gist.github.com/jrhemstad/811d1e41af9685670241fa472170ef32
-Configure CMake to create Ninja build files
-mkdir build && cd build
-PARALLEL_LEVEL=N cmake -GNinja ..
+https://gist.github.com/jrhemstad/811d1e41af9685670241fa472170ef32  
+Configure CMake to create Ninja build files  
+mkdir build && cd build  
+PARALLEL_LEVEL=N cmake -GNinja ..  
 
 
 **How to Build ClickHouse on Linux**  
-https://clickhouse.com/docs/en/development/build/
-sudo apt update
-sudo apt install git cmake ninja-build clang++ python
-git clone --recursive https://github.com/ClickHouse/ClickHouse.git
-mkdir build && cd build
-cmake ../ClickHouse
-ninja
+https://clickhouse.com/docs/en/development/build/  
+sudo apt update  
+sudo apt install git cmake ninja-build clang++ python  
+git clone --recursive https://github.com/ClickHouse/ClickHouse.git  
+mkdir build && cd build  
+cmake ../ClickHouse  
+ninja  
 
 **Build your C projects faster using ninja**  
 https://ilyas-hamadouche.medium.com/build-your-c-projects-faster-using-ninja-3d7af9b418fc   
 Install  
 You can install Ninja using package managers, Linux Debian/Ubuntu:   
     sudo apt-get install ninja-build  
-To generate Ninja build files, we need to run CMake with the flag -G Ninja. Run the following command in the terminal:
+To generate Ninja build files, we need to run CMake with the flag -G Ninja. Run the following command in the terminal:  
     cmake -G Ninja  
 CMake will generate its own cache/settings files, build.ninja and rules.ninja. This image shows the output files  
 
-**dmidiplayer deb-multimedia.org | debian development folder**
+**dmidiplayer deb-multimedia.org | debian development folder**  
 www.deb-multimedia dmidiplayer dmo 1.7.0 debian  
 https://www.deb-multimedia.org/pool/main/d/dmidiplayer-dmo/dmidiplayer-dmo_1.7.0-dmo1.debian.tar.xz  
 /debian/rules  
