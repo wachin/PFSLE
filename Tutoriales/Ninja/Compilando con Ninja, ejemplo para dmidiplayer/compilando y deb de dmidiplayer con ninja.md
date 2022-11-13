@@ -341,7 +341,14 @@ y he subido el archivo a mi cuenta de github:
 
 
 
+    sudo apt install libc6 libgcc-s1 libqt5core5a libqt5gui5 libqt5gui5-gles libqt5printsupport5 libqt5widgets5 libstdc++6 libuchardet0 libqt5network5 libasound2 libpulse0
 
+
+
+y aquí una imagen representativa:
+
+
+![](vx_images/281812023269383.png)
 
 Dios les bendiga
 
