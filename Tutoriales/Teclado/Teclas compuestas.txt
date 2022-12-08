@@ -1,5 +1,6 @@
 
-Cómo insertar teclas compuestas 
+Cómo insertar carácteres especiales con teclas compuestas en Linux (atajos de teclado)
+Usando combinaciones de teclas se pueden insertar caracteres especiales
 
 Ctrl+Shift+u + 5c   = \ Barra inversa (En Win ejm C:\)
 Ctrl+Shift+u + 7c   = | Pleca o Barra vertical
