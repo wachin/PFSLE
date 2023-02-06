@@ -5,6 +5,8 @@ Instalando FFQueue en MX Linux 21 de 32 bits
 
 ![](img/100 FFqueue.png)
 
+![090826](vx_images/195843710278475.png)
+
 La siguientes es una traducción usando Google Translator de la información del programa en la página:
 
 http://ffqueue.bruchhaus.dk/

@@ -2,6 +2,8 @@
 Cómo insertar carácteres especiales con teclas compuestas en Linux (atajos de teclado)
 Usando combinaciones de teclas se pueden insertar caracteres especiales
 
+Como ejemplo, lo siguiente que se puede insertar usando UNICODE:
+
 Ctrl+Shift+u + 5c   = \ Barra inversa (En Win ejm C:\)
 Ctrl+Shift+u + 7c   = | Pleca o Barra vertical
 Ctrl+Shift+u + 5b   = [ Paréntesis corchete izquierdo
@@ -11,6 +13,7 @@ Ctrl+Shift+u + 7d   = }  Paréntesis llave derecha
 Ctrl+Shift+u + 00b0 = ° Símbolo de grados centígrados
 
 https://fsymbols.com/es/teclado/linux/teclas-compuestas/
+
 
 
 Para lo siguiente equivale:
@@ -56,6 +59,16 @@ Lo siguiente lo he testeado con detalle en MX Linux 21 en la configuración del 
 
 
 Nota: Si usa un teclado en Inglés es posible que no funcione alguna de las combinaciones y otras puede que estén movidas las teclas
+
+
+CONSULTAS
+
+Laptop Keyboard Layout Identification Guide | Keyshorts Blog
+https://keyshorts.com/blogs/blog/44712961-how-to-identify-laptop-keyboard-localization#spanish-latin-america
+
+Keyboard layout - Wikipedia
+https://en.wikipedia.org/wiki/Keyboard_layout#:~:text=They%20can%20be%20divided%20into,QZERTY%20and%20national%20variants%20thereof.
+
 
 
 
