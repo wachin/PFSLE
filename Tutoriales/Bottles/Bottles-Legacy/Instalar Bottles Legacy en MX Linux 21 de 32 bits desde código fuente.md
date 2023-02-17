@@ -10,9 +10,20 @@ Installation - Bottles
 instalar las dependencias:
 
 ```
-sudo apt install meson ninja-build appstream-util libglib2.0-dev libwebkit2gtk-4.0-dev libhandy-1-dev patool gir1.2-granite-1.0
+sudo apt install meson ninja-build appstream-util libglib2.0-dev libwebkit2gtk-4.0-dev patool gir1.2-granite-1.0 libgranite-dev 
 ```
 
+Este paquete:
+
+libhandy-1-dev
+
+ya no va, parece que ha quedado obsoleto
+
+Descargar
+
+https://usebottles.com/download/
+
+https://github.com/bottlesdevs/Bottles/releases/tag/continuous-v1
 
 
 instalé la versión

@@ -38,7 +38,7 @@ y me da:
 
 5.10.0-13-686-pae
 
-entonces se que si instalo una versión como esa debería de funcionar.
+entonces se que si instalo una versión como esa debería de funcionar, o sea esto es para tener una idea
 
 # Instalar dependencias
 
@@ -78,10 +78,9 @@ Voy a usar una versión del Kernel:
 
 5.10
 
-entonces con esto en mente debo buscar un parque R eal Time para esta versión, para esto me dirijo a:
+entonces con esto en mente debo buscar un parche Real Time para esta versión, para esto me dirijo a:
 
-**Proyectos Real Time**
-
+**Proyectos Real Time**  
 [https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt](https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt)
 
 allí entre toda la lista busco el número 
@@ -102,6 +101,7 @@ pero les explico que luego es muy posible que este enlace ya no esté disponible
 
 Me dirijo a:
 
+**Linux Kernel**  
 [https://mirrors.edge.kernel.org/pub/linux/kernel/](https://mirrors.edge.kernel.org/pub/linux/kernel/)
 
 allí dentro busco:
