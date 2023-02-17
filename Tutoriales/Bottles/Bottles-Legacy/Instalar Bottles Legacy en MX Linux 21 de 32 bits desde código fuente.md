@@ -10,7 +10,7 @@ Installation - Bottles
 instalar las dependencias:
 
 ```
-sudo apt install meson ninja-build appstream-util libglib2.0-dev libwebkit2gtk-4.0-dev patool gir1.2-granite-1.0 libgranite-dev 
+sudo apt install meson ninja-build appstream-util libglib2.0-dev libwebkit2gtk-4.0-dev patool gir1.2-granite-1.0 libgranite-dev zenity
 ```
 
 Este paquete:

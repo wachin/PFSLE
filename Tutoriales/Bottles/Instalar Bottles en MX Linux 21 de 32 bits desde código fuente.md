@@ -10,8 +10,15 @@ https://docs.usebottles.com/getting-started/installation
 instalar las dependencias:
 
 ```
-sudo apt install meson ninja-build appstream-util libglib2.0-dev libwebkit2gtk-4.0-dev libhandy-1-dev patool gir1.2-granite-1.0 python3 python3-gi python3-yaml python3-certifi python3-requests python3-markdown patool p7zip libhandy-1-0 zlib1g gir1.2-gtk-3.0 gir1.2-handy-1 gir1.2-notify-0.7 libglib2.0-bin ibus-gtk3 libfreetype6 gamemode gamemode-daemon libgamemode0 winbind
+sudo apt install meson ninja-build appstream-util libglib2.0-dev libwebkit2gtk-4.0-dev patool gir1.2-granite-1.0 python3 python3-gi python3-yaml python3-certifi python3-requests python3-markdown patool p7zip libhandy-1-0 zlib1g gir1.2-gtk-3.0 libglib2.0-bin ibus-gtk3 libfreetype6 gamemode gamemode-daemon libgamemode0 winbind gettext
+
+blueprint-tools
+
 ```
+
+libhandy-1-dev
+gir1.2-handy-1 gir1.2-notify-0.7
+
 
 se podría clonar el repositorio:
 
