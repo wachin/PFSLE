@@ -11,6 +11,7 @@ sudo apt install python3-pip
 pip3 install --user meson
 
 
+
 Actualizar el path cambiando tuusuario por su nombre de usuario
 
 export PATH=$PATH:/home/tuusuario/.local/bin
