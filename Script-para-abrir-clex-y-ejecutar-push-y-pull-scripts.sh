@@ -1,6 +1,8 @@
 #!/bin/sh
 
-gnome-terminal --tab --title="PFSLE" --command="bash -c 'clex; $SHELL'"
+konsole -p tabtitle='PFSLE' -e clex
+
+#gnome-terminal --tab --title="PFSLE" --command="bash -c 'clex; $SHELL'"
 
 
 ## Requerimientos, tener instalado clex y gnome-terminal y abierta la terminal gnome
