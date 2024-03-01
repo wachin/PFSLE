@@ -1,6 +1,8 @@
 #!/bin/sh
 
-konsole -p tabtitle='PFSLE' -e clex
+#konsole -p tabtitle='PFSLE' -e clex
+
+konsole -p tabtitle='PFSLE' -e nnn "auto-push-script.sh"
 
 #gnome-terminal --tab --title="PFSLE" --command="bash -c 'clex; $SHELL'"
 
