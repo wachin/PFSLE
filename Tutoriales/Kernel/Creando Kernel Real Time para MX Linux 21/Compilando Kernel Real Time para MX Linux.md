@@ -1,7 +1,37 @@
 # Creando Kernel de Tiempo Real (Real Time) para MX Linux 21
+En los repositorios de Sistemas Operativos Linux basados en Debian como ejemplo MX Linux y otros está disponible para instalar un Kernel Real Time (RT). Primero es necesario recargar los repositorios:
+ 
+    sudo apt-get update
+ 
+luego instalar las actualizaciones si es que las hayan enviado:
+ 
+    sudo apt-get upgrade
 
-### Añadir el nombre del Mantenedor o Responsable a su Sistema para que se compile con ese nombre (Opcional)
+Los siguientes dos paquetes que tienen dentro del nombre: image y headers son paquetes de configuración que instalan automáticamente el último Kernel RT que esté disponible
 
+**Instalar Kernel Realtime para 32 bits desde Debian repo**
+Si su ordenador usa 32 bits, poner en la terminal:
+
+    sudo apt-get install dkms linux-image-rt-686-pae linux-headers-rt-686-pae
+
+
+**Instalar Kernel Realtime para 64 bits desde Debian repo**
+Si su ordenador usa 64 bits, poner en la terminal:
+
+    sudo apt-get install dkms linux-image-rt-amd64 linux-headers-rt-amd64
+    
+## Kernel Instalado
+Pero a la fecha 16 de marzo del 2024 en MX Linux 21 de 32 bit el Kernel RT que se instala es la versión 5.10.0-28 y a veces cuando enciendo un ordenador que armé con la tarjeta madre que me regaló mi primo Paco, información de la misma la cual se puede conocer poniendo en una terminal:
+
+    sudo dmidecode -t 2
+
+con lo cual sé que es un:
+
+ASUSTek Computer INC. LEONITE Version: 5.00 Serial Number: MS1C6CS29109829
+
+les cuento que a veces al encender el ordenador y en el grub al elegir ese Kernel 5.10.0-28 a veces se cuelga y no se puede poner la contraseña para iniciar sesión. Pero otro Kernel 5.6 de [AV Linux el que yo compilé](https://facilitarelsoftwarelibre.blogspot.com/2022/04/compilando-kernel-de-av-linux-en-mx.html) siempre va bien, nunca se cuelga esa PC, será porque es muy muy vieja y es más compatible el Kernel 5.6 con el hardware antiguo. Esta es la razón por la cual compilar un Kernel Real Time desde kernel.org porque allí uno puede elegir versiones antiguas que no están en Synaptic
+
+## Añadir el nombre del Mantenedor o Responsable a su Sistema para que se compile con ese nombre (Opcional)
 Esto es totalmente opcional, no es necesario para compilar el Kernel, pero si lo hace una vez instalado el  Kernel al revisarlo en Synaptic se verá allí su nombre y su correo
 
 Para hacer esto ponga en una terminal lo siguiente (teniendo instalado Gedit):
@@ -270,7 +300,7 @@ esto es para que la compilación no se demore mucho
 
  
 
-#### Compinado el Kernel etiquetandolo  
+### Compinado el Kernel etiquetandolo  
 
 Es  posible Compilar el Kernel y ponerle una etiqueta como descripción, en el siguiente ejemplo en LOCALVERSION= está la etiqueta  wachin:
 
