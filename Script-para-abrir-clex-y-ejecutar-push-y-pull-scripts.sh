@@ -2,9 +2,9 @@
 
 #konsole -p tabtitle='PFSLE' -e clex
 
-konsole -p tabtitle='PFSLE' -e nnn "auto-push-script.sh"
+#konsole -p tabtitle='PFSLE' -e nnn "auto-push-script.sh"
 
-#gnome-terminal --tab --title="PFSLE" --command="bash -c 'clex; $SHELL'"
+gnome-terminal --tab --title="PFSLE" --command="bash -c 'clex; $SHELL'"
 
 
 ## Requerimientos, tener instalado clex y gnome-terminal y abierta la terminal gnome
