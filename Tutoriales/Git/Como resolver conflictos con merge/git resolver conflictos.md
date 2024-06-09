@@ -1,6 +1,8 @@
+# Cómo resolver conflictos en un repositorio git con merge el cuál está siendo trabajado desde dos ordenadores diferentes
+
 Tengo un repositorio de mi proyecto RisenPC Fluxbox y con frecuencia lo edito desde dos ordenadores diferentes, y estas son unas investigaciones para saber como usar git para mantener sincronizados los repositorios resolviendo los conflictos entre ellos, para saber cómo verificar las diferencias entre la rama local y la rama remota. Aquí pasos detallados:
 
-### 1. Clonar el repositorio (si no lo has hecho)
+### 1. Clonar el repositorio
 Clonar el repositorio a tu máquina local:
 
 ```bash
