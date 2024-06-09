@@ -1,7 +1,8 @@
-Claro, te puedo guiar en cómo verificar las diferencias entre tu rama local y la rama remota. Aquí tienes los pasos detallados:
+Tengo un repositorio de mi proyecto RisenPC Fluxbox y con frecuencia lo edito desde dos ordenadores diferentes, y estas son unas investigaciones para saber como usar git para mantener sincronizados los repositorios resolviendo los conflictos entre ellos, para saber cómo verificar las diferencias entre la rama local y la rama remota. Aquí pasos detallados:
 
 ### 1. Clonar el repositorio (si no lo has hecho)
-Si aún no has clonado el repositorio, clónalo a tu máquina local:
+Clonar el repositorio a tu máquina local:
+
 ```bash
 git clone https://github.com/wachin/RisenPC-Fluxbox-ES
 cd RisenPC-Fluxbox-ES
