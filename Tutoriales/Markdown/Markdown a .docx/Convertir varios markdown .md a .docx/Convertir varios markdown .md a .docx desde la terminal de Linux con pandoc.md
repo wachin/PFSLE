@@ -11,6 +11,9 @@ Este método itera a través de cada archivo .md en un directorio y lo convierte
 ```bash
 for file in *.md; do pandoc -t docx "$file" -o "${file%.md}.docx"; done
 ```
+Captura de pantalla:
+
+![](vx_images/166154013288886.webp)
 
 **Explicación:**
 
