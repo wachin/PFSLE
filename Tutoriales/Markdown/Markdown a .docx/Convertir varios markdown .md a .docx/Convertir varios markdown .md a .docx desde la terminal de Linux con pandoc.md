@@ -46,21 +46,16 @@ find . -name "*.md" -exec pandoc -t docx {} -o {}.docx \;
 
 Ambos métodos logran el mismo resultado, elige el que te parezca más legible.
 
+Dios les bendiga
+
 
 ## Referencias
 
 * **Sitio web de Pandoc:** [https://www.pandoc.org/](https://www.pandoc.org/)
-
 * **Guía de usuario de Pandoc:** [https://pandoc.org/getting-started.html](https://pandoc.org/getting-started.html)
-
 * **Escritura sostenible en texto plano usando Pandoc y Markdown:** [https://programminghistorian.org/es/lecciones/escritura-sostenible-usando-pandoc-y-markdown.html](https://programminghistorian.org/es/lecciones/escritura-sostenible-usando-pandoc-y-markdown.html)
-
 * **Convertir de Markdown a docx y a LaTeX con Pandoc:** [https://maciaschain.gitlab.io/gnutas/pandoc-docx.html](https://maciaschain.gitlab.io/gnutas/pandoc-docx.html)
-
 * **Convierta Obsidian Markdowns a MS Word, Power Point - Pandoc:** [https://unclesnote.com/es/240108111119/convert_obsidian_md_to_docx_pptx_pandoc](https://unclesnote.com/es/240108111119/convert_obsidian_md_to_docx_pptx_pandoc)
-
 * **Stack Overflow:** [https://stackoverflow.com/questions/tagged/pandoc](https://stackoverflow.com/questions/tagged/pandoc)
-
 * **Repositorio de GitHub de Pandoc:** [https://github.com/jgm/pandoc](https://github.com/jgm/pandoc)
-
 
