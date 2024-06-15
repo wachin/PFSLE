@@ -17,8 +17,8 @@ for file in *.md; do pandoc -t docx "$file" -o "${file%.md}.docx"; done
 * `for file in *.md` - Recorre todos los archivos con la extensión .md en el directorio actual.
 * `pandoc -t docx "$file"` - Convierte el archivo actual (`$file`) a formato docx utilizando la opción `-t docx`.
 * `-o "${file%.md}.docx"` - Define el nombre del archivo de salida.
-    * `"${file%.md}"` elimina la extensión .md del nombre de archivo original.
-    * `.docx` agrega la extensión .docx para el archivo de salida.
+* `"${file%.md}"` elimina la extensión .md del nombre de archivo original.
+* `.docx` agrega la extensión .docx para el archivo de salida.
 
 **2. Utilizando el comando `find`:**
 
@@ -32,8 +32,8 @@ find . -name "*.md" -exec pandoc -t docx {} -o {}.docx \;
 
 * `find . -name "*.md"` - Busca todos los archivos llamados *.md en el directorio actual (`.`) y sus subdirectorios.
 * `-exec pandoc -t docx {} -o {}.docx \;` - Ejecuta el siguiente comando para cada archivo encontrado:
-    * `pandoc -t docx {}` - Convierte el archivo actual (`{}`) a formato docx.
-    * `-o {}.docx` - Guarda el archivo de salida con el mismo nombre que el archivo original, reemplazando la extensión con .docx.
+* `pandoc -t docx {}` - Convierte el archivo actual (`{}`) a formato docx.
+* `-o {}.docx` - Guarda el archivo de salida con el mismo nombre que el archivo original, reemplazando la extensión con .docx.
 
 **Notas importantes:**
 
@@ -47,10 +47,13 @@ Ambos métodos logran el mismo resultado, elige el que te parezca más legible.
 ## Referencias
 
 * **Sitio web de Pandoc:** [https://www.pandoc.org/](https://www.pandoc.org/)
+
 * **Guía de usuario de Pandoc:** [https://pandoc.org/getting-started.html](https://pandoc.org/getting-started.html)
 
 * **Escritura sostenible en texto plano usando Pandoc y Markdown:** [https://programminghistorian.org/es/lecciones/escritura-sostenible-usando-pandoc-y-markdown.html](https://programminghistorian.org/es/lecciones/escritura-sostenible-usando-pandoc-y-markdown.html)
+
 * **Convertir de Markdown a docx y a LaTeX con Pandoc:** [https://maciaschain.gitlab.io/gnutas/pandoc-docx.html](https://maciaschain.gitlab.io/gnutas/pandoc-docx.html)
+
 * **Convierta Obsidian Markdowns a MS Word, Power Point - Pandoc:** [https://unclesnote.com/es/240108111119/convert_obsidian_md_to_docx_pptx_pandoc](https://unclesnote.com/es/240108111119/convert_obsidian_md_to_docx_pptx_pandoc)
 
 * **Stack Overflow:** [https://stackoverflow.com/questions/tagged/pandoc](https://stackoverflow.com/questions/tagged/pandoc)
