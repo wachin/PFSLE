@@ -1,42 +1,46 @@
 
 
-PARA CONVERTIR UN SOLO ARCHIVO
+    ## Convertir por lotes archivos markdown .md a .docx con Pandoc desde la línea de comandos de Linux
 
-Markdown a docx
+Existen dos métodos principales para convertir por lotes archivos markdown .md a .docx (Microsoft Office Word) con Pandoc en la línea de comandos de Linux:
 
-    pandoc -o test.docx test.md
+**1. Utilizando un bucle:**
 
-y verifica si es mejor:
+Este método itera a través de cada archivo .md en un directorio y lo convierte individualmente.
 
-To convert a “.md” file to a “.docx” file, run a command in the following format:
+```bash
+for file in *.md; do pandoc -t docx "$file" -o "${file%.md}.docx"; done
+```
 
-    pandoc file.md -f markdown -t docx -s -o file.docx
-    
-    
-Ejemplo:
+**Explicación:**
 
+* `for file in *.md` - Recorre todos los archivos con la extensión .md en el directorio actual.
+* `pandoc -t docx "$file"` - Convierte el archivo actual (`$file`) a formato docx utilizando la opción `-t docx`.
+* `-o "${file%.md}.docx"` - Define el nombre del archivo de salida.
+    * `"${file%.md}"` elimina la extensión .md del nombre de archivo original.
+    * `.docx` agrega la extensión .docx para el archivo de salida.
 
-    
-    pandoc -o "02. Es pertinente el Sermón I.A.docx" "02. Es pertinente el Sermón I.A.md"
-    
-    
-CONVERSION EN MASA    
-    
-Markdown a docx
+**2. Utilizando el comando `find`:**
 
-    for i in *.md ; do echo "$i" && pandoc -s $i -o $i.docx ; done    
-    
-    
-O:
+Este método utiliza el comando `find` para localizar todos los archivos .md y ejecuta pandoc en cada uno de ellos.
 
-md a docx
+```bash
+find . -name "*.md" -exec pandoc -t docx {} -o {}.docx \;
+```
 
-    for i in *.md; do pandoc -o "$i" "${i%.*}.docx"; done
+**Explicación:**
 
+* `find . -name "*.md"` - Busca todos los archivos llamados *.md en el directorio actual (`.`) y sus subdirectorios.
+* `-exec pandoc -t docx {} -o {}.docx \;` - Ejecuta el siguiente comando para cada archivo encontrado:
+    * `pandoc -t docx {}` - Convierte el archivo actual (`{}`) a formato docx.
+    * `-o {}.docx` - Guarda el archivo de salida con el mismo nombre que el archivo original, reemplazando la extensión con .docx.
 
+**Notas importantes:**
 
+* Asegúrate de tener Pandoc instalado en tu sistema. Por lo general, puedes instalarlo con tu administrador de paquetes (por ejemplo, `sudo apt install pandoc` para Debian/Ubuntu).
+* Estos comandos sobrescribirán cualquier archivo existente con el mismo nombre y la extensión .docx. Considera agregar un paso de copia de seguridad si es necesario.
+* Puedes modificar estos comandos para especificar un directorio de salida diferente cambiando la opción `-o`.
 
-    
-        pandoc -o test.docx test.md
-        
+Ambos métodos logran el mismo resultado, elige el que te parezca más legible.
+
 
