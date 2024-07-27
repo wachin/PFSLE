@@ -48,49 +48,106 @@ Esta busqueda también se puede hacer manualmente, entrando desde un administrad
 
 /usr/share/applications/ 
 
-y allí ejemplo buscando el nombre dolphin
+![](vx_images/20240724-155132-dolphin-encontrado-en-usr-share-applications.png)
+
+encontré el archivo desktop buscando la palabra: dolphin
 
 
 
-## Más ejemplos
+## Comandos para cambiar a los siguientes administradores de archivos
 
-A continuación se muestran algunos ejemplos más de otros administradores de archivos y cómo cambiarlos para que sean los predeterminados.
+A continuación se muestran los comandos de los administradores de archivos más conocidos y cómo cambiarlos para que sean los predeterminados:
 
-- Dolphin
+─ **Nautilus**
 
-  ```
-    $ xdg-mime default org.kde.dolphin.desktop inode/directory
-  ```
+```
+xdg-mime default org.gnome.Nautilus.desktop inode/directory
+```
 
-- Doble Commander
+─ **Dolphin**
 
-  ```
-    $ xdg-mime default doublecmd.desktop inode/directory
-  ```
+```
+$ xdg-mime default org.kde.dolphin.desktop inode/directory
+```
 
-- Gnome Comander
+─ **Doble Commander**
 
-  ```
-    $ xdg-mime default org.gnome.gnome-commander.desktop inode/directory
-  ```
+```
+$ xdg-mime default doublecmd.desktop inode/directory
+```
 
-- Krusader
+─ **Gnome Comander**
 
-  ```
-    $ xdg-mime default org.kde.krusader.desktop inode/directory
-  ```
+```
+$ xdg-mime default org.gnome.gnome-commander.desktop inode/directory
+```
 
-- nnn
+─ **Krusader**
 
-  ```
-    $ xdg-mime default nnn.desktop inode/directory
-  ```
+```
+$ xdg-mime default org.kde.krusader.desktop inode/directory
+```
 
-- Thunar
+─ **Thunar**
 
-  ```
-    $ xdg-mime default thunar.desktop inode/directory
-  ```
+```
+$ xdg-mime default thunar.desktop inode/directory
+```
+
+─ **Caja**
+
+```bash
+$ xdg-mime default org.mate.caja.desktop inode/directory
+```
+
+─ **Nemo**
+
+```bash
+$ xdg-mime default nemo.desktop inode/directory
+```
+
+─ **PCManFM**
+
+```bash
+$ xdg-mime default pcmanfm.desktop inode/directory
+```
+
+─ **Thunar**
+
+```bash
+$ xdg-mime default thunar.desktop inode/directory
+```
+
+─ **Midnight Commander**
+
+Para Midnight Commander, que es un administrador de archivos de línea de comandos, no es común establecerlo como el administrador de archivos predeterminado para manejar carpetas gráficamente. Sin embargo, si deseas establecerlo, primero asegúrate de que tienes un archivo `.desktop` adecuado para Midnight Commander. Si no lo tienes, puedes crear uno como sigue:
+
+1.) Crea un archivo llamado `mc.desktop` en `~/.local/share/applications/` (o `/usr/share/applications/` para todos los usuarios):
+
+```ini
+[Desktop Entry]
+Name=Midnight Commander
+Comment=File Manager
+Exec=mc
+Icon=utilities-terminal
+Terminal=true
+Type=Application
+Categories=System;FileTools;FileManager;
+```
+
+2.) Luego, usa el siguiente comando:
+
+```bash
+$ xdg-mime default mc.desktop inode/directory
+```
+
+─ **nnn**
+Semejante hacer para nnn
+
+```
+$ xdg-mime default nnn.desktop inode/directory
+```
 
 
+Con estos comandos puedes configurar el administrador de archivos que prefieras como predeterminado en tu sistema Linux.
 

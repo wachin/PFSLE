@@ -8,16 +8,16 @@ El siguiente es un ejemplo de lo que me da ChatGPT:
    - Crea una nueva entrada o edita una existente.
    - Cambia a la vista HTML en el editor de entradas de Blogger.
 
-Para poder copiarlo bien desde Typora debo editarlo en Typora así:
+Para poder copiarlo bien desde Typora debo editarlo en Typora cambiando el guión por "─", así:
 
 4.) **Agregar el HTML a Blogger**:
    ─ Inicia sesión en tu cuenta de Blogger y ve a la sección de entradas.
    ─ Crea una nueva entrada o edita una existente.
    ─ Cambia a la vista HTML en el editor de entradas de Blogger.
 
-allí si se pegará bien
+allí si copiar desde Typora se pegará bien en Blogger
 
-Para corregir los numerales estoy usando el siguiente simbolo:
+La descripción del simbolo usado:
 
 ─      U+2500 (alt-09472)    BOX DRAWINGS LIGHT HORIZONTAL = Videotex Mosaic DG 15
 
