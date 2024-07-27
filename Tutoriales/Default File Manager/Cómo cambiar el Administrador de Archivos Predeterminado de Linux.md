@@ -1,5 +1,12 @@
 # Cómo cambiar el Administrador de Archivos Predeterminado de Linux desde la terminal
 
+
+La siguiente entrada es una traducción y aumentado de:
+
+[https://www.adamsdesk.com/posts/change-default-linux-file-manager/](https://draft.blogger.com/blog/post/edit/8761056917308551623/8816026536907223517#)
+
+![](vx_images/20240724-155455-change-default-linux-file-manager.png)
+
 Cambiar el administrador de archivos predeterminado en Linux depende del entorno de escritorio que estés usando.. Es un hecho que no todos los usuarios de Linux quieren usar el mismo administrador de archivos y desean cambiar el administrador de archivos predeterminado. Sin embargo, otros usuarios pueden estar contentos con su administrador de archivos, pero experimentan el problema de que los directorios no se abren en el administrador de archivos deseado. En cualquier caso, estas situaciones pueden remediarse fácilmente. Primero comencemos explicando algunas cosas, antes de cambiar el administrador predeterminado.
 
 ## Asociación De Archivos
