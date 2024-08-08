@@ -1,10 +1,7 @@
- 
-
 # pip no me deja instalar paquetes de python en Debian 12
+Instalé Debian 12 y cuando trato de instalar paquetes con pip no puedo. La siguiente es la solución:
 
-Instalé Debian 12 y cuando trato de in
-
-1. Install the necessary packages
+1.) Instalar las dependencias necesarias:
 
 ```
 apt update
@@ -30,9 +27,7 @@ error: externally-managed-environment
 ╰─> To install Python packages system-wide, try apt install
     python3-xyz, where xyz is the package you are trying to
     install.
-    
 
-​```
 If you wish to install a non-Debian-packaged Python package,
 create a virtual environment using python3 -m venv path/to/venv.
 Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
@@ -43,7 +38,6 @@ it may be easiest to use pipx install xyz, which will manage a
 virtual environment for you. Make sure you have pipx installed.
 
 See /usr/share/doc/python3.11/README.venv for more information.
-​```
 
 note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
 hint: See PEP 668 for the detailed specification.
@@ -52,8 +46,6 @@ hint: See PEP 668 for the detailed specification.
 a continuación pongo una captura de pantalla:
 
 ![](vx_images/20240729-104054-pip-no-me-deja-instalar-paquetes-de-python.png)
-
-
 
 ## Solución usar un Entorno Virtual
 
@@ -83,27 +75,31 @@ Un entorno virtual es una herramienta que permite mantener dependencias y paquet
 
 ### Pasos adicionales
 
-1. **Activar el entorno virtual**:
-   - En Linux y macOS:
-     ```sh
-     source .venv/bin/activate
-     ```
-   - En Windows:
-     ```sh
-     .venv\Scripts\activate
-     ```
+1.) **Activar el entorno virtual**
 
-2. **Instalar paquetes** dentro del entorno virtual:
-   ```sh
-   pip install nombre_del_paquete
-   ```
+En Linux y macOS:
 
-3. **Desactivar el entorno virtual** cuando ya no lo necesites:
-   ```sh
-   deactivate
-   ```
+```
+source .venv/bin/activate
+```
 
+En Windows:
 
+```
+.venv\Scripts\activate
+```
+
+2.) **Instalar paquetes** dentro del entorno virtual
+
+```
+pip install nombre_del_paquete
+```
+
+3.) **Desactivar el entorno virtual** cuando ya no lo necesites:
+
+```
+deactivate
+```
 
 # Cómo saber si está bien instalado el entorno virtual pip con venv?
 
@@ -134,22 +130,30 @@ def check_requests():
 
 if __name__ == "__main__":
     check_requests()
+
 ```
 
 ### Instrucciones para ejecutar el script:
 
-1. **Asegúrate de que tu entorno virtual esté activado** (este paso ya lo habíamos hecho): 
-   
-   ```sh
-   source .venv/bin/activate  # En Linux y macOS
-   .venv\Scripts\activate     # En Windows
-   ```
+1.) **Asegúrate de que tu entorno virtual esté activado** (este paso ya lo habíamos hecho):
 
-2. **Guarda el script en un archivo** llamado, por ejemplo, `check_requests.py`.
+En Linux y macOS:
 
-3. **Ejecuta el script**:
+```
+source .venv/bin/activate
+```
+​
+En Windows:
 
-```sh
+```
+.venv\Scripts\activate
+```
+
+2.) **Guarda el script en un archivo** llamado, por ejemplo, `check_requests.py`.
+
+3.) **Ejecuta el script**:
+
+```
 python3 check_requests.py
 ```
 
@@ -170,11 +174,28 @@ A mi me devuelve:
 
 está correcto.
 
+# Y cómo hago para después que haya apagado mi ordenador y entrado otra vez activar el entorno
+
+Para activar el entorno virtual poner otra vez en una terminal:
+
+En Linux y macOS:
+
+```
+source .venv/bin/activate
+```
+
+En Windows:
+
+```
+.venv\Scripts\activate
+```
+
+y allí instalar y hacer lo que uno necesite
+
 ## REFERENCIAS
 
-1. **Documentación oficial de Python: Entornos virtuales y módulos `venv`**:
-   - Python Software Foundation. (2023). *The Python Standard Library: venv*. Recuperado de [https://docs.python.org/3/library/venv.html](https://docs.python.org/3/library/venv.html).
+- **Documentación oficial de Python: Entornos virtuales y módulos `venv`**:
+Python Software Foundation. (2023). *The Python Standard Library: venv*. Recuperado de [https://docs.python.org/3/library/venv.html](https://docs.python.org/3/library/venv.html).
 
-2. **Documentación oficial del paquete `requests`**:
-   - Kenneth Reitz & Python Software Foundation. (2023). *Requests: HTTP for Humans*. Recuperado de [https://docs.python-requests.org/en/latest/](https://docs.python-requests.org/en/latest/).
-
+- **Documentación oficial del paquete `requests`**:
+Kenneth Reitz & Python Software Foundation. (2023). *Requests: HTTP for Humans*. Recuperado de [https://docs.python-requests.org/en/latest/](https://docs.python-requests.org/en/latest/).
