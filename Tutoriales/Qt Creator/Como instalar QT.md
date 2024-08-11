@@ -12,7 +12,8 @@ Le puse como nombre: "Chord_TrasnScroller" y he dado: Next, Next, Next, y he lle
 
 sudo apt-get install cmake build-essential libqt5x11extras5-dev qt5-qmake \
      qtbase5-dev-tools extra-cmake-modules qtdeclarative5-dev-tools qtdeclarative5-dev \
-     qtcreator qttools5-dev qttools5-dev-tools libqt5svg5-dev
+     qtcreator qttools5-dev qttools5-dev-tools libqt5svg5-dev clang xterm cmake-extras \
+     qmlscene-qt6 qmlscene qmake qt6-base-dev qtcreator qmake6
 
 
 https://facilitarelsoftwarelibre.blogspot.com/2021/03/compilar-ksnip-desde-codigo-fuente-en-linux.html
@@ -33,3 +34,11 @@ o Assign, Make Path – “/usrbin/make”
 o Assign, ABI – x86 – linux – generic – elf – 32 bit
 • Do the same for g++ compiler as well.
 • Select Qt versions -> Add -> Browse for compiled qmake file located in “/usr/local/Qt_5.15.1/bin/qmake”
+
+
+
+Consulta
+
+"No QML utility installed" not letting me use Qt6
+https://forum.qt.io/topic/145219/no-qml-utility-installed-not-letting-me-use-qt6/9
+sudo apt install qml-qt6
