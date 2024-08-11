@@ -1,0 +1,15 @@
+
+
+There is no GCC as a compiler and is compatible with your version of Qt for Qt Creator in Debian 12 x386 32 bit
+
+
+qmake qt6-base-dev qt6-base-dev qtcreator
+
+Can't add kits and can't choose Qt version in Qt Creator
+
+Le puse como nombre: "Chord_TrasnScroller" y he dado: Next, Next, Next, y he llegado hasta: "Kits - Kit Selection" y me pregunta: "The folloring kits can be used for projet Chord_TransCroller: Type to filter kits by name:" qué hago?
+
+
+sudo apt-get install cmake build-essential libqt5x11extras5-dev qt5-qmake \
+     qtbase5-dev-tools extra-cmake-modules qtdeclarative5-dev-tools qtdeclarative5-dev \
+     qtcreator qttools5-dev qttools5-dev-tools libqt5svg5-dev
