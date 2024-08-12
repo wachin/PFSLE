@@ -180,17 +180,18 @@ Estos son los pasos para crear un nuevo proyecto en Qt Creator en Debian 12.
 
 ### 9. Abrir un ejemplo de aplicación escrita en Qt
 
-- Cierre Qt Creator y vuelvalo a abrir, y clone el siguiente repositorio en algún directorio (debe tener instalado git):
+- Cierre Qt Creator y vuelvalo a abrir
+- Clone el siguiente repositorio en algún directorio (debe tener instalado git):
 
    ```
    git clone https://github.com/Anchakor/MRichTextEditor
    ```
 
-- En Qt Creator de clic en "Open Project..." y busque el archivo:  
+- En Qt Creator de clic en **"File"** > **"Open File or Project..."** y busque el archivo:  
 
-  MRichTextEditor.pro  
+  **MRichTextEditor.pro**  
 
-- a la derecha de la ventana de clic en "Configure Project" y a la izquierda arriba en "Projects"  en "MRichTextEditor (Master)" busque el archivo: MRichTextEditor.pro y dele clic **"Build"** > **"Build Project MRichTextEditor"**, a la esquina abajo derecha está la información de la compilación, cuando se ponga verde ya está
+- a la derecha de la ventana de clic en **"Configure Project"** y a la izquierda arriba en "Projects"  en "MRichTextEditor (Master)" busque el archivo: **MRichTextEditor.pro** y dele clic **"Build"** > **"Build Project MRichTextEditor"**, a la esquina abajo derecha está la información de la compilación, cuando se ponga verde ya está:
 
 - **"Build"** > **"Run"**
 
