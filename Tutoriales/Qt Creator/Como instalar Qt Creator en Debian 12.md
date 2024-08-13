@@ -191,28 +191,40 @@ Estos son los pasos para crear un nuevo proyecto en Qt Creator en Debian 12.
 
   **MRichTextEditor.pro**  
 
-- a la derecha de la ventana de clic en **"Configure Project"** y a la izquierda arriba en "Projects"  en "MRichTextEditor (Master)" busque el archivo: **MRichTextEditor.pro** y dele clic **"Build"** > **"Build Project MRichTextEditor"**, a la esquina abajo derecha está la información de la compilación, cuando se ponga verde ya está:
+- a la derecha de la ventana de clic en **"Configure Project"** y a la izquierda arriba en **"Projects"**  en **"MRichTextEditor (Master)"** busque el archivo: **MRichTextEditor.pro** dandole doble clic para que lo abra, y luego dele clic en:
+
+- **"Build"** > **"Build Project MRichTextEditor"** y a la esquina abajo derecha está la información de la compilación, cuando se ponga verde ya está y de clic en:
 
 - **"Build"** > **"Run"**
 
-y se abrirá el programa
+y se abrirá el programa.
+
+### Proyectos de programas en Qt en GitHub
+
+Puede buscar en [www.github.com](www.github.com) las palabras:
+
+Text Editor Qt
+
+allí encontré otro proyecto que también se abre:
+
+[https://github.com/pr-ravi/TextEditor-Qt](https://github.com/pr-ravi/TextEditor-Qt)
 
 Dios les bendiga
 
 ### Consultas:  
 
-How to install qt version?(for Linux)  
-https://forum.qt.io/topic/116658/how-to-install-qt-version-for-linux  
+**How to install qt version?(for Linux)**  
+[https://forum.qt.io/topic/116658/how-to-install-qt-version-for-linux](https://forum.qt.io/topic/116658/how-to-install-qt-version-for-linux )  
 
-Instalar ksnip 1.9.0 en Linux desde código fuente 32 y 64 bits (cmake prefix hacia /usr  
-https://facilitarelsoftwarelibre.blogspot.com/2021/03/compilar-ksnip-desde-codigo-fuente-en-linux.html  
+**Instalar ksnip 1.9.0 en Linux desde código fuente 32 y 64 bits (cmake prefix hacia /usr**  
+[https://facilitarelsoftwarelibre.blogspot.com/2021/03/compilar-ksnip-desde-codigo-fuente-en-linux.html](https://facilitarelsoftwarelibre.blogspot.com/2021/03/compilar-ksnip-desde-codigo-fuente-en-linux.html)  
 
-"No QML utility installed" not letting me use Qt6  
-https://forum.qt.io/topic/145219/no-qml-utility-installed-not-letting-me-use-qt6/9  
+**"No QML utility installed" not letting me use Qt6**  
+[https://forum.qt.io/topic/145219/no-qml-utility-installed-not-letting-me-use-qt6/9](https://forum.qt.io/topic/145219/no-qml-utility-installed-not-letting-me-use-qt6/9)  
 sudo apt install qml-qt6  
 
-qtcreator: no qml utility  
-https://groups.google.com/g/linux.debian.user/c/T9yImA-5abY  
+**qtcreator: no qml utility**  
+[https://groups.google.com/g/linux.debian.user/c/T9yImA-5abY](https://groups.google.com/g/linux.debian.user/c/T9yImA-5abY)  
 But if i execute on cmdline  
 qml -v  
 the output is  
@@ -221,24 +233,24 @@ Qml Runtime 5.15.8
 This packages are installed:  
 sudo apt install qtcreator qml build-essential qtbase5-dev qt5-qmake cmake  
 
-Getting Started With Qt and Qt Creator on Linux  
+**Getting Started With Qt and Qt Creator on Linux**  
 By Jeff Tranter Wednesday, October 12, 2016  
-https://www.ics.com/blog/getting-started-qt-and-qt-creator-linux  
+[https://www.ics.com/blog/getting-started-qt-and-qt-creator-linux](https://www.ics.com/blog/getting-started-qt-and-qt-creator-linux)  
 sudo apt-get install build-essential libgl1-mesa-dev  
 
-clazy  
-https://github.com/KDE/clazy  
+**clazy**  
+[https://github.com/KDE/clazy](https://github.com/KDE/clazy)  
 Ubuntu: sudo apt install g++ cmake clang llvm-dev git-core libclang-dev  
 
-Ubuntu 22.04 with Qt6 - qmake: could not find a Qt installation of ''  
-https://askubuntu.com/questions/1460242/ubuntu-22-04-with-qt6-qmake-could-not-find-a-qt-installation-of  
+**Ubuntu 22.04 with Qt6 - qmake: could not find a Qt installation of ''**  
+[https://askubuntu.com/questions/1460242/ubuntu-22-04-with-qt6-qmake-could-not-find-a-qt-installation-of](https://askubuntu.com/questions/1460242/ubuntu-22-04-with-qt6-qmake-could-not-find-a-qt-installation-of )  
 
-How to Compile Qt from Source Code on Linux  
+**How to Compile Qt from Source Code on Linux**  
 By Jeff Tranter Wednesday, January 4, 2017  
-https://www.ics.com/blog/how-compile-qt-source-code-linux  
+[https://www.ics.com/blog/how-compile-qt-source-code-linux](https://www.ics.com/blog/how-compile-qt-source-code-linux )  
 
-https://vitux.com/compiling-your-first-qt-program-in-ubuntu/  
+[https://vitux.com/compiling-your-first-qt-program-in-ubuntu/](https://vitux.com/compiling-your-first-qt-program-in-ubuntu/)  
 sudo apt-get install qt5-doc qtbase5-examples qtbase5-doc-html  
 
-Instalando dmidiplayer 1.7.0 en MX Linux 21 de 32 o 64 bits desde código fuente  
-https://facilitarelsoftwarelibre.blogspot.com/2022/10/instalando-dmidiplayer-1.7-en-mx-linux-21-desde-src.html  
+**Instalando dmidiplayer 1.7.0 en MX Linux 21 de 32 o 64 bits desde código fuente**  
+[https://facilitarelsoftwarelibre.blogspot.com/2022/10/instalando-dmidiplayer-1.7-en-mx-linux-21-desde-src.html](https://facilitarelsoftwarelibre.blogspot.com/2022/10/instalando-dmidiplayer-1.7-en-mx-linux-21-desde-src.html )  
