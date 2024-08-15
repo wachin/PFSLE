@@ -8,7 +8,7 @@ based in the instructions from:
    
 ```
 sudo apt-get install cmake build-essential libqt5x11extras5-dev qt5-qmake \
-     qtbase5-dev-tools extra-cmake-modules qtdeclarative5-dev-tools \ 
+     qtbase5-dev-tools extra-cmake-modules qtdeclarative5-dev-tools \
      qtdeclarative5-dev qtcreator qttools5-dev qttools5-dev-tools \
      libqt5svg5-dev qtwebengine5-dev libqt5svg5-dev \
      libqt5location5 qtlocation5-dev
