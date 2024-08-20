@@ -1,5 +1,7 @@
 
 
+# Cómo instalar VNote 3.17.0 en Linux 
+
 El archivo .pro que es neceario ya no está en la versión más reciente, pero en la anterior si está
 
 Descarga esta versión v3.17.0:
