@@ -1,4 +1,6 @@
-### Proyecto 1 ###
+#!/bin/bash
+
+### Proyecto 1
 echo "Agregando cambios al stage..."
 git add .
 echo "Realizando commit..."
