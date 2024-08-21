@@ -1,5 +1,5 @@
 #!/bin/bash
-### Proyecto 1
+### Auto push script
 echo "Agregando cambios al stage..."
 git add .
 echo "Realizando commit..."
