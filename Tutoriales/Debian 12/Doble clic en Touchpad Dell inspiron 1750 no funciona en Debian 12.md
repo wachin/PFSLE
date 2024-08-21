@@ -1,6 +1,6 @@
 # Doble clic en Touchpad Dell inspiron 1750 no funciona en Debian 12
 
-Hay dos soluciones para el problema del doble clic en el touchpad de la laptop Dell Inspiron 1750 en Debian 12:
+En mi laptop antes siempre ha funcionado el doble clic del touchpad, desde Ubuntu 7.04, Debian 9, MX Linux 19, pero en Debian 12 ya no funciona. Hay dos soluciones para el problema del doble clic en el touchpad de la laptop Dell Inspiron 1750 en Debian 12:
 
 ## Solución 1: Configurar mediante synclient al inicio
 
@@ -21,7 +21,18 @@ synclient TapButton3=2
 synclient ClickFinger3=2
 ```
 
-Para añadir al inicio esto debe usted de consultar cómo se hace eso en su sistema operativo Linux, pero si le paree le mostraré dos métodos comunes:
+**Explicación de las líneas con `synclient`:**
+
+1.) `synclient TapButton1=1`: Configura el botón 1 (clic izquierdo) para que se active al tocar con un dedo en el touchpad.  
+2.) `synclient ClickFinger1=1`: Configura el botón 1 (clic izquierdo) para que se active al hacer clic con un dedo en el touchpad.  
+3.) `synclient TapButton2=3`: Configura el botón 2 (clic central) para que se active al tocar con dos dedos en el touchpad.  
+4.) `synclient ClickFinger2=3`: Configura el botón 2 (clic central) para que se active al hacer clic con dos dedos en el touchpad.  
+5.) `synclient TapButton3=2`: Configura el botón 3 (clic derecho) para que se active al tocar con tres dedos en el touchpad.  
+6.) `synclient ClickFinger3=2`: Configura el botón 3 (clic derecho) para que se active al hacer clic con tres dedos en el touchpad.  
+
+Estas líneas permiten configurar el comportamiento de los gestos de toque y clic en el touchpad utilizando el comando `synclient`, que es parte del paquete `xserver-xorg-input-synaptics`.
+
+Para añadir al inicio esto debe usted de consultar cómo se hace eso en su sistema operativo Linux, pero si le parece le mostraré dos métodos comunes:
 
 **Método A: Usando el archivo ~/.profile**
 
@@ -126,7 +137,7 @@ Ambos métodos deberían funcionar para añadir estas configuraciones al inicio 
 
 El scritp creado del Método B se lo puede añadir directamente en algún lugar de la configuración del sistema donde se permita añadir programas al inicio.
 
-Esto configura los botones del touchpad para que el doble clic funcione correctamente.
+Todo esto configura los botones del touchpad para que el doble clic funcione correctamente.
 
 ## Solución 2: Configurar mediante libinput en el archivo de configuración
 
@@ -156,6 +167,21 @@ Section "InputClass"
         Option "TappingButton3" "2"
 EndSection
 ```
+
+**Explicación de las líneas con `libinput`:**
+
+1.) `Section "InputClass"`: Define una clase de entrada (en este caso, para el touchpad).  
+2.) `Identifier "libinput touchpad catchall"`: Identifica la clase de entrada como "libinput touchpad catchall".  
+3.) `MatchIsTouchpad "on"`: Indica que esta configuración se aplica solo a dispositivos de tipo touchpad.  
+4.) `MatchDevicePath "/dev/input/event*"`: Aplica la configuración a todos los dispositivos de entrada que coincidan con la ruta de dispositivo especificada.  
+5.) `Driver "libinput"`: Especifica que se debe usar el controlador `libinput` para gestionar el touchpad.
+6.) `Option "Tapping" "on"`: Habilita la función de toque (tocar) en el touchpad.  
+7.) `Option "TappingButton1" "1"`: Configura el botón 1 (clic izquierdo) para que se active al tocar con un dedo en el touchpad.  
+8.) `Option "TappingButton2" "3"`: Configura el botón 2 (clic central) para que se active al tocar con dos dedos en el touchpad.  
+9.) `Option "TappingButton3" "2"`: Configura el botón 3 (clic derecho) para que se active al tocar con tres dedos en el touchpad.  
+10.) `EndSection`: Cierra la definición de la clase de entrada.  
+
+Estas líneas permiten configurar el comportamiento del touchpad utilizando el controlador `libinput`, que es el recomendado en las últimas versiones de Debian y Ubuntu. La configuración es similar a la que se hace con `synclient`, pero adaptada al uso de `libinput`.
 
 Para hacerlo ponga en la terminal:
 
@@ -252,7 +278,7 @@ Dios les bendiga
 
 
 
-## Referenias
+## Referencias
 
 Ubuntu Documentation Team. (2022). "Ubuntu Desktop Guide". Canonical Ltd. Disponible en: [https://help.ubuntu.com/stable/ubuntu-help/](https://help.ubuntu.com/stable/ubuntu-help/)  
 
@@ -262,6 +288,6 @@ Arch Linux Wiki Contributors. (2023). "Touchpad Synaptics". Arch Linux Wiki. Dis
 
 Freedesktop.org. (2023). "libinput". Freedesktop.org. Disponible en: [https://wayland.freedesktop.org/libinput/doc/latest/](https://wayland.freedesktop.org/libinput/doc/latest/)  
 
-xinput para configurar la velocidad del cursor cuando no funciona en Ubuntu 16.04, 18.04, OpenSUSE, Linux Mint, Debian, antiX, MX Linux, etc
-[https://facilitarelsoftwarelibre.blogspot.com/2017/11/ubuntu-1704-no-funciona-la-velocidad.html](https://facilitarelsoftwarelibre.blogspot.com/2017/11/ubuntu-1704-no-funciona-la-velocidad.html)
+xinput para configurar la velocidad del cursor cuando no funciona en Ubuntu 16.04, 18.04, OpenSUSE, Linux Mint, Debian, antiX, MX Linux, etc  
+[https://facilitarelsoftwarelibre.blogspot.com/2017/11/ubuntu-1704-no-funciona-la-velocidad.html](https://facilitarelsoftwarelibre.blogspot.com/2017/11/ubuntu-1704-no-funciona-la-velocidad.html)  
 
