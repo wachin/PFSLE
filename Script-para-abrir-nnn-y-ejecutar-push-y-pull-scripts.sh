@@ -1,6 +1,6 @@
 #!/bin/sh
 
-konsole -p tabtitle='PFSLE' -e nnn "auto-push-script.sh"
+konsole -p tabtitle='PFSLE' -e nnn "auto-push-script-2.sh"
 
 # gnome-terminal --tab --title="PFSLE" --command="bash -c 'nnn auto-push-script.sh; $SHELL'"
 

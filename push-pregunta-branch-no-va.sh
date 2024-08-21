@@ -18,7 +18,6 @@ read
 # how to automate the "commit-and-push" process? (git) - Stack Overflow
 # https://stackoverflow.com/questions/16709404/how-to-automate-the-commit-and-push-process-git
 # https://stackoverflow.com/a/16709405/10648253
-#
 # 
 # the script in a moment will ask what is the name of your branch, 
 # if you don't know it put in the terminal:
