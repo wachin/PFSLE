@@ -1,15 +1,24 @@
 
-
+# En Debian 11
 
 sudo apt install lightdm lightdm-settings lightdm-gtk-greeter-mx21 lightdm-gtk-greeter-settings
 
+
+# En Debian 12
+
+sudo apt install lightdm lightdm-settings lightdm-gtk-greeter-mx23 lightdm-gtk-greeter-settings
+
+
+# No instalar
+
+No instalar
+
 slick-greeter
 
-
-lightdm-settings 
-
+porque sospecho que causa problemas para cambiar el idioma
 
 
+# Para reconfigurarlo
 
 sudo dpkg-reconfigure lightdm
 
