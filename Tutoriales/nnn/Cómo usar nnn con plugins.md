@@ -52,7 +52,7 @@ pone un ejemplo para habilitar varios scripts:
 export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview'
 ```
 
-**Nota**: Si ustedes usan zsh u otro deberán añadirlo a su archivo de configuración.
+**Nota**: Si ustedes usan zsh u otro deberán añadirlo a su archivo de configuración para que sea permanente la configuración.
 
 pero yo no voy a usar todos esos sino solo los siguientes incluyendo el que hemos creado, pongamos en la terminal y ejecutar:
 
@@ -82,10 +82,13 @@ p launch
 
 v imgview
 
-5. Añadir permanentemente las configuraciones de los plugins en bash
+5. **Añadir permanentemente las configuraciones de los plugins en bash**
 Debemos de añadir al archivo:
 
 .bashrc
+
+**Nota**: Si ustedes usan zsh u otro deberán añadirlo a su archivo de configuración para que sea permanente la configuración.
+
 
 la linea:
 
