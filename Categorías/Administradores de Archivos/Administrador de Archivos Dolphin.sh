@@ -2,6 +2,6 @@
 
 cd ..
 cd ..
-nemo Tutoriales/Dolphin
+dolphin Tutoriales/Dolphin
 
 
