@@ -19,7 +19,7 @@ Para que `nnn` ejecute automáticamente tus scripts `.sh` con `bash` al presiona
 1. **Crear el archivo de configuración de nnn**: Si no tienes un archivo de configuración personalizado para `nnn`, créalo en tu directorio home:
 
    ```bash
-   nano ~/.config/nnn/plugins/execonenter
+   nano ~/.config/nnn/plugins/execonbash
    ```
 
 2. **Añadir el script para ejecutar archivos `.sh`**: Copia y pega el siguiente contenido en el archivo:
@@ -38,7 +38,7 @@ Para que `nnn` ejecute automáticamente tus scripts `.sh` con `bash` al presiona
 3. **Dar permisos de ejecución**:
 
    ```bash
-   chmod +x ~/.config/nnn/plugins/execonenter
+   chmod +x ~/.config/nnn/plugins/execonbash
    ```
 
 4. **Configurar `bash` para usar los plugins**:
@@ -57,7 +57,7 @@ export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview'
 pero yo no voy a usar todos esos sino solo los siguientes incluyendo el que hemos creado, pongamos en la terminal y ejecutar:
 
 ```
-export NNN_PLUG='f:finder;o:execonenter;p:launch;v:imgview'
+export NNN_PLUG='f:finder;o:execonbash;p:launch;v:imgview'
 ```
 
 y cerrar cualquier instancia de nnn y volver a abrir en una terminal nnn y escribir:
@@ -76,7 +76,7 @@ esto significa que están habilitadas esas teclas para los plugins:
 
 f finder
 
-o execonenter
+o execonbash
 
 p launch
 
