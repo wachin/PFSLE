@@ -305,9 +305,9 @@ python3 test_venv.py
 1.  **Usando el parámetro **+x**:**
 2.   Para asignar permisos de ejecución al archivo **venv\_dir\_launcher.sh**, ejecuta:
 
-    ```
-    $ chmod +x venv_dir_launcher.sh
-    ```
+```
+$ chmod +x venv_dir_launcher.sh
+```
 
     Esto permitirá que el archivo se ejecute.
 
@@ -315,9 +315,9 @@ python3 test_venv.py
 
 4.  Si prefieres asignar permisos específicos, puedes usar valores numéricos. Por ejemplo, para dar permisos de ejecución al usuario propietario y solo permisos de lectura al grupo y al invitado:
 
-    ```
-    $ chmod 0755 venv_dir_launcher.sh
-    ```
+```
+$ chmod 0755 venv_dir_launcher.sh
+```
 
     En este caso, el **0** indica que no se asignan permisos al grupo y al invitado.
 
@@ -352,9 +352,11 @@ e-Sword  FeatherNotes  test_venv.py
 bash ./venv_dir_launcher.sh
 ```
 
+con eso se ejecutará.
+
 ### Cómo hago para usarlo con mi script
 
- Para su script .py abralo con nano o con un editor de texto y cambie la linea:
+Para su script .py abralo con nano o con un editor de texto y cambie la linea:
 
 ```
 #! /bin/bash
@@ -480,15 +482,7 @@ konsole --noclose -e bash -c '
 ' -p tabtitle=PFSLE  # Establece el título de la pestaña como "PFSLE"
 ```
 
-este contenido ponerlo en un archivo ejemplo llamado:
-
-open-venv-environment.sh
-
-a este archivo darle permisos de ejecución:
-
-```
-chmod +x open-venv-environment.sh
-```
+este es el contenido del poderoso script.
 
 ## Manual de Uso: Script de Entorno Virtual Python
 
