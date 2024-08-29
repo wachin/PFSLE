@@ -1,5 +1,7 @@
 Estoy usando Debian 12 (este tutorial debe funcionar en Sistemas Operativos Linux basados en Debian y tal vez otros -o modificandolo-) y he instalado java con sudo apt install default-jre y para lanzar las aplicaciones java pongo en la terminal ejemplo: java -jar miapp.jar pero quiero abrirlas con clic derecho en los administradores de archvios, para eso debo crear un lanzador
 
+![https://github.com/wachin/Facilitar-el-Software-Libre/blob/main/Tutoriales/Java/Integrar%20Java%20en%20los%20administradores%20de%20archivos%20con%20clic%20derecho/vx_images/01-Clic-derecho-habilitado-abrir-app-java-en-administrador-de-archivo.png?raw=true](https://github.com/wachin/Facilitar-el-Software-Libre/blob/main/Tutoriales/Java/Integrar%20Java%20en%20los%20administradores%20de%20archivos%20con%20clic%20derecho/vx_images/01-Clic-derecho-habilitado-abrir-app-java-en-administrador-de-archivo.png?raw=true)
+
 
 ## Creando el lanzador con nano
 
