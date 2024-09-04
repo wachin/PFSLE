@@ -268,3 +268,6 @@ Para que Dolphin (en Debian 12 la versión 22.12 -es posible que sirva para otra
 - Busca la sección "**Confirmaciones**" allí en "**Abrir un archivo ejecutable**" abre la ventanita y selecciona: "**Preguntar siempre**"
 
 Que Dios les bendiga
+
+
+
