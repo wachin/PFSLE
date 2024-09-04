@@ -1,4 +1,5 @@
 #!/bin/bash
+
 ### Auto push script
 echo "Agregando cambios al stage..."
 git add .
