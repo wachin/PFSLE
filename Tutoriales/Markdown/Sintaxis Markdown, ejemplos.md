@@ -10,14 +10,11 @@ ping 192.168.0.1
 ```
 
 
-
 ```dos
 cd \
 copy a b
 ping 192.168.0.1
 ```
-
-
 
 **Bloque de citas:**
 
@@ -25,7 +22,6 @@ ping 192.168.0.1
 hola cómo están
 
 >> Second paragraph in the blockquote, nested.
-
 
 
 **Encabezado 2**
@@ -46,22 +42,26 @@ pero pasará eso verdad
 
 
 
-<pre>Claro como están todos
+<pre>
+Claro como están todos
 bueno espero estén bien
-
 y bueno, todos noe veremos después
 </pre>
 
 How do I add Markdown formatting in a code / pre block? - Stack Overflow
 https://stackoverflow.com/questions/10063896/how-do-i-add-markdown-formatting-in-a-code-pre-block
 
-
+<pre>
+int main(void) {
+    <b>return 0;</b>
+}
+</pre>
 
 
 
 <p>remove this and it should work fine</p>
-<pre>
 
+<pre>
        <span>this should not be escaped</span>
 </pre>
 
@@ -120,9 +120,9 @@ Here's a simple footnote,[^1] and here's a longer one.[^bignote]
 [^bignote]: Here's one with multiple paragraphs and code.
 
     Indent paragraphs to include them in the footnote.
-
+    
     `{ my code }`
-
+    
     Add as many paragraphs as you like.
 
 The rendered output looks like this:

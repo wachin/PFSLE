@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+
 export NNN_PLUG='f:finder;o:execonbash;p:launch;v:imgview'
 konsole -p tabtitle='PFSLE' -e nnn "auto-push-script-2.sh"
 
