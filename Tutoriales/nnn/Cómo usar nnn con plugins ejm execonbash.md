@@ -1,20 +1,36 @@
-Estoy usando en linux en la terminal el administrador de archivos nnn y quiero ejecute unos archivos .sh los cuales son unos scripts que tengo, para ejecutarlos hago lo siguiente en nnn me pongo encima del script.sh y aplasto Ctrl + O y me pregunta: "open with" y yo escribo: "bash" y doy enter y me pregunta: "c" li "g"ui? y le pongo c y se ejecuta allí. Pero yo quiero que directamente al yo dar enter en nnn encima del archivo script.sh se ejecute con bash
+## Ejecutando script bash en nnn con Ctrl + O escribiendo bash
 
-Si desea puede instalar todos los plugins con:
+Estoy usando en linux en la terminal el administrador de archivos nnn (es un administrador de archivos de línea de comandos
+
+**Instalar nnn**
+
+```
+sudo apt install nnn
+```
+
+**Nota:** nnn también se puede usar en Android con Termux.
+
+Y quiero que ejecute unos archivos .sh los cuales son unos scripts que tengo, para ejecutarlos hago lo siguiente, primero ejecuto en la terminal nnn y se abre y allí busco el script sh, ejemplo:
+
+script.sh  
+
+y en nnn me pongo encima del **script.sh** y aplasto **Ctrl + O** y me pregunta: "**open with**" y yo escribo: "b**ash**" y doy enter y me pregunta: **"c" li "g"ui?** y le pongo **c** y se ejecuta allí, todo bien. Pero yo quiero que se ejecute con menos pasos
+
+## Creando un plugin para nnn para ejecutar script bash
+
+Primero instalar todos los plugins de nnn, ponga en la terminal:
 
 ```bash
 sh -c "$(curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs)"
 ```
 
-estas instrucciones están en:
+estas mismas instrucciones están en (puede verlas allí o directamente desde allí seguirlas):
 
 https://github.com/jarun/nnn/tree/master/plugins#installation
 
-Ejemplo de plugin
+## Plugin execonbash
 
-## Plugin para abrir script directamente con bash
-
-Para que `nnn` ejecute automáticamente tus scripts `.sh` con `bash` al presionar Enter, configura un atajo de acción en el archivo de configuración de `nnn`. los siguientes son los pasos:
+Para que `nnn` ejecute con menos pasos los scripts `.sh` con `bash` al presionar Enter, debemos crear el plugin y configurar un atajo de acción en el archivo de configuración de `nnn`. los siguientes son los pasos:
 
 1. **Crear el archivo de configuración de nnn**: Si no tienes un archivo de configuración personalizado para `nnn`, créalo en tu directorio home:
 
