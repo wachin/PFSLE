@@ -55,7 +55,7 @@ sh -c "$(curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/get
 
 estas mismas instrucciones están en (puede verlas allí o directamente desde allí seguirlas):
 
-https://github.com/jarun/nnn/tree/master/plugins#installation
+[https://github.com/jarun/nnn/tree/master/plugins#installation](https://github.com/jarun/nnn/tree/master/plugins#installation)
 
 ## Plugin execonbash
 
@@ -91,7 +91,7 @@ chmod +x ~/.config/nnn/plugins/execonbash
 4.1.) **Configurar bash para usar los plugins** (no funciona en mi ordenador Linux):
 Según el tutotial en:
 
-https://github.com/jarun/nnn/tree/master/plugins#configuration
+[https://github.com/jarun/nnn/tree/master/plugins#configuration](https://github.com/jarun/nnn/tree/master/plugins#configuration)
 
 pone un ejemplo para habilitar varios scripts:
 
