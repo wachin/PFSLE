@@ -267,4 +267,4 @@ Para que Dolphin (en Debian 12 la versión 22.12 -es posible que sirva para otra
 - Selecciona la pestaña "**General**" en la ventana de configuración.
 - Busca la sección "**Confirmaciones**" allí en "**Abrir un archivo ejecutable**" abre la ventanita y selecciona: "**Preguntar siempre**"
 
-Dios les bendiga
+Que Dios les bendiga
