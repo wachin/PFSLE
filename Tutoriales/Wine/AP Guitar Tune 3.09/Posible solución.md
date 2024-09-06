@@ -230,6 +230,8 @@ Aquí hay algunas sugerencias para intentar resolver el problema:
    - vcrun2008
    - vcrun2010
    - dotnet40
+   - vcrun2017
+   - d3dcompiler_47
 
 4. Verifica la configuración de DPI:
    El error menciona "GetDpiForSystem", lo que sugiere un problema relacionado con la configuración de DPI. Intenta cambiar la configuración de DPI en la configuración de Wine.
