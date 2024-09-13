@@ -18,7 +18,7 @@ Para configurar Obsidian en Android y sincronizarlo con un repositorio de GitHub
 2. **Clonar tu repositorio de GitHub**:
    - Una vez que tenga acceso a su almacenamiento Interno, en Termux, clona tu repositorio de GitHub donde almacenarás tus notas de Obsidian:
      ```bash
-     git clone https://github.com/tu-usuario/tu-repositorio.git /ruta/a/tu/repositorio
+     git clone https://github.com/tu-usuario/tu-repositorio
      ```
    - Asegúrate de que el repositorio ya tenga al menos un **push** realizado previamente (es decir, debe tener contenido subido a GitHub).
 
@@ -61,7 +61,7 @@ Si prefieres editar tus notas de Obsidian utilizando otros editores de Markdown 
 
 Para clonar tu repositorio en Linux, ejecuta:
 ```bash
-git clone https://github.com/tu-usuario/tu-repositorio.git /ruta/local/a/tu/repositorio
+git clone https://github.com/tu-usuario/tu-repositorio
 ```
 
 Una vez clonado, abre los archivos Markdown con el editor que prefieras.
