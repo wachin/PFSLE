@@ -1,4 +1,8 @@
 
+git clone https://github.com/vnotex/vnote.git vnote.git
+cd vnote.git
+git submodule update --init --recursive
+
 
 # Cómo instalar VNote 3.17.0 en Linux 
 
@@ -158,15 +162,10 @@ entonces esas seis (contando el Enter) líneas se las añado al archivo:
 en el lugar correspondiente lo cual lo sé al buscar la línea: "target_link_libraries(Hunspell PUBLIC" y guardo.
 
 
-Luego de los commits está:
+Luego en:
 
-fix Qt5
-tamlok
-tamlok
-committed
-4 months ago
-
-"Commits on Apr 18, 2021".
+qmake to cmake
+https://github.com/vnotex/hunspell/commit/9f886c37b9285baec444913303926e1c9b61c8a1#diff-77b0f1f54c3c1175c559a20d67cb5fefeb0899832afa3d10ba0239a7de70b502
 
 allí está el archivo faltante:
 
@@ -254,25 +253,31 @@ además allí hay otro archivo:
 
 hunspell_export.pri
 
+y
+
+hunspell_export_lib.pri
+
 hago el mismo procedimiento, creo el archivo en mi fork y copio el contenido y se lo pego y guardo.
 
-
-
-
-
+## Sonnet
 
 https://github.com/vnotex/sonnet
 
 
-
-
-
-https://github.com/vnotex/QHotkey.git
 
 y no hay el archivo .pro hay que buscar un fork que tenga, encuentro uno:
 
 https://github.com/hoenking/QHotkey
 
 Nota: He creado un fork: https://github.com/wachin/QHotkey para retener su contenido
+
+
+https://facilitarelsoftwarelibre.blogspot.com/2022/07/vnote-for-mx-linux-deb-package.html
+
+mkdir build
+cd build
+qmake ../vnote.pro
+make
+sudo make install
 
 
