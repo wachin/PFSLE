@@ -10,8 +10,11 @@ sudo apt-get install cmake build-essential libqt5x11extras5-dev qt5-qmake \
 	
    ```
    wget -c https://github.com/vnotex/vnote/archive/refs/tags/v3.17.0.tar.gz
-   
+   tar -xzvf v3.17.0.tar.gz
+   cd vnote-3.17.0
    ``` 
+
+Ahora necesitamos copiar los archivos de los submódulos:
 
 # vnote-fork /libs
 https://github.com/wachin/vnote-fork/tree/master/libs
@@ -49,6 +52,21 @@ https://github.com/vnotex/syntax-highlighting/tree/04289967286edc44e29f0bde4d1e1
 <>Code > Download ZIP
 https://github.com/vnotex/syntax-highlighting/archive/04289967286edc44e29f0bde4d1e1cb7b94c3434.zip
 
+
+de la siguiente manera:
+
+```
+	cd libs/QHotkey
+	wget -c https://github.com/vnotex/QHotkey/archive/18ac011008d3ae55abc19233ba94fad1ea9801d8.zip
+	mkdir temp_dir
+	unzip 18ac011008d3ae55abc19233ba94fad1ea9801d8.zip -d temp_dir
+	mv temp_dir/QHotkey-18ac011008d3ae55abc19233ba94fad1ea9801d8/* .
+	rm -fr temp_dir
+	rm 18ac011008d3ae55abc19233ba94fad1ea9801d8.zip
+	cd ../vtextedit
+
+
+```
 
 
 y 
