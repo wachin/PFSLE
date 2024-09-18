@@ -64,16 +64,51 @@ de la siguiente manera:
 	rm -fr temp_dir
 	rm 18ac011008d3ae55abc19233ba94fad1ea9801d8.zip
 	cd ../vtextedit
+	wget -c https://github.com/vnotex/vtextedit/archive/b512b5126fe0898a29280204f2959e2dbeb67660.zip
+	mkdir temp_dir
+	unzip b512b5126fe0898a29280204f2959e2dbeb67660.zip -d temp_dir
+	mv temp_dir/vtextedit-b512b5126fe0898a29280204f2959e2dbeb67660/* .
+	rm -fr temp_dir
+	rm b512b5126fe0898a29280204f2959e2dbeb67660.zip
+	cd src/libs/hunspell
+	wget -c https://github.com/vnotex/hunspell/archive/efb0389dbd3cb4c9634e1df73bacb5a290dd9311.zip
+	mkdir temp_dir
+	unzip efb0389dbd3cb4c9634e1df73bacb5a290dd9311.zip -d temp_dir
+	mv temp_dir/hunspell-efb0389dbd3cb4c9634e1df73bacb5a290dd9311/* .
+	rm -fr temp_dir
+	rm efb0389dbd3cb4c9634e1df73bacb5a290dd9311.zip
+	cd ../sonnet
+	wget -c https://github.com/vnotex/sonnet/archive/57e5adb5dd375c7fd1acfabfd1d87b5ba5547b0d.zip
+	mkdir temp_dir
+	unzip 57e5adb5dd375c7fd1acfabfd1d87b5ba5547b0d.zip -d temp_dir
+	mv temp_dir/sonnet-57e5adb5dd375c7fd1acfabfd1d87b5ba5547b0d/* .
+	rm -fr temp_dir
+	rm 57e5adb5dd375c7fd1acfabfd1d87b5ba5547b0d.zip
+	cd ../syntax-highlighting
+	wget -c https://github.com/vnotex/syntax-highlighting/archive/04289967286edc44e29f0bde4d1e1cb7b94c3434.zip
+	mkdir temp_dir
+	unzip 04289967286edc44e29f0bde4d1e1cb7b94c3434.zip -d temp_dir
+	mv temp_dir/syntax-highlighting-04289967286edc44e29f0bde4d1e1cb7b94c3434/* .
+	rm -fr temp_dir
+	rm 04289967286edc44e29f0bde4d1e1cb7b94c3434.zip
+	cd ../../../../../
+```
 
+y ahora si compilar:
+
+```
+mkdir build && cd build
+qmake ../vnote.pro
+make
 
 ```
 
+Luego si se desea instalar:
 
-y 
+```
+sudo make install
+```
 
-mkdir build && cd build
-cmake ..
-make
 
 
 wachin@netinst:~/Dev/vnote-wachi/vnote-3.15.1
