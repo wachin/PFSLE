@@ -96,6 +96,7 @@ de la siguiente manera:
 
 y ahora si compilar:
 
+
 ```
 mkdir build && cd build
 qmake ../vnote.pro
@@ -110,56 +111,103 @@ sudo make install
 ```
 
 
+# Creacion del deb
 
-wachin@netinst:~/Dev/vnote-wachi/vnote-3.15.1
-$ dpkg-buildpackage -uc -b
-dpkg-buildpackage: información: paquete fuente vnote
-dpkg-buildpackage: información: versión de las fuentes 3.15.1-1
-dpkg-buildpackage: información: distribución de las fuentes UNRELEASED
-dpkg-buildpackage: información: fuentes modificadas por Washington Indacochea Delgado <wachin.id@gmail.com>
-dpkg-buildpackage: información: arquitectura del sistema i386
- dpkg-source --before-build .
- debian/rules clean
-dh clean
-   dh_auto_clean
-   dh_clean
-        rm -f debian/debhelper-build-stamp
-        rm -rf debian/.debhelper/
-        rm -f -- debian/vnote.substvars debian/files
-        rm -fr -- debian/vnote/ debian/tmp/
-        find .  \( \( \
-                \( -path .\*/.git -o -path .\*/.svn -o -path .\*/.bzr -o -path .\*/.hg -o -path .\*/CVS -o -path .\*/.pc -o -path .\*/_darcs \) -prune -o -type f -a \
-                \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
-                 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
-                 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
-                 -o -name TAGS -o \( -path '*/.deps/*' -a -name '*.P' \) \
-                \) -exec rm -f {} + \) -o \
-                \( -type d -a -name autom4te.cache -prune -exec rm -rf {} + \) \)
- debian/rules binary
-dh binary
-   dh_update_autotools_config
-   dh_autoreconf
-   debian/rules override_dh_auto_configure
-make[1]: se entra en el directorio '/home/wachin/Dev/vnote-wachi/vnote-3.15.1'
-qmake PREFIX=/usr
-Info: creating stash file /home/wachin/Dev/vnote-wachi/vnote-3.15.1/.qmake.stash
-make[1]: se sale del directorio '/home/wachin/Dev/vnote-wachi/vnote-3.15.1'
-   debian/rules override_dh_auto_build
-make[1]: se entra en el directorio '/home/wachin/Dev/vnote-wachi/vnote-3.15.1'
-dh_auto_build -- qmake && make
-        make -j2 qmake
-make[2]: se entra en el directorio '/home/wachin/Dev/vnote-wachi/vnote-3.15.1'
-make[2]: se sale del directorio '/home/wachin/Dev/vnote-wachi/vnote-3.15.1'
-make[2]: se entra en el directorio '/home/wachin/Dev/vnote-wachi/vnote-3.15.1'
-cd libs/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-wachi/vnote-3.15.1/libs/libs.pro PREFIX=/usr ) && make -f Makefile 
-make[3]: se entra en el directorio '/home/wachin/Dev/vnote-wachi/vnote-3.15.1/libs'
-cd vtextedit/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-wachi/vnote-3.15.1/libs/vtextedit/vtextedit.pro PREFIX=/usr ) && make -f Makefile 
-make[4]: se entra en el directorio '/home/wachin/Dev/vnote-wachi/vnote-3.15.1/libs/vtextedit'
-cd src/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-wachi/vnote-3.15.1/libs/vtextedit/src/src.pro PREFIX=/usr ) && make -f Makefile 
-make[5]: se entra en el directorio '/home/wachin/Dev/vnote-wachi/vnote-3.15.1/libs/vtextedit/src'
-cd libs/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-wachi/vnote-3.15.1/libs/vtextedit/src/libs/libs.pro PREFIX=/usr ) && make -f Makefile 
-make[6]: se entra en el directorio '/home/wachin/Dev/vnote-wachi/vnote-3.15.1/libs/vtextedit/src/libs'
-cd syntax-highlighting/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/wachin/Dev/vnote-wachi/vnote-3.15.1/libs/vtextedit/src/libs/syntax-highlighting/syntax-highlighting.pro PREFIX=/usr ) && make -f Makefile 
-make[7]: se entra en el directorio '/home/wachin/Dev/vnote-wachi/vnote-3.15.1/libs/vtextedit/src/libs/syntax-highlighting'
+El archivo rules:
 
+file:///home/wachin/Dev/vnote-wachi/vnote-3.15.1/debian/rules
+
+debe contener:
+
+```
+#!/usr/bin/make -f
+
+# Habilita verbose para ver los comandos que modifican archivos en el sistema de compilación
+export DH_VERBOSE = 1
+
+# Configura QMake
+override_dh_auto_configure:
+	qmake PREFIX=/usr
+
+# Compila el proyecto
+override_dh_auto_build:
+	dh_auto_build -- qmake && make
+
+# Realiza las pruebas usando target_wrapper.sh para definir el LD_LIBRARY_PATH
+override_dh_auto_test:
+	dh_auto_test
+
+# Instala el ejecutable y los archivos necesarios
+override_dh_auto_install:
+	# Instalamos el binario en /usr/bin
+	install -d $(DESTDIR)/usr/bin
+	install -m 755 build/vnote $(DESTDIR)/usr/bin/vnote
+
+	# Copiamos los archivos necesarios a /usr/share/vnote/
+	install -d $(DESTDIR)/usr/share/vnote
+	cp -r pics $(DESTDIR)/usr/share/vnote/
+	cp -r package $(DESTDIR)/usr/share/vnote/
+
+%:
+	dh $@
+
+```
+
+
+file:///home/wachin/Dev/vnote-wachi/vnote-3.15.1/build/tests/test_utils/target_wrapper.sh
+
+
+To adjust the `target_wrapper.sh` script so that it uses your custom paths during testing (without hardcoding system-specific paths), you'll want to modify the `LD_LIBRARY_PATH` to point to the location where `libVTextEdit.so` is located during the build process. Based on the paths you've shared earlier, it seems that the library is located under the build directory.
+
+You can modify the script like this:
+
+```sh
+#!/bin/sh
+
+# Add your build directory to LD_LIBRARY_PATH for the tests
+LD_LIBRARY_PATH=$(pwd)/../../libs/vtextedit/src/editor${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH
+
+# Use the default QT_PLUGIN_PATH unless explicitly set
+QT_PLUGIN_PATH=/usr/lib/i386-linux-gnu/qt5/plugins${QT_PLUGIN_PATH:+:$QT_PLUGIN_PATH}
+export QT_PLUGIN_PATH
+
+# Execute the test
+exec "$@"
+```
+
+### Explanation:
+1. `LD_LIBRARY_PATH=$(pwd)/../../libs/vtextedit/src/editor` dynamically points to the directory where `libVTextEdit.so` resides. `$(pwd)` ensures the path is relative to the current directory when the tests are executed.
+2. The rest of the script remains unchanged. It exports the appropriate paths and executes the command.
+
+This modification allows the script to use the correct path for `libVTextEdit.so` during the test phase, without hardcoding a system-specific path. This will help ensure that the tests can be run successfully in different environments.
+
+
+
+Para verificar que esté correctamente apuntando:
+
+pwd /../../libs/vtextedit/src/editor
+
+esto en "/vnote-3.15.1/build/tests/test_utils":
+
+```
+wachin@netinst:~/Dev/vnote-wachi/vnote-3.15.1/build/tests/test_utils
+$ pwd /../../libs/vtextedit/src/editor
+/home/wachin/Dev/vnote-wachi/vnote-3.15.1/build/tests/test_utils
+```
+eso significa que está correcto
+
+
+y allí mismo inmediatamente para crear el deb:
+
+```
+cd ..
+```
+y allí si:
+```
+dpkg-buildpackage -uc -b
+```
+
+Creando paquete deb del editor de Markdown "VNote" en MX Linux 21 al estilo Alien (este método podría servir para crear el deb desde cualquier programa Qt si no tiene el archivo rules ni install_manifest.txt )
+https://facilitarelsoftwarelibre.blogspot.com/2022/11/creando-paquete-deb-de-vnote-en-mx-linux-21.html
 
