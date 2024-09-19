@@ -153,7 +153,10 @@ override_dh_auto_install:
 
 ```
 
+ruta correcta:
+file:///home/wachin/Dev/vnote-wachi/vnote-3.15.1/tests/test_utils/target_wrapper.sh
 
+la siguietne ruta no es correcta:
 file:///home/wachin/Dev/vnote-wachi/vnote-3.15.1/build/tests/test_utils/target_wrapper.sh
 
 
@@ -208,6 +211,80 @@ y allí si:
 dpkg-buildpackage -uc -b
 ```
 
+### make clean
+Es necesario para cada prueba y error siempre hacer:
+
+```
+make clean
+```
+
+para que se limpien los archivos
+
+# Reducir tiempo test rules
+Entiendo tu preocupación sobre el tiempo que puede tomar el proceso completo. Efectivamente, hay formas de hacer pruebas preliminares para verificar si la configuración básica para crear el paquete deb es correcta, sin tener que compilar todo el proyecto. Aquí te propongo algunos pasos para hacer un test rápido:
+
+1. Primero, asegúrate de que tienes la estructura básica del paquete Debian:
+
+   ```
+   dh_make --createorig -p vnote_3.15.1
+   ```
+
+2. Edita el archivo `debian/rules` como te mencioné antes:
+
+   ```makefile
+   override_dh_auto_configure:
+       qmake
+
+   override_dh_auto_build:
+       make
+
+   override_dh_auto_install:
+       make INSTALL_ROOT=$(CURDIR)/debian/vnote install
+   ```
+
+3. Crea un archivo `debian/vnote.install` si no existe, y agrega las rutas de los archivos que se instalarán. Por ejemplo:
+
+   ```
+   usr/bin/vnote
+   usr/share/applications/vnote.desktop
+   usr/share/icons/hicolor/*/apps/vnote.png
+   ```
+
+4. Ejecuta una construcción en seco (dry-run) del paquete:
+
+   ```
+   dpkg-buildpackage -us -uc -nc -d
+   ```
+
+   Esto simulará la construcción del paquete sin realmente compilar el código. El flag `-nc` evita limpiar los archivos de construcción existentes, y `-d` ignora las dependencias de construcción.
+
+5. Verifica la salida en busca de errores obvios en la configuración.
+
+6. Si quieres probar solo el empaquetado sin la compilación, puedes usar:
+
+   ```
+   fakeroot debian/rules binary
+   ```
+
+   Esto intentará crear el paquete deb sin compilar el código. Puede fallar en algunos pasos, pero te dará una idea de si la configuración básica es correcta.
+
+7. Para una verificación más completa pero aún rápida, puedes intentar construir solo una parte pequeña del proyecto. Modifica temporalmente el `Makefile` en el directorio raíz para que solo compile un subconjunto pequeño de archivos, y luego ejecuta:
+
+   ```
+   dpkg-buildpackage -us -uc -b
+   ```
+
+Estos pasos te darán una indicación rápida de si la configuración básica para crear el paquete deb es correcta, sin tener que esperar a que se compile todo el proyecto. Si estos pasos funcionan sin errores graves, es una buena señal de que la configuración completa probablemente funcionará.
+
+Recuerda restaurar cualquier cambio temporal que hayas hecho en los archivos de construcción antes de intentar la construcción completa del paquete.
+
+
+
 Creando paquete deb del editor de Markdown "VNote" en MX Linux 21 al estilo Alien (este método podría servir para crear el deb desde cualquier programa Qt si no tiene el archivo rules ni install_manifest.txt )
 https://facilitarelsoftwarelibre.blogspot.com/2022/11/creando-paquete-deb-de-vnote-en-mx-linux-21.html
+
+make clean
+make
+make check
+
 
