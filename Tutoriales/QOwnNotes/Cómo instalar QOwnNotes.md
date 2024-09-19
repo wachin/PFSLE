@@ -33,18 +33,18 @@ QOwnNotes es una aplicación de código abierto para tomar notas en archivos de 
 9. **Comunidad y Soporte**:
    - La aplicación tiene una comunidad activa en Telegram donde los usuarios pueden discutir y compartir conocimientos.
 
-10. **Instalación**
-Ver en la pagina web del desarrollador:
+10. **Instalación**  
+Ver en la pagina web del desarrollador:  
 
-https://www.qownnotes.org/installation/
+[https://www.qownnotes.org/installation/](https://www.qownnotes.org/installation/)
 
-Ejemplo para:
+Ejemplo para:  
 
 Install on Ubuntu Linux, elementary OS and Linux Mint
-https://www.qownnotes.org/installation/ubuntu.html
+[https://www.qownnotes.org/installation/ubuntu.html](https://www.qownnotes.org/installation/ubuntu.html)
 
 Debian Linux
-https://www.qownnotes.org/installation/debian.html
+[https://www.qownnotes.org/installation/debian.html](https://www.qownnotes.org/installation/debian.html)
 
 y ver allí para Windows, macOS, y otros
 
