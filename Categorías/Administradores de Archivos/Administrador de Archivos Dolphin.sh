@@ -1,7 +1,5 @@
-#! /bin/bash
+#!/bin/bash
 
 cd ..
 cd ..
-dolphin Tutoriales/Dolphin
-
-
+dolphin --new-window Tutoriales/Dolphin
