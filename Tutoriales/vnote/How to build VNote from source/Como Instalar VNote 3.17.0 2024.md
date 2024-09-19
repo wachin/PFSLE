@@ -55,7 +55,7 @@ Ahora necesitamos copiar los archivos de los submódulos:
 [https://github.com/vnotex/syntax-highlighting/archive/04289967286edc44e29f0bde4d1e1cb7b94c3434.zip](https://github.com/vnotex/syntax-highlighting/archive/04289967286edc44e29f0bde4d1e1cb7b94c3434.zip)
 
 
-de la siguiente manera:
+allí donde estaba en la terminal ponga de una sola vez todos los siguientes comandos:
 
 ```
 	cd libs/QHotkey
