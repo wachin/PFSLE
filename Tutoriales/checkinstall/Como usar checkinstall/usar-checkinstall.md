@@ -224,6 +224,21 @@ Estas son las bibliotecas y herramientas relacionadas con **Qt** que el programa
    libqt5x11extras5, libqt5svg5, libqt5location5, libqt5webengine5, qtbase5-dev, qtdeclarative5-dev, qttools5-dev
    ```
 
+pero viendo mi compilación:
+
+https://github.com/wachin/vnote-fork/releases/tag/v3.15.1
+
+https://github.com/wachin/vnote-fork/releases/download/v3.15.1/vnote_3.15.1_i386.deb
+
+el archivo control dice:
+
+libc6 (>= 2.3), libgcc-s1 (>= 3.0), libqt5core5a (>= 5.15.1), libqt5gui5 (>= 5.12.2) | libqt5gui5-gles (>= 5.12.2), libqt5network5 (>= 5.8.0), libqt5printsupport5 (>= 5.0.2), libqt5sql5 (>= 5.0.2), libqt5svg5 (>= 5.6.0~beta), libqt5webchannel5 (>= 5.6.1), libqt5webenginewidgets5 (>= 5.14.1), libqt5widgets5 (>= 5.14.1), libqt5x11extras5 (>= 5.6.0), libstdc++6 (>= 5.2), libx11-6
+
+entonces lo arreglo:
+
+libc6, libgcc-s1, libqt5core5a, libqt5gui5, libqt5gui5-gles, libqt5network5, libqt5printsupport5, libqt5sql5, libqt5svg5, libqt5webchannel5, libqt5webenginewidgets5, libqt5widgets5, libqt5x11extras5, libstdc++6, libx11-6
+
+
 3. Después de esto, `checkinstall` incluirá esas dependencias en el archivo de control del paquete `.deb`, y cuando alguien intente instalar tu paquete, `apt` o `dpkg` se encargará de instalar automáticamente esas dependencias si no están ya presentes en el sistema.
 
 ### Ejemplo del proceso con `checkinstall`:

@@ -6,7 +6,8 @@ La siguiente es una forma de unir varios archivos `.odt` o `.docx` o `.doc` en u
 
 **1.)** Clic en: **Archivo > Nuevo > Patrón de documento**. 
 
-![](vx_images/20240820-084825-Archivo>Nuevo>Patrón-de-documento.png)
+![20240820-084825-Archivo>Nuevo>Patrón-de-documento](vx_images/150603589846713-nuevo-patron-de-documento.png)
+
 
 Allí aparece una ventana llamada **Navegador** y por defecto  **Texto** y a éste seleccionarlo con clic izquierdo y luego darle clic derecho y seleccionar **Insertar > Archivo** y navegar hasta el lugar donde están los documentos y elegir todos los que quiera añadir puede ser con "Ctlr + A" para seleccionar todos o "Ctrl + clic encima de los que desea añadir". Luego, dar clic en **Insertar** y se añadirán al **Patrón de documento**.
 

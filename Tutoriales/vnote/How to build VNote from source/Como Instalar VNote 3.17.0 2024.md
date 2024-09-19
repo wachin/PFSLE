@@ -19,40 +19,40 @@ sudo apt-get install cmake build-essential libqt5x11extras5-dev qt5-qmake \
 Ahora necesitamos copiar los archivos de los submódulos:
 
 # vnote-fork /libs
-https://github.com/wachin/vnote-fork/tree/master/libs
+[https://github.com/wachin/vnote-fork/tree/master/libs](https://github.com/wachin/vnote-fork/tree/master/libs)
 
 ## QHotkey @ 18ac011
-https://github.com/vnotex/QHotkey/tree/18ac011008d3ae55abc19233ba94fad1ea9801d8
+[https://github.com/vnotex/QHotkey/tree/18ac011008d3ae55abc19233ba94fad1ea9801d8](https://github.com/vnotex/QHotkey/tree/18ac011008d3ae55abc19233ba94fad1ea9801d8)
 
 <>Code > Download ZIP
-https://github.com/vnotex/QHotkey/archive/18ac011008d3ae55abc19233ba94fad1ea9801d8.zip
+[https://github.com/vnotex/QHotkey/archive/18ac011008d3ae55abc19233ba94fad1ea9801d8.zip](https://github.com/vnotex/QHotkey/archive/18ac011008d3ae55abc19233ba94fad1ea9801d8.zip)
 
 ## vtextedit @ b512b51
-https://github.com/vnotex/vtextedit/tree/b512b5126fe0898a29280204f2959e2dbeb67660
+[https://github.com/vnotex/vtextedit/tree/b512b5126fe0898a29280204f2959e2dbeb67660](https://github.com/vnotex/vtextedit/tree/b512b5126fe0898a29280204f2959e2dbeb67660)
 
 <>Code > Download ZIP
-https://github.com/vnotex/vtextedit/archive/b512b5126fe0898a29280204f2959e2dbeb67660.zip
+[https://github.com/vnotex/vtextedit/archive/b512b5126fe0898a29280204f2959e2dbeb67660.zip](https://github.com/vnotex/vtextedit/archive/b512b5126fe0898a29280204f2959e2dbeb67660.zip)
 
 ### vtextedit src/libs
-https://github.com/vnotex/vtextedit/tree/b512b5126fe0898a29280204f2959e2dbeb67660/src/libs
+[https://github.com/vnotex/vtextedit/tree/b512b5126fe0898a29280204f2959e2dbeb67660/src/libs](https://github.com/vnotex/vtextedit/tree/b512b5126fe0898a29280204f2959e2dbeb67660/src/libs)
 
 #### hunspell @ efb0389
-https://github.com/vnotex/hunspell/tree/efb0389dbd3cb4c9634e1df73bacb5a290dd9311
+[https://github.com/vnotex/hunspell/tree/efb0389dbd3cb4c9634e1df73bacb5a290dd9311](https://github.com/vnotex/hunspell/tree/efb0389dbd3cb4c9634e1df73bacb5a290dd9311)
 
 <>Code > Download ZIP
-https://github.com/vnotex/hunspell/archive/efb0389dbd3cb4c9634e1df73bacb5a290dd9311.zip
+[https://github.com/vnotex/hunspell/archive/efb0389dbd3cb4c9634e1df73bacb5a290dd9311.zip](https://github.com/vnotex/hunspell/archive/efb0389dbd3cb4c9634e1df73bacb5a290dd9311.zip)
 
 #### sonnet @ 57e5adb
-https://github.com/vnotex/sonnet/tree/57e5adb5dd375c7fd1acfabfd1d87b5ba5547b0d
+[https://github.com/vnotex/sonnet/tree/57e5adb5dd375c7fd1acfabfd1d87b5ba5547b0d](https://github.com/vnotex/sonnet/tree/57e5adb5dd375c7fd1acfabfd1d87b5ba5547b0d)
 
 <>Code > Download ZIP
-https://github.com/vnotex/sonnet/archive/57e5adb5dd375c7fd1acfabfd1d87b5ba5547b0d.zip
+[https://github.com/vnotex/sonnet/archive/57e5adb5dd375c7fd1acfabfd1d87b5ba5547b0d.zip](https://github.com/vnotex/sonnet/archive/57e5adb5dd375c7fd1acfabfd1d87b5ba5547b0d.zip)
 
 #### syntax-highlighting @ 0428996
-https://github.com/vnotex/syntax-highlighting/tree/04289967286edc44e29f0bde4d1e1cb7b94c3434
+[https://github.com/vnotex/syntax-highlighting/tree/04289967286edc44e29f0bde4d1e1cb7b94c3434](https://github.com/vnotex/syntax-highlighting/tree/04289967286edc44e29f0bde4d1e1cb7b94c3434)
 
 <>Code > Download ZIP
-https://github.com/vnotex/syntax-highlighting/archive/04289967286edc44e29f0bde4d1e1cb7b94c3434.zip
+[https://github.com/vnotex/syntax-highlighting/archive/04289967286edc44e29f0bde4d1e1cb7b94c3434.zip](https://github.com/vnotex/syntax-highlighting/archive/04289967286edc44e29f0bde4d1e1cb7b94c3434.zip)
 
 
 de la siguiente manera:
