@@ -36,11 +36,13 @@ kate ~/.config/kate/lspclient/settings.json
 dejo abierto ese archivo y de la siguiente dirección copiar todo el contenido (Ctrl + A):
 
 [https://github.com/KDE/kate/blob/master/addons/lspclient/settings.json
-](https://github.com/KDE/kate/blob/master/addons/lspclient/settings.json%0A)
+](https://github.com/KDE/kate/blob/master/addons/lspclient/settings.json)
 
-y pegar el contenido en el archivo que dejamos abierto y guardar y cerrar esa pestaña en Kate
+**Nota:** Ese archivo contiene las url de las paginas web con las instrucciones para instalar esos lenguajes de programación.
 
-Cuando usted reinicie el sistema operativo y abra Kate y abra un script en python se verá el esquema del script en la izquierda de Kate, solo que se demora un poco en activarse, pero solo es de esperar
+una vez que he copiado el contenido debo pegar el contenido en el archivo que dejamos abierto y guardar y cerrar esa pestaña en Kate
+
+Cuando usted cierre Kate y lo abra otra vez a Kate y abra un script en python se verá el esquema del script en la izquierda de Kate, solo que se demora un poco en activarse, pero solo es de esperar. Además si abra ejemplo un archivo .m markdown se verá a la izquierda abajo un botón en Kate llamado "Salida" que al darle clic está la url donde debemos ir para instalar el lenguaje de programación
 
 
   
