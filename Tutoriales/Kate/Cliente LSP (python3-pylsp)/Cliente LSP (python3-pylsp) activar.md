@@ -45,6 +45,19 @@ una vez que he copiado el contenido debo pegar el contenido en el archivo que de
 Cuando usted cierre Kate y lo abra otra vez a Kate y abra un script en python se verá el esquema del script en la izquierda de Kate, solo que se demora un poco en activarse, pero solo es de esperar. Además si abra ejemplo un archivo .m markdown se verá a la izquierda abajo un botón en Kate llamado "Salida" que al darle clic está la url donde debemos ir para instalar el lenguaje de programación
 
 
+## Marksman
+
+Al copiar el enlace que me da al abrir un archivo markdown (a la izquierda abajo en el botón en Kate llamado "Salida"):
+
+[https://github.com/artempyanykh/marksman/blob/main/docs/install.md](https://github.com/artempyanykh/marksman/blob/main/docs/install.md)
+
+y entrar en un navegador web, veo las instrucciones, pero allí falta para Debian 12 de 32 bit así que no lo instalo.
+
+
+
+
+
+
   
 **CONSULTAS**
 
