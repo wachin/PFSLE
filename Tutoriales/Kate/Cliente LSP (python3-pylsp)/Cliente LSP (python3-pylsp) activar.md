@@ -3,18 +3,27 @@
 
 En el editor de texto Kate es posible habilitar funciones como el formato automático o el autocompletado de código al momento de escribir, así como ejemplo en VS Code
 
+La siguiente imagen es del Editor de Texto Kate con el autocompletado habilitado para el lenguaje de porgramación python:
+
+ ![20241029-125614 Autocompletado en Kate para lenguaje python](vx_images/145565712289300.webp)
+
+
+
 ## Dependencias
 Necesitamos instalar el paquete:
 
 ```
-sudo apt install python3-pylsp
+python3-pylsp
 ```
 
-**Nota:** Este paquete instala: python3-docstring-to-markdown y ese paquete en synaptic tiene el enlace: https://github.com/python-lsp/docstring-to-markdown con las instrucciones de instalación.
+sugiero instalarlo desde Synaptic
+
+Este paquete instala automáticamente: python3-docstring-to-markdown y ese paquete en synaptic tiene el enlace: https://github.com/python-lsp/docstring-to-markdown con las instrucciones de instalación, pero sólo es para 64 bit
+
+Además este paquete sugiere otros paquetes:
 
 
-Además este paquete sugiere otros paquetes
-
+![](vx_images/466971604635915.webp)
 ## Activar el Cliente LSP en Kate
 
 Para activar el plugin en Kate ir y marcar en:
@@ -45,7 +54,7 @@ una vez que he copiado el contenido debo pegar el contenido en el archivo que de
 Cuando usted cierre Kate y lo abra otra vez a Kate y abra un script en python se verá el esquema del script en la izquierda de Kate, solo que se demora un poco en activarse, pero solo es de esperar. Además si abra ejemplo un archivo .m markdown se verá a la izquierda abajo un botón en Kate llamado "Salida" que al darle clic está la url donde debemos ir para instalar el lenguaje de programación
 
 
-## Marksman
+## Marksman (64 bit)
 
 Al copiar el enlace que me da al abrir un archivo markdown (a la izquierda abajo en el botón en Kate llamado "Salida"):
 
