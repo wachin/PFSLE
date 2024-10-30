@@ -7,6 +7,7 @@ Obsidian puede ser una poderosa base de conocimientos pues uno puede guardar en 
 [Descargar Obsidian para Android](https://play.google.com/store/apps/details?id=md.obsidian)
 
 ## Cómo usar Obsidian sincronizado con GitHub
+Antes de seguir les explico el porqué de este tutorial, sucede que yo uso Linux Debian de 32 bit y Obsidian para Linux no tiene una versión 32 bit sino sólo de 64 entonces por eso se me ocurrió ver si Obsidian puede usar un repositorio de GitHub pues si fuera así en Android usando Obsidian con un repositorio git (instalado en Termux) podría tener los archivos sincronizados en la nube, y luego en Linux de 32 bit con git podría clonar ese repositorio y abrirlo con algún editor de Markdown como VNote, Ghostwriter, etc, etc que funcionan en Linux de 32 bit hacer alguna modificación y enviar los cambios a la nube, y luego viceversa sincronizando entre ambos Android y Linux el repositorio para tener sincronizados mis archivos en la nube y en local, y si se puede
 
 ### Paso 1: Sincronización con GitHub en Android
 
