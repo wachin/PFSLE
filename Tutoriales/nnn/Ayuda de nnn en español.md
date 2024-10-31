@@ -8,8 +8,6 @@ en el teclado hay que poner:
 
 ?
 
-y aparece la ayuda que es la siguiente:
-
 pero antes explico que en este tutorial se abrevia CTRL con ^, así ejemplo CTRL + ] es igual a:
 
 ^]
@@ -63,10 +61,5 @@ ahora si vamos con la ayuda:
          t ^T  Sort toggles            s  Manage session
             T  Set time type           0  Lock
 
-VOLUME: 1.026G of 1.375G free
 
-SELECTION FILE: /home/wachin/.config/nnn/.selection
-
-v3.5
-BSD 2-Clause
 https://github.com/jarun/nnn
