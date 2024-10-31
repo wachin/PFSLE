@@ -11,7 +11,17 @@ en el teclado hay que poner:
 
 y aparece la ayuda que es la siguiente:
 
-En la siguiente ayuda el signo ^ significa Ctrl y más carácter al lado
+En este tutorial se abrevia CTRL con ^, así ejemplo CTRL + ] es igual a:
+
+^]
+
+y en nano aparece así:
+
+^O Guardar
+
+así, para guardar aplaste:
+
+CTRL + O
 
  NAVEGACIÓN
          Up  k  Arriba            
@@ -55,7 +65,7 @@ En la siguiente ayuda el signo ^ significa Ctrl y más carácter al lado
          x ^X  Delete                  E  Edit sel
  MISC
         Alt ;  Select plugin           =  Launch app
-         ! ^]  Shell                   ]  Cmd prompt
+         ! ^]  Shell                   ]  Cmd prompt (cambiar a modo terminal)
             c  Connect remote          u  Unmount remote/archive
          t ^T  Sort toggles            s  Manage session
             T  Set time type           0  Lock
