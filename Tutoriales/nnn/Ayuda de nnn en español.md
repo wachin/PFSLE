@@ -1,4 +1,3 @@
-cj
 Ayuda de nnn file manager 
 
 Para acceder a la ayuda de nnn, una vez ejecutado este en una terminal
@@ -11,17 +10,11 @@ en el teclado hay que poner:
 
 y aparece la ayuda que es la siguiente:
 
-En este tutorial se abrevia CTRL con ^, así ejemplo CTRL + ] es igual a:
+pero antes explico que en este tutorial se abrevia CTRL con ^, así ejemplo CTRL + ] es igual a:
 
 ^]
 
-y en nano aparece así:
-
-^O Guardar
-
-así, para guardar aplaste:
-
-CTRL + O
+ahora si vamos con la ayuda:
 
  NAVEGACIÓN
          Up  k  Arriba            
