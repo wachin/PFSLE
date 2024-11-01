@@ -6,6 +6,68 @@ Obsidian puede ser una poderosa base de conocimientos pues uno puede guardar en 
 
 [Descargar Obsidian para Android](https://play.google.com/store/apps/details?id=md.obsidian)
 
+[Descargar Obsidian para Windows, Linux, MAC, iOS](https://obsidian.md/download)
+
+
+# ¿Qué es Markdown?
+
+Markdown es una forma simple de agregar formato (como negritas, listas, títulos, etc.) a un texto sin tener que usar opciones complicadas o menús de edición.
+
+Markdown es un lenguaje de marcado, lo que significa que usa símbolos específicos para añadir formato a un texto. La idea detrás de Markdown es que el texto sea fácil de leer y de escribir, sin necesidad de un editor avanzado, lo cual es ideal para tomar notas rápidas y bien organizadas.
+
+Cuando vas creado una nota en Obsidian, en la esquina derecha arriba (al lado de los tres puntitos) se puede intercambiar entre dos modos, veras un icono de un lápiz o un libro abierto, y dándole clic intercambiarás entre uno u otro de esos modos, y cuando estés en el modo de edición, arriba del teclado del celular (aproximadamente en medio de la pantalla) aparecerá una "Barra de herramientas móvil" que tiene unos iconos los mismos que servirán para usar algunos formatos básicos como los siguientes que también se pueden escribir manualmente
+
+Por ejemplo:
+
+1. En lugar de buscar un botón para poner el texto en negrita, en Markdown simplemente escribes: 
+~~~
+**tu texto en negrita**
+~~~
+muestra **tu texto en negrita** y al verlo Obsidian lo mostrará en negrita. Puedes usar también para esto el icono "B".
+
+2. Para escribir en cursiva, solo necesitas escribir: 
+~~~
+*texto en cursiva*
+~~~
+y muestra *Texto en cursiva*. Puedes usar también para esto el icono "I"
+
+Ejemplos de Markdown básico
+
+3. Encabezados: Para añadir un título o encabezado, usa el símbolo #. La cantidad de # indica el nivel del encabezado.
+~~~
+# Título principal
+## Subtítulo
+### Sub-subtítulo
+~~~
+ también para esto puedes usar el icono "H"
+
+4. Listas:
+
+Para listas con viñetas, usa: - seguido del contenido:
+
+~~~
+- Elemento 1
+- Elemento 2
+~~~
+Para listas numeradas, usa números seguidos de un punto:
+~~~
+1. Primer elemento
+2. Segundo elemento
+~~~
+
+5. Enlaces a otras notas: En Obsidian, escribes:
+~~~
+[[Nombre de la otra nota]]
+~~~
+para crear un enlace directo a otra nota en tu bóveda. También puedes usar para esto el icono []
+
+6. Imágenes: Usa 
+~~~
+![[nombre-de-la-imagen.jpg]] 
+~~~
+para agregar imágenes dentro de la nota. También puedes usar para esto el icono: clip
+
+
 ## Cómo usar Obsidian sincronizado con GitHub
 Antes de seguir les explico el porqué de este tutorial, sucede que yo uso Linux Debian de 32 bit y Obsidian para Linux no tiene una versión 32 bit sino sólo de 64 entonces por eso se me ocurrió ver si Obsidian puede usar un repositorio de GitHub pues si fuera así en Android usando Obsidian con un repositorio git (instalado en Termux) podría yo tener los archivos sincronizados en la nube, y luego en Linux de 32 bit con git podría clonar ese repositorio y abrir los archivos .md con algún editor de Markdown como VNote, Ghostwriter, etc, etc que funcionan en Linux de 32 bit, y luego hacer alguna modificación y enviar los cambios a la nube, y luego viceversa sincronizando entre ambos Android y Linuxen  el repositorio para tener sincronizados mis archivos en la nube y en local, y si se puede, es posible
 
@@ -25,7 +87,7 @@ Para configurar Obsidian en Android y sincronizarlo con un repositorio de GitHub
 
 3. **Configurar Obsidian con el repositorio clonado**:
    - Abre Obsidian en tu dispositivo Android.
-   - Durante la configuración inicial o desde la opción de **abrir una carpeta de Obsidian**, selecciona la carpeta local donde se encuentra el repositorio que has clonado.
+   - Durante la configuración inicial o desde la opción de **abrir una carpeta de Obsidian**, selecciona la carpeta local donde se encuentra el repositorio que has clonado el cual será usado como lo que Obsidian llama "Vault" (Bóveda).
    - A partir de este momento, cualquier cambio que hagas en Obsidian podrá sincronizarse con GitHub usando `git` en Termux.
 
 ### Paso 2: Configuración de Obsidian en Android
@@ -49,16 +111,21 @@ Para configurar Obsidian en Android y sincronizarlo con un repositorio de GitHub
 
 Para editar tus notas en Linux, tienes varias opciones:
 
-### Paso 1: Instalar Obsidian en Linux
-Puedes instalar la versión de 64 bits de Obsidian directamente desde su sitio web oficial:
-- [Descargar Obsidian para Linux](https://obsidian.md/download)
+### Opción 1: Instalar Obsidian en Linux
+Aunque no es mi objetivo, si tienes un Sistema Operativo Linux de 64 bit puedes instalar la versión de 64 bits de Obsidian directamente desde su sitio web oficial:
+- [Descargar Obsidian](https://obsidian.md/download)
+Y debes registrarte y acceder en uno de sus planes
 
-### Paso 2: Editar tus notas en Linux usando otros editores
-Si prefieres editar tus notas de Obsidian utilizando otros editores de Markdown en Linux, ejemplo si usas un Linux de 32 bit pues allí no se puede instalar Obsidian, puedes clonar tu repositorio de GitHub en tu sistema Linux y utilizar uno de los siguientes programas:
+### Opción 2: Editar tus notas en Linux usando otros editores
+Si prefieres editar tus notas de Obsidian utilizando otros editores de Markdown en Linux, ejemplo si usas un Linux de 32 puedes clonar tu repositorio de GitHub en tu sistema Linux y utilizar uno de los siguientes programas:
 
-- **VNote**: Editor de Markdown con excelente soporte para notas y carpetas.
-- **Ghostwriter**: Editor de Markdown minimalista.
-- **Typora**: Editor de Markdown que renderiza el formato en tiempo real, etc
+- **VNote**: Editor de Markdown con excelente soporte para notas y carpetas [Info aquí](https://facilitarelsoftwarelibre.blogspot.com/search/label/VNote)
+- **Ghostwriter**: Editor de Markdown minimalista.[Info](https://facilitarelsoftwarelibre.blogspot.com/search/label/Ghostwriter)
+- **Typora**: Editor de Markdown que renderiza el formato en tiempo real [Info](https://facilitarelsoftwarelibre.blogspot.com/search/label/Typora)
+- **Retext** [Info](https://github.com/retext-project/retext)
+- Otros Editores [Info](https://facilitarelsoftwarelibre.blogspot.com/search/label/Markdown)
+- **StackEdit** es un editor de texto en línea que te permite crear documentos utilizando un formato simple llamado Markdown. Es como un procesador de textos, pero más fácil de usar y sin tantas distracciones. Con StackEdit puedes crear documentos profesionales: Desde simples notas hasta informes más complejos, exportar a diferentes formatos: Puedes guardar tu trabajo como HTML, PDF, o incluso como un documento de Word. Sincronizar con la nube: Conecta tu cuenta de Google Drive o Dropbox para tener tus documentos siempre a mano. [Info](https://stackedit.io/)
+- **Dillinger** Parecido al anterior, es online, es una plataforma habilitada para la nube, compatible con dispositivos móviles y con almacenamiento fuera de línea. [Info](https://dillinger.io/)
 
 Para clonar tu repositorio en Linux, ejecuta:
 ```bash
@@ -69,7 +136,99 @@ Una vez clonado, abre los archivos Markdown con el editor que prefieras.
 
 ---
 
+# Usar Obsidian para editar archivos Markdown en Android
+
+Aunque no se puede usar directamente Obsidian como un editor de archivos Markdown en Android, al menos no en la versión que he instalado en el 2024, es posible copiar el archivo Markdown que uno tenga en el celular en el Almacenamiento Interno y pegarlo a la carpeta que Obsidian usa (Vault = bóveda) para sus archivos, en este caso es el repositorio git, y allí editarlo con Obsidian (al abrir Obsidian lo verá entre los archivos) y luego copiarlo de allí y sobre-escribirlo en el lugar donde estaba.
+
+
+# Tutorial básico sobre cómo comenzar con Obsidian en Android, ideal para organizar notas, ideas, diarios, y más.
+El siguiente es un pequeño tutorial para usar Obsidian:
+
+## Crear una carpeta dentro de tu Vault (Bóveda)
+Para organizar tus notas, puedes crear carpetas. Esto es útil si quieres separar temas, como clases, ideas o tu diario personal (por ejemplo por fechas).
+
+1. En Obsidian Apps en la esquina superior izquierda da clic en el icono que abre la vista principal de tu Vault (Bóveda)
+2. Abajo pulsa en el icono en forma de carpeta que tiene un + en medio. 
+3. Escribe un nombre para tu carpeta, por ejemplo, "Diario", "Ideas" o "Clases".
+4. Pulsa OK para guardar la carpeta.
+
+### Crear una nota dentro de una carpeta
+
+1. En Obsidian Apps en la esquina superior izquierda da clic en el icono que abre la vista principal de tu Vault (Bóveda) elige la carpeta (en el paso anterior vimos como crear una) donde quieres crear la nota. Pulsala y sueltala y aparecerá un submenú y pulsa en "Nueva nota"
+2. Dale un nombre a la nota, por ejemplo, "Clase de hoy" o "Ideas para el proyecto".
+3. Ahora puedes empezar a escribir directamente en tu nueva nota.
+
+
+## Mover notas entre carpetas
+1. Desde arriba en la barra lateral izquierda, elige la carpeta donde se encuentra la nota que quieres mover.
+2. Mantén presionada la nota que deseas mover.
+3. Aparecerá una opción que ttdice "Mover archivo a..". ttTócala y selecciona la carpeta de destino.
+
+## Insertar imágenes en tus notas
+
+Obsidian permite agregar imágenes en las notas, ya sea fotos o capturas de pantalla.
+
+1. Insertar una imagen desde el dispositivo:
+
+Copia la imagen en la carpeta de tu bóveda usando un explorador de archivos de Android.
+
+Luego, dentro de la nota, puedes usar el icono de clip para buscarla e insertarla o tmanualmente usa el siguiente formato para insertar la: 
+
+~~~~
+![](nombre-de-la-imagen.jpg)
+~~~~
+
+Ejemplo una foto con mi amigo Fulco en Octubre 2024:
+
+![](20241025-en-la-casa-de-Fulco.jpg)
+
+No estamos usando el siguiente formato de Wikilinks:
+
+~~~~
+ ![[nombre-de-la-imagen.jpg]]
+~~~~
+porque lo he configurado para poder usar el formato que entiende Git en Linux y sus editores de markdown
+
+1. Tomar una foto desde la nota:
+
+No es posible hacerlo directamente desde Obsidian, pero puedes usar la cámara del teléfono y guardar la imagen en la carpeta de tu bóveda. Luego, insértala en la nota como en el paso anterior.
+
+3. Sugerencias para organizar tus notas
+
+Usa etiquetas: En cualquier parte de la nota, escribe #Etiqueta pero debes escribir el asterisco seguido del nombre de la etiqueta pues de lo contrario lo tomará como un título. Esto te permite agrupar notas similares, como #Diario, #Ideas, o #Clases. Para buscarlas por este criterio en Obsidian App arriba en la esquina izquierda de clic al botón que abre el contenido del Vault (Bóveda) y de clic en medio de "Explorador de archivos" y se abrirá un submenú y de clic en "Etiquetas" y allí las encontrará
+
+4. Carpetas y subcarpetas: 
+
+Puedes crear subcarpetas dentro de las carpetas principales para organizar mejor la información.
+
+5. Búsqueda: 
+
+Para usar el buscador hágalo desde arriba en la esquina izquierda dando clic en el icono que abre el contenido del Vault (Bóveda) y de clic en medio del "Explorador de archivos" y se abrirá un submenú y de clic en "Search" para buscar y encontrar rápidamente notas o temas específicos.
+
+### Consejos finales
+
+Aprovecha la interconexión: Al enlazar notas, puedes construir una red de ideas interconectadas.
+
+Organiza tus notas según tus intereses: Puedes crear categorías específicas como "Ideas para libros", "Resúmenes de clase", o "Notas diarias".
+
+
 ## Conclusión
+Con esta configuración, puedes tener tus notas de Obsidian sincronizadas entre Android y Linux mediante GitHub. No lo he probado entre Windows o MAC y sé que se pueden instalar allí (buscar en Google), y si a alguien les sirve allí que bueno.
 
-Con esta configuración, puedes tener tus notas de Obsidian sincronizadas entre Android y Linux mediante GitHub. Esto te permite editar en cualquier plataforma y mantener tus cambios siempre actualizados.
+# Quien inventó Markdown
+Markdown fue creado en 2004 por John Gruber, con contribuciones de Aaron Swartz. Gruber, un escritor y desarrollador de software, diseñó Markdown con el objetivo de que los textos sin formato se leyeran de manera similar a como se verían formateados, para que los escritores pudieran enfocarse en el contenido sin preocuparse por la complejidad del formato.
 
+Aaron Swartz, un programador y activista digital muy influyente, contribuyó en la implementación de Markdown, ayudando a escribir el primer convertidor que transformaba texto en Markdown a HTML. Markdown fue concebido como una alternativa sencilla a HTML, que a menudo resulta más complicado para escribir textos simples.
+
+
+# Referencias
+
+1. [Daring Fireball - Markdown](https://daringfireball.net/projects/markdown/)
+2. [The Markdown Story on Wikipedia](https://en.wikipedia.org/wiki/Markdown)
+3. [Aaron Swartz - Biography on the Internet Hall of Fame](https://www.internethalloffame.org/inductees/aaron-swartz)
+4. [Obsidian Help Docs](https://help.obsidian.md/)
+5. [Foro de la comunidad de Obsidian](https://forum.obsidian.md/)
+6. [Canal de YouTube de Obsidian](https://www.youtube.com/c/ObsidianApp)
+7. [Markdown Guide](https://www.markdownguide.org/)
+8. [Turning Obsidian into Your Personal Wiki](https://sidequirk.com/turning-obsidian-into-your-personal-wiki)
+9. [Plugins y temas de Obsidian: En GitHub, puedes explorar](https://github.com/obsidianmd/obsidian-releases)
