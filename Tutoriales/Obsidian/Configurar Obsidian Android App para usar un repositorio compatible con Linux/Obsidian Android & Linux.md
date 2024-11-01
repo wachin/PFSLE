@@ -74,11 +74,13 @@ Una vez clonado, abre los archivos Markdown con el editor que prefieras.
 ---
 
 # Usar Obsidian para editar archivos Markdown en Android
+
 Aunque no se puede usar directamente Obsidian como un editor de archivos Markdown en Android, al menos no en la versión que he instalado en el 2024, es posible copiar el archivo Markdown que uno tenga en el celular en el Almacenamiento Interno y pegarlo a la carpeta que Obsidian usa (Vault = bóveda) para sus archivos, en este caso es el repositorio git, y allí editarlo con Obsidian (al abrir Obsidian lo verá entre los archivos) y luego copiarlo de allí y sobre escribirlo en el lugar donde estaba.
 
 
 # Tutorial básico sobre cómo comenzar con Obsidian en Android, ideal para organizar notas, ideas, diarios, y más.
 El siguiente es un pequeño tutorial para usar Obsidian:
+
 ## Crear una carpeta dentro de tu Vault
 Para organizar tus notas, puedes crear carpetas. Esto es útil si quieres separar temas, como clases, ideas o tu diario personal.
 
@@ -95,13 +97,13 @@ Para organizar tus notas, puedes crear carpetas. Esto es útil si quieres separa
 
 # Escribir y dar formato a tus notas
 
-Obsidian usa Markdown, un lenguaje sencillo de marcado, para dar formato a las notas. Cuando vas creado una nota en la esquina derecha arriba (al lado de los tres puntitos) se puede intercambiar entre dos modos, veras un icono de un lápiz o un libro abierto, y dándole clic intercambiarás entre uno u otro de esos modos, cuando estés en el modo de edición, arriba de tu teclado del celular aparecerán unos iconos los mismos que servirán para usar algunos formatos básicos como los siguientes que también se pueden escribir manualmente:
+Obsidian usa Markdown, un lenguaje sencillo de marcado, para dar formato a las notas. Cuando vas creado una nota en la esquina derecha arriba (al lado de los tres puntitos) se puede intercambiar entre dos modos, veras un icono de un lápiz o un libro abierto, y dándole clic intercambiarás entre uno u otro de esos modos, cuando estés en el modo de edición, arriba del teclado del celular (aproximadamente en medio de la pantalla) aparecerá una "Barra de herramientas móvil" que tiene unos iconos los mismos que servirán para usar algunos formatos básicos como los siguientes que también se pueden escribir manualmente:
 
-Negrita: Escribe **texto en negrita**.
+Negrita: Escribe **texto en negrita**. Es el icono "B"
 
-Cursiva: Usa *texto en cursiva*.
+Cursiva: Usa *texto en cursiva*. Es el icono "I" inclinado 
 
-Encabezados: Escribe # Encabezado 1, ## Encabezado 2, y así sucesivamente.
+Encabezados: Escribe # Encabezado 1, ## Encabezado 2, y así sucesivamente. Es el icono "H"
 
 Listas:
 
@@ -109,12 +111,16 @@ Para listas con viñetas, usa - Elemento.
 
 Para listas numeradas, usa 1. Elemento.
 
-Enlaces a otras notas: Escribe [[Nombre de la otra nota]] para enlazar directamente otra nota de tu (vault) bóveda.
+Enlaces a otras notas: Escribe
+~~~
+[[Nombre de la otra nota]] 
+~~~
+para enlazar directamente otra nota de tu (vault) bóveda. Es el icono "[]"
 
-Y otros más.Tytttt
+Y otros más.
 
-## Mover notas entre *carpetast*
-*t*tt*
+
+## Mover notas entre carpetas
 1. Desde arriba en la barra lateral izquierda, elige la carpeta donde se encuentra la nota que quieres mover.
 2. Mantén presionada la nota que deseas mover.
 3. Aparecerá una opción que ttdice "Mover archivo a..". ttTócala y selecciona la carpeta de destino.
@@ -127,11 +133,11 @@ Obsidian permite agregar imágenes en las notas, ya sea fotos o capturas de pant
 
 Copia la imagen en la carpeta de tu bóveda usando un explorador de archivos de Android.
 
-Luego, dentro de la nota, puedes usar el icono de clip para buscarla e insertarla o tmanualmente usa el siguiente formato para insertar la ttttt: 
+Luego, dentro de la nota, puedes usar el icono de clip para buscarla e insertarla o tmanualmente usa el siguiente formato para insertar la: 
 
 ~~~~
 ![](nombre-de-la-imagen.jpg)
-~~~~tttttt
+~~~~
 
 Ejemplo una foto con un amigo:
 
@@ -168,6 +174,18 @@ Organiza tus notas según tus intereses: Puedes crear categorías específicas c
 
 
 ## Conclusión
+Con esta configuración, puedes tener tus notas de Obsidian sincronizadas entre Android y Linux mediante GitHub. No lo he probado entre Windows o MAC y sé que se pueden instalar allí (buscar en Google), si a alguien les sirve allí que bueno.
 
-vgvvvg
-~~hhh~~hvhvvhhbhv~~~~v~~vhvvvhhvvvvvvhhv~~hhh43
+# Referencias
+
+1. [Obsidian Help Docs](https://help.obsidian.md/)
+
+2. [Foro de la comunidad de Obsidian](https://forum.obsidian.md/)
+
+3. [Canal de YouTube de Obsidian](https://www.youtube.com/c/ObsidianApp)
+
+4. [Markdown Guide](https://www.markdownguide.org/)
+
+5. [Obsidian Hub](https://obsidianhub.wiki/)
+
+6. [Plugins y temas de Obsidian: En GitHub, puedes explorar](https://github.com/obsidianmd/obsidian-releases)
