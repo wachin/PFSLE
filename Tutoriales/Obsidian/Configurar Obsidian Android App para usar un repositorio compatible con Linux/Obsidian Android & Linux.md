@@ -232,3 +232,4 @@ Aaron Swartz, un programador y activista digital muy influyente, contribuyó en 
 7. [Markdown Guide](https://www.markdownguide.org/)
 8. [Turning Obsidian into Your Personal Wiki](https://sidequirk.com/turning-obsidian-into-your-personal-wiki)
 9. [Plugins y temas de Obsidian: En GitHub, puedes explorar](https://github.com/obsidianmd/obsidian-releases)
+10. [Construye tu segundo cerebro digital | Obsidian + NVIM | Organizarte | Youtube](https://youtu.be/6HSc2l0oyws?si=pWDeRqvfDpteTFN3)
