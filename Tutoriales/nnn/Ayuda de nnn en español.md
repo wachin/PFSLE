@@ -1,4 +1,3 @@
-cj
 Ayuda de nnn file manager 
 
 Para acceder a la ayuda de nnn, una vez ejecutado este en una terminal
@@ -9,9 +8,11 @@ en el teclado hay que poner:
 
 ?
 
-y aparece la ayuda que es la siguiente:
+pero antes explico que en este tutorial se abrevia CTRL con ^, así ejemplo CTRL + ] es igual a:
 
-En la siguiente ayuda el signo ^ significa Ctrl y más carácter al lado
+^]
+
+ahora si vamos con la ayuda:
 
  NAVEGACIÓN
          Up  k  Arriba            
@@ -55,15 +56,10 @@ En la siguiente ayuda el signo ^ significa Ctrl y más carácter al lado
          x ^X  Delete                  E  Edit sel
  MISC
         Alt ;  Select plugin           =  Launch app
-         ! ^]  Shell                   ]  Cmd prompt
+         ! ^]  Shell                   ]  Cmd prompt (cambiar a modo terminal)
             c  Connect remote          u  Unmount remote/archive
          t ^T  Sort toggles            s  Manage session
             T  Set time type           0  Lock
 
-VOLUME: 1.026G of 1.375G free
 
-SELECTION FILE: /home/wachin/.config/nnn/.selection
-
-v3.5
-BSD 2-Clause
 https://github.com/jarun/nnn
