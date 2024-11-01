@@ -68,7 +68,7 @@ Space ^J       (Des)seleccionar
  m ^Space      Marcar rango/borrar selección
    p ^P        Copiar selección aquí   
    a           Seleccionar todo
-   v ^V        Mover selección aquí    
+ v ^V          Mover selección aquí    
  w ^W          Copiar/mover selección como
    x ^X        Eliminar                
    E           Editar selección
@@ -79,7 +79,7 @@ Space ^J       (Des)seleccionar
 Alt ;          Seleccionar plugin      
    =           Lanzar aplicación
   ! ^]         Consola                
-   ]           Prompt de comando (cambiar a modo terminal)
+   ]           Prompt de comando (cambiar a la terminal)
    c           Conectar remoto        
    u           Desmontar remoto/archivo comprimido
    t ^T        Alternar opciones de ordenamiento
