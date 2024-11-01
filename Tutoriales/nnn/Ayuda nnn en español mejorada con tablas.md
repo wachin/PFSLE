@@ -83,18 +83,18 @@ Los siguientes atajos de teclado tienen dos opciones, si no funciona la primera 
 
 **MICELANEO**
 
-| Opción 1 | Opción 2 |                 Resultado                 |
-| -------- | -------- | ----------------------------------------- |
-| Alt ;    |          | Seleccionar plugin                        |
-| =        |          | Lanzar aplicación                         |
-| ! ^]     | Consola  |                                           |
-| ]        |          | Prompt de comando (cambiar a la terminal) |
-| c        |          | Conectar remoto                           |
-| u        |          | Desmontar remoto/archivo comprimido       |
-| t        | ^T       | Alternar opciones de ordenamiento         |
-| s        |          | Administrar sesión                        |
-| T        |          | Establecer tipo de tiempo                 |
-| 0        |          | Bloquear                                  |
+| Opción 1 | Opción 2 |                 Resultado                  |
+| -------- | -------- | ------------------------------------------ |
+| Alt ;    |          | Seleccionar plugin                         |
+| =        |          | Lanzar aplicación                          |
+| !        | ^]       | Consola (cierra nnn y vuelve a la Consola) |
+| ]        |          | Prompt de comando (mini modo Consola)      |
+| c        |          | Conectar remoto                            |
+| u        |          | Desmontar remoto/archivo comprimido        |
+| t        | ^T       | Alternar opciones de ordenamiento          |
+| s        |          | Administrar sesión                         |
+| T        |          | Establecer tipo de tiempo                  |
+| 0        |          | Bloquear                                   |
 
 
 --- 
