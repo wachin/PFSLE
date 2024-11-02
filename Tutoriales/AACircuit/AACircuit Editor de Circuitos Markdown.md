@@ -1,7 +1,3 @@
-¡Perfecto! Aquí tienes el tutorial actualizado con los pasos de instalación en Debian 12.
-
----
-
 ### Tutorial: Uso de AACircuit en Debian 12 para Crear Diagramas de Circuitos ASCII
 
 **AACircuit** es una herramienta para diseñar circuitos electrónicos en formato ASCII, ideal para documentos de texto plano o para quienes prefieren una visualización en terminal. Este tutorial te guiará en la instalación y uso de AACircuit en **Debian 12**.
@@ -30,7 +26,8 @@ Para que AACircuit funcione correctamente, es necesario instalar algunas depende
    
 pero si usas Debian te recomiendo el siguiente manual para crear un entorno virtual:
 
-
+**pip no me deja instalar paquetes de python en Debian 12**
+[https://facilitarelsoftwarelibre.blogspot.com/2024/08/pip-no-me-deja-instalar-paquetes-de-python-en-debian-12.html](https://facilitarelsoftwarelibre.blogspot.com/2024/08/pip-no-me-deja-instalar-paquetes-de-python-en-debian-12.html)
 
 3. Una vez instaladas las dependencias, ejecuta el archivo `aacircuit.py`. 
 
@@ -83,3 +80,29 @@ V         |
 - **Guarda Frecuentemente**: Debido a que AACircuit no tiene deshacer avanzado, es útil guardar copias del diseño en progreso.
 
 Con estos pasos, ya estás listo para comenzar a crear circuitos ASCII con AACircuit en Debian 12. ¿Listo para el primer diseño? ¡Explora y diviértete creando circuitos en formato ASCII!
+
+
+# Referencias
+
+1. **Página oficial de GTK y PyGObject**:
+   - GTK es el kit de herramientas utilizado para la interfaz gráfica de AACircuit, mientras que **PyGObject** es la biblioteca que permite a Python interactuar con GTK. Aquí encontrarás documentación oficial y ejemplos de uso de GTK en Python.
+   - [GTK Documentation](https://docs.gtk.org/)
+   - [PyGObject Documentation](https://pygobject.readthedocs.io/en/latest/)
+
+2. **ASCII Art para Diagramas Técnicos**:
+   - La creación de diagramas ASCII tiene una larga tradición en la informática y puede ser muy útil en contextos donde el texto plano es preferible. Esta guía ofrece principios generales para crear diagramas en ASCII:
+   - [A Guide to ASCII Diagrams](https://asciiflow.com/)
+
+3. **Uso de Cairo para Dibujos en Python**:
+   - **Cairo** es la biblioteca subyacente que AACircuit utiliza para gráficos en 2D. La documentación de Cairo proporciona información sobre cómo crear gráficos y exportarlos en diferentes formatos, como PDF, lo cual es útil si quieres aprender más sobre cómo AACircuit maneja la generación de sus gráficos.
+   - [PyCairo Documentation](https://pycairo.readthedocs.io/en/latest/)
+
+4. **Programación con PubSub en Python**:
+   - AACircuit utiliza un sistema de mensajería llamado **pubsub** para comunicar eventos entre partes del programa. Este enfoque es común en aplicaciones gráficas, y esta guía te ayudará a entender cómo implementar el patrón publicador-suscriptor en Python.
+   - [Python PubSub Documentation](https://pypubsub.readthedocs.io/en/latest/)
+
+5. **Introducción a las Interfaces Gráficas en Python**:
+   - Si quieres explorar más sobre cómo funcionan las interfaces gráficas en Python y cómo GTK se compara con otras opciones, esta guía de Python GUI puede darte una buena base.
+   - [Python GUI Programming - A Beginner’s Guide](https://realpython.com/python-gui-programming/) 
+
+Estas referencias deberían ayudarte a profundizar en el uso de AACircuit y las tecnologías que lo soportan.
