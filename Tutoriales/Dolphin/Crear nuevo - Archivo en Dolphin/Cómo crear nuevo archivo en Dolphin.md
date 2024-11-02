@@ -73,7 +73,93 @@ Eso es todo, y ya podrá ver al dar clic derecho con Dolphin en un lugar vació 
 ![](vx_images/307893391635988.webp)
 
 
-## Qué otras plantillas de Documentos podría necesitar?
+## Plantillas de Documentos de LibreOffice
+
+Para la suite LibreOffice. Aquí tienes los archivos .desktop correspondientes:
+
+1. LibreOffice Calc (Hoja de cálculo):
+```desktop
+[Desktop Entry]
+Name=Hoja de cálculo...
+Name[en_GB]=Spreadsheet...
+Name[es]=Hoja de cálculo...
+Comment=Nueva hoja de cálculo de LibreOffice
+Comment[en_GB]=New LibreOffice spreadsheet
+Comment[es]=Nueva hoja de cálculo de LibreOffice
+Type=Link
+URL=.source/Hoja_de_calculo.ods
+Icon=libreoffice-calc
+```
+
+2. LibreOffice Impress (Presentación):
+```desktop
+[Desktop Entry]
+Name=Presentación...
+Name[en_GB]=Presentation...
+Name[es]=Presentación...
+Comment=Nueva presentación de LibreOffice
+Comment[en_GB]=New LibreOffice presentation
+Comment[es]=Nueva presentación de LibreOffice
+Type=Link
+URL=.source/Presentacion.odp
+Icon=libreoffice-impress
+```
+
+3. LibreOffice Draw (Dibujo):
+```desktop
+[Desktop Entry]
+Name=Dibujo...
+Name[en_GB]=Drawing...
+Name[es]=Dibujo...
+Comment=Nuevo dibujo de LibreOffice
+Comment[en_GB]=New LibreOffice drawing
+Comment[es]=Nuevo dibujo de LibreOffice
+Type=Link
+URL=.source/Dibujo.odg
+Icon=libreoffice-draw
+```
+
+4. LibreOffice Base (Base de datos):
+```desktop
+[Desktop Entry]
+Name=Base de datos...
+Name[en_GB]=Database...
+Name[es]=Base de datos...
+Comment=Nueva base de datos de LibreOffice
+Comment[en_GB]=New LibreOffice database
+Comment[es]=Nueva base de datos de LibreOffice
+Type=Link
+URL=.source/Base_de_datos.odb
+Icon=libreoffice-base
+```
+
+**Notas importantes:**
+1. Deberás crear los archivos vacíos correspondientes en la carpeta `.sources/` con las extensiones:
+   - `.ods` para Calc
+   - `.odp` para Impress
+   - `.odg` para Draw
+   - `.odb` para Base
+
+2. Los nombres de los iconos (`libreoffice-calc`, `libreoffice-impress`, etc.) son los estándar en la mayoría de las distribuciones Linux, pero puedes verificarlos en tu sistema en:
+   - `/usr/share/icons/`
+   - `/usr/share/icons/hicolor/`
+
+3. Para crear los archivos plantilla vacíos, la manera más sencilla es:
+   1. Abrir la aplicación correspondiente de LibreOffice
+   2. Crear un documento nuevo y vacío
+   3. Guardarlo en la carpeta `.sources/` con el nombre correspondiente
+   4. No es necesario añadir contenido, pero podrías incluir configuraciones básicas como:
+      - Márgenes predeterminados
+      - Tamaño de página
+      - Estilos básicos
+      - Configuración regional
+
+4. Para Base (.odb), ten en cuenta que necesitarás decidir si quieres incluir:
+   - Base de datos incorporada HSQLDB (la opción más común)
+   - Conexión a una base de datos externa
+   - Base de datos incorporada Firebird
+
+## Qué otras plantillas podría necesitar?
 Las siguientes plantillas útiles que podrías añadir:
 
 1. Documento HTML básico:
