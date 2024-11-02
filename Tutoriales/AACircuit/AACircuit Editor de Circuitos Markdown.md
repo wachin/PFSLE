@@ -1,0 +1,85 @@
+¡Perfecto! Aquí tienes el tutorial actualizado con los pasos de instalación en Debian 12.
+
+---
+
+### Tutorial: Uso de AACircuit en Debian 12 para Crear Diagramas de Circuitos ASCII
+
+**AACircuit** es una herramienta para diseñar circuitos electrónicos en formato ASCII, ideal para documentos de texto plano o para quienes prefieren una visualización en terminal. Este tutorial te guiará en la instalación y uso de AACircuit en **Debian 12**.
+
+### Paso 1: Instalación de Dependencias en Debian 12
+
+Clona el repositorio (debes tener instalado git):
+
+```
+git clone https://github.com/Blokkendoos/AACircuit
+```
+
+Para que AACircuit funcione correctamente, es necesario instalar algunas dependencias:
+
+1. Abre una terminal y ejecuta los siguientes comandos para instalar las bibliotecas necesarias:
+
+   ```bash
+   sudo apt install -y libgirepository1.0-dev libcairo2-dev gir1.2-gtk-3.0
+   ```
+
+2. Luego, instala `pycairo` y `PyGObject` en tu entorno de Python usando `pip`. Si usas MX Linux 21 o 23 no tendrás problemas con pip::
+
+   ```bash
+   pip install pycairo PyGObject
+   ```
+   
+pero si usas Debian te recomiendo el siguiente manual para crear un entorno virtual:
+
+
+
+3. Una vez instaladas las dependencias, ejecuta el archivo `aacircuit.py`. 
+
+   ```bash
+   python3 aacircuit.py
+   ```
+
+Esto abrirá la interfaz de AACircuit, lista para que puedas crear tus diseños.
+
+### Paso 2: Uso de la Interfaz de AACircuit
+
+AACircuit ofrece una interfaz gráfica basada en GTK, en la cual verás:
+- **Panel de Componentes**: Contiene los símbolos y elementos electrónicos disponibles, como resistencias, capacitores y fuentes de voltaje.
+- **Área de Dibujo**: La "pizarra" donde puedes construir tu circuito colocando y conectando componentes.
+- **Configuración de Preferencias**: Aquí puedes ajustar el tamaño de la cuadrícula y personalizar los caracteres ASCII que representan cada componente.
+
+### Paso 3: Crear un Circuito Básico
+
+1. **Selecciona un Componente**: Elige un componente desde el panel, como una resistencia.
+2. **Coloca el Componente**: Haz clic en el área de dibujo para ubicar la resistencia donde desees.
+3. **Conecta los Componentes**: Usa líneas horizontales y verticales (`-` y `|`) para crear conexiones entre los componentes. AACircuit permite añadir líneas automáticamente entre ellos.
+4. **Ajusta la Cuadrícula**: En las preferencias, puedes modificar la cantidad de filas y columnas para adaptar el diseño.
+
+### Paso 4: Personalización y Exportación del Diseño
+
+- **Modificar Caracteres ASCII**: Personaliza los caracteres que representan los componentes. Por ejemplo, puedes usar `R` para una resistencia o `C` para un capacitor.
+- **Guardar y Exportar**:
+  - **Guardar como ASCII**: Exporta el diseño como un archivo de texto ASCII que se puede copiar y pegar en otros documentos.
+  - **Exportar como PDF**: Si necesitas un formato más visual, puedes exportarlo como un archivo PDF.
+
+### Ejemplo de Circuito Básico en ASCII
+
+Para ayudarte a comenzar, aquí tienes un ejemplo sencillo de un circuito con una resistencia y una fuente de voltaje:
+
+```
++----R----+
+|         |
+V         |
+|         |
++---------+
+```
+
+- `R` representa una resistencia.
+- `V` indica una fuente de voltaje.
+- Los caracteres `-` y `|` forman las conexiones.
+
+### Consejos Prácticos
+
+- **Usa Atajos**: Familiarízate con los atajos de teclado para duplicar y rotar componentes.
+- **Guarda Frecuentemente**: Debido a que AACircuit no tiene deshacer avanzado, es útil guardar copias del diseño en progreso.
+
+Con estos pasos, ya estás listo para comenzar a crear circuitos ASCII con AACircuit en Debian 12. ¿Listo para el primer diseño? ¡Explora y diviértete creando circuitos en formato ASCII!
