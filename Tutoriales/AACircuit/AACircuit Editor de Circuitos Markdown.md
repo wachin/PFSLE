@@ -1,7 +1,6 @@
-### Tutorial: Uso de AACircuit en Debian 12 para Crear Diagramas de Circuitos ASCII
+### Uso de AACircuit en Debian 12 para Crear Diagramas de Circuitos ASCII
 
-**AACircuit** es una herramienta para diseñar circuitos electrónicos en formato ASCII, ideal para documentos de texto plano o para quienes prefieren una visualización en terminal. Este tutorial te guiará en la instalación y uso de AACircuit en **Debian 12**.
-
+**AACircuit** es una herramienta para diseñar circuitos electrónicos en formato ASCII, ideal para documentos de texto plano o para quienes prefieren una visualización en terminal. 
 ### Paso 1: Instalación de Dependencias en Debian 12
 
 Clona el repositorio (debes tener instalado git):
@@ -14,14 +13,14 @@ Para que AACircuit funcione correctamente, es necesario instalar algunas depende
 
 1. Abre una terminal y ejecuta los siguientes comandos para instalar las bibliotecas necesarias:
 
-   ```bash
-   sudo apt install -y libgirepository1.0-dev libcairo2-dev gir1.2-gtk-3.0
+   ```
+   sudo apt install -y python3-pip libgirepository1.0-dev libcairo2-dev gir1.2-gtk-3.0
    ```
 
 2. Luego, instala `pycairo` y `PyGObject` en tu entorno de Python usando `pip`. Si usas MX Linux 21 o 23 no tendrás problemas con pip::
 
-   ```bash
-   pip install pycairo PyGObject
+   ```
+   pip install xerox pypubsub bresenham pycairo PyGObject
    ```
    
 pero si usas Debian te recomiendo el siguiente manual para crear un entorno virtual:
@@ -31,11 +30,20 @@ pero si usas Debian te recomiendo el siguiente manual para crear un entorno virt
 
 3. Una vez instaladas las dependencias, ejecuta el archivo `aacircuit.py`. 
 
-   ```bash
+   ```
    python3 aacircuit.py
    ```
 
 Esto abrirá la interfaz de AACircuit, lista para que puedas crear tus diseños.
+
+### Lanzando el programa en Debian 12
+En Debian 12 para poderlo usar debo crear un entorno virtual con venv siguiendo el tutorial anteriormente mencionado, en mi caso he clonado el repositorio en HOME en la carpeta Dev y debo poner los comandos que se muestran en la siguiente imagen (no pongo los comandos porque en cada caso sería diferente donde hayan clonado el repositorio):
+
+![](vx_images/140413119289373.webp)
+
+y el siguiente es un circuito que estaba yo representando:
+
+![](vx_images/474524512289374.webp)
 
 ### Paso 2: Uso de la Interfaz de AACircuit
 
@@ -79,7 +87,6 @@ V         |
 - **Usa Atajos**: Familiarízate con los atajos de teclado para duplicar y rotar componentes.
 - **Guarda Frecuentemente**: Debido a que AACircuit no tiene deshacer avanzado, es útil guardar copias del diseño en progreso.
 
-Con estos pasos, ya estás listo para comenzar a crear circuitos ASCII con AACircuit en Debian 12. ¿Listo para el primer diseño? ¡Explora y diviértete creando circuitos en formato ASCII!
 
 
 # Referencias
@@ -103,6 +110,6 @@ Con estos pasos, ya estás listo para comenzar a crear circuitos ASCII con AACir
 
 5. **Introducción a las Interfaces Gráficas en Python**:
    - Si quieres explorar más sobre cómo funcionan las interfaces gráficas en Python y cómo GTK se compara con otras opciones, esta guía de Python GUI puede darte una buena base.
-   - [Python GUI Programming - A Beginner’s Guide](https://realpython.com/python-gui-programming/) 
+   - [Python GUI Programming - A Beginner’s Guide](https://realpython.com/start-here/) 
 
 Estas referencias deberían ayudarte a profundizar en el uso de AACircuit y las tecnologías que lo soportan.
