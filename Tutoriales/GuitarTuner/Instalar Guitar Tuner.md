@@ -1,4 +1,4 @@
-# Tutorial de Instalación de GuitarTuner
+# Tratando de hacer funcionar GuitarTuner en Debian 12
 
 ## Descripción General
 GuitarTuner es un afinador cromático simple diseñado principalmente para guitarra, aunque funciona con cualquier instrumento. El programa:
@@ -16,7 +16,7 @@ GuitarTuner es un afinador cromático simple diseñado principalmente para guita
 2. Doble clic para instalar
 3. ¡Listo para usar!
 
-### 2. Instalación desde Python (Para cualquier sistema operativo)+
+### 2. Instalación desde Python para Debian 12
 
 #### Prerequisitos:
 1. Instala Python y pip si no los tienes:
