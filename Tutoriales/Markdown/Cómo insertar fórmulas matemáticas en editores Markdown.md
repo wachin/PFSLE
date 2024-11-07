@@ -1,10 +1,15 @@
-# Cómo insertar fórmulas matemáticas en markdown .md para ver en editores como VNote, Typora, etc
+# Cómo insertar fórmulas matemáticas en editores Markdown.md
 
-Para VNote, Typora y otros:
+
+## El editor de ecuaciones en linea editor.codecogs.com
 
 En el siguiente servicio online:
 
 [https://editor.codecogs.com/](https://editor.codecogs.com/)
+
+de donde traduzco:
+
+"El editor de ecuaciones en línea más popular del mundo que utiliza el formato LaTeX. La API del editor permite una integración y personalización perfectas en sitios web para ofrecer cálculos matemáticos en plataformas web y móviles."
 
 Escribí usando las herramientas que allí me ofrece, la siguiente fórmula:
 
@@ -15,6 +20,10 @@ y me da abajo:
 [https://latex.codecogs.com/svg.image?x=\frac{4}{5x7}}](https://latex.codecogs.com/svg.image?x=\frac{4}{5x7})
 
 ![](vx_images/91612627596789.webp)
+
+
+
+## El código que debo insertar en el archivo markdown
 
 Solo tengo que sacar de esa línea lo siguiente: 
 
@@ -37,7 +46,8 @@ $$
 
 Guardar y en la vista previa se verá la fórmula
 
-**En qué editores se ve la fórmula?**
+## En qué editores Markdown se ve la fórmula?
+
 He probado en:
 
 - Typora
@@ -76,30 +86,28 @@ He probado en:
 
 
 
-Nota: Se verá también en GitHub.
-
 ## Otros servicios para crear fórmulas matemáticas
 
 Los siguientes servicios online también sirven para crear fórmulas, pero hay que saber usar latex
 
 Math Live
-https://cortexjs.io/mathlive/demo/
+[https://cortexjs.io/mathlive/demo/](https://cortexjs.io/mathlive/demo/)
 
 Matcha (Abrir el editor -investigar cómo funciona-)
-https://www.mathcha.io/
+[https://www.mathcha.io/](https://www.mathcha.io/)
 
 (No funciona bien en Celular)
-https://latexeditor.lagrida.com/
+[https://latexeditor.lagrida.com/](https://latexeditor.lagrida.com/)
 
 equatheque
-https://visualmatheditor.equatheque.net/
+[https://visualmatheditor.equatheque.net/](https://visualmatheditor.equatheque.net/)
 
 wiris
-https://demo.wiris.com/mathtype/en/developers.php
+[https://demo.wiris.com/mathtype/en/developers.php](https://demo.wiris.com/mathtype/en/developers.php)
 
 hostmath
-https://www.hostmath.com/
+[https://www.hostmath.com/](https://www.hostmath.com/)
 
 Investigar:
-https://asciimath.org/
-https://www.mathpearl.com/
+[https://asciimath.org/](https://asciimath.org/)
+[https://www.mathpearl.com/](https://www.mathpearl.com/)
