@@ -6,13 +6,15 @@ En el siguiente servicio online:
 
 [https://editor.codecogs.com/](https://editor.codecogs.com/)
 
-Escribí:
+Escribí usando las herramientas que allí me ofrece, la siguiente fórmula:
 
 x=\frac{4}{5x7} 
 
 y me da abajo: 
 
 [https://latex.codecogs.com/svg.image?x=\frac{4}{5x7}}](https://latex.codecogs.com/svg.image?x=\frac{4}{5x7})
+
+![](vx_images/91612627596789.webp)
 
 Solo tengo que sacar de esa línea lo siguiente: 
 
