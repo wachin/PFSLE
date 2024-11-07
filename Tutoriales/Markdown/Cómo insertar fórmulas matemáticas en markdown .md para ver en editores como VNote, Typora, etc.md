@@ -42,23 +42,29 @@ He probado en:
 
 ![](vx_images/200320920289377.webp)
 
+
 - NVote 
 
 ![](vx_images/17441302846900.webp)
+
 
 
 - [https://github.com/](https://github.com/)
 
 ![](vx_images/596142411635992.webp)
 
-- https://stackedit.io/
+
+- [https://stackedit.io/](https://stackedit.io/)
+
+![](vx_images/417323434961743.webp)
 
 
+- [https://hackmd.io/](https://hackmd.io/)
 
-- https://hackmd.io/
-
+![](vx_images/557473598910147.webp)
 
 - Debe verse en algún otro pero no he probado
+
 
 **En qué editores NO se ve la fórmula?**
 - Ghostwriter
