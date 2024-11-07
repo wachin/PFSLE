@@ -33,13 +33,31 @@ x=\frac{4}{5x7}
 $$
 
 
-Guardar y en la vista previa se verá la fórmula ejemplo en VNote, Typora
+Guardar y en la vista previa se verá la fórmula
 
 **En qué editores se ve la fórmula?**
-He probado en
+He probado en:
+
 - Typora
+
+![](vx_images/200320920289377.webp)
+
 - NVote 
-- github.com
+
+![](vx_images/17441302846900.webp)
+
+
+- [https://github.com/](https://github.com/)
+
+![](vx_images/596142411635992.webp)
+
+- https://stackedit.io/
+
+
+
+- https://hackmd.io/
+
+
 - Debe verse en algún otro pero no he probado
 
 **En qué editores NO se ve la fórmula?**
