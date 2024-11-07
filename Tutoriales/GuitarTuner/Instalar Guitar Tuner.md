@@ -52,6 +52,14 @@ pip3 install -r requirements.txt
 python3 main.py
 ```
 
+*Nota*: Si tienes configurado un entorno virtual activalo, ejemplo:
+
+```
+source .venv/bin/activate
+```
+
+y luego navega hasta donde esté el programa y alli si pon `python3 main.py`
+
 ### 3. Crear tu propia aplicación independiente
 
 #### Para macOS:
