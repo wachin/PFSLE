@@ -2,40 +2,40 @@ La siguiente imagen es de un test que he hecho para verificar el correcto funcio
 
 En el año 2024 la unica manera que me ha funcionado de instalar paquetes desde pip es usando venv el entorno virtual de python
 
- Para que puedas usar programas en python que dependen de paquetes pip esta es la solución
+ Para que puedas usar programas en python que dependen de paquetes pip esta es la solución
 
- Instala
+ Instala
 
 ```
 sudo apt install python3 python3-pip python3.*-venv
 ```
 
- ahora en HOME abre una terminal pues necesitamos usar el comando "python3 -m venv .venv" que se utiliza para crear un entorno virtual en Python, este comando sólo hay que usarlo una vez. Poner en la terminal:
+ ahora en HOME abre una terminal pues necesitamos usar el comando "python3 -m venv .venv" que se utiliza para crear un entorno virtual en Python, este comando sólo hay que usarlo una vez. Poner en la terminal:
 
 ```
 python3 -m venv .venv
 ```
 
- y se creará el entorno virtual
+ y se creará el entorno virtual
 
- Un entorno virtual es una herramienta que permite mantener dependencias y paquetes específicos para un proyecto aislado del sistema global de Python. Esto es especialmente útil para evitar conflictos entre versiones de paquetes en diferentes proyectos.
+ Un entorno virtual es una herramienta que permite mantener dependencias y paquetes específicos para un proyecto aislado del sistema global de Python. Esto es especialmente útil para evitar conflictos entre versiones de paquetes en diferentes proyectos.
 
 ## Activar el entorno virtual
 
- Ahora allí en HOME en la termial ponga:
+ Ahora allí en HOME en la termial ponga:
 
 ```
 source .venv/bin/activate
 ```
 
- Mi nombre de usuario es wachin y el nombre de la maquina es netinst y a continuación les pongo como puse el comando y lo que aparece en la terminal:
+ Mi nombre de usuario es wachin y el nombre de la maquina es netinst y a continuación les pongo como puse el comando y lo que aparece en la terminal:
 
 ```
 wachin@netinst:~$ source .venv/bin/activate
 (.venv) wachin@netinst:~$
 ```
 
- si pongo ls se muestran normalmente los directorios:
+ si pongo ls se muestran normalmente los directorios:
 
 ```
 /home/wachin/Descargas
@@ -45,7 +45,7 @@ wachin@netinst:~$ source .venv/bin/activate
 etc
 ```
 
- y si pongo: ls -a se muestran además los archvos ocultos:
+ y si pongo: ls -a se muestran además los archvos ocultos:
 
 ```
 /home/wachin/.cache /home/wachin/.config
@@ -58,33 +58,64 @@ etc
 etc
 ```
 
- Como ve allí está la carpeta .venv
+ Como ve allí está la carpeta .venv
 
- el comando mencionado hace que se active el entorno virtual, y desde ahora podremos instalar paquetes pip dentro del entorno virtual:
+ el comando mencionado hace que se active el entorno virtual, y desde ahora podremos instalar paquetes pip dentro del entorno virtual:
 
 ```
 pip install nombre_del_paquete
 ```
 
- Ejemplo voy a instalar para hacer un test:
+ Ejemplo voy a instalar para hacer un test:
 
 ```
 pip install requests
 ```
 
+### Navegando con cd desde el entorno virtual hasta el lugar donde está el script en python
+Una vez que usted ha activado .venv y cuando ya está así:
+
+```
+wachin@netinst:~$ source .venv/bin/activate
+(.venv) wachin@netinst:~$
+```
+
+allí usted puede clonar o descargar algún código y ejecutarlo allí, pero si lo tiene en otra ruta, use cd para moverse a la ruta donde usted tenga el código, ejemplo:
+
+```
+wachin@netinst:~$ source .venv/bin/activate
+(.venv) wachin@netinst:~$ cd ruta-a-el-codigo-a-usar
+```
+
+y quedará:
+
+```
+wachin@netinst:~$ source .venv/bin/activate
+(.venv) wachin@netinst:ruta-a-el-codigo-a-usar $ 
+```
+
+y allí usted podrá ejecutar un scipt, ejemplo:
+
+```
+wachin@netinst:~$ source .venv/bin/activate
+(.venv) wachin@netinst:ruta-a-el-codigo-a-usar $ python3 mi-script.py
+```
+
+
+
 ## Desactivar el entorno virtual
 
- cuando ya no lo necesites pon:
+ cuando ya no lo necesites pon:
 
 ```
 deactivate
 ```
 
- **Nota:** Los programas que dependen de paquetes pip no funcionan si no está activado su entorno virtual.
+ **Nota:** Los programas que dependen de paquetes pip no funcionan si no está activado su entorno virtual.
 
 # Script para hacer un test a VENV
 
- Ahora creemos un script en python para que por medio del paquete requests probar si funciona el entorno virtual VENV correctamente, el código es el siguiente:
+ Ahora creemos un script en python para que por medio del paquete requests probar si funciona el entorno virtual VENV correctamente, el código es el siguiente:
 
 ```
 import requests
@@ -106,17 +137,17 @@ if __name__ == "__main__":
 
 ```
 
- ejemplo el scritp deberá tener un nombre como el siguiente:
+ ejemplo el scritp deberá tener un nombre como el siguiente:
 
- **test\_venv.py**
+ **test\_venv.py**
 
- en este caso guardelo dentro del directorio .venv pues este tutorial lo hago para un amigo el cual tenía que poner dentro de la carpeta virtual de python un script en python (si desea puede ver los archivos ocultos desde su administrador de archivos con Ctrl + H), entonces:
+ en este caso guardelo dentro del directorio .venv pues este tutorial lo hago para un amigo el cual tenía que poner dentro de la carpeta virtual de python un script en python (si desea puede ver los archivos ocultos desde su administrador de archivos con Ctrl + H), entonces:
 
 ```
 cd .venv
 ```
 
- además luego poner ls para ver los archivos allí presentes:
+ además luego poner ls para ver los archivos allí presentes:
 
 ```
 (.venv) wachin@netinst:~$ cd .venv
@@ -124,15 +155,15 @@ cd .venv
 bin  include  lib  pyvenv.cfg
 ```
 
- para que lo cree y guarde use nano, ponga así:
+ para que lo cree y guarde use nano, ponga así:
 
 ```
 nano test_venv.py
 ```
 
- y allí pegue el codigo, y guardelo con Ctrl + O, luego de Enter y Ctrl + X para sarlir. Si necesita algún tutorial sobre como usar nano vea: https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html o puede usar vi
+ y allí pegue el codigo, y guardelo con Ctrl + O, luego de Enter y Ctrl + X para sarlir. Si necesita algún tutorial sobre como usar nano vea: https://facilitarelsoftwarelibre.blogspot.com/2024/08/como-usar-nano-en-linux.html o puede usar vi
 
- luego ponga ls y ya lo verá allí, ejemplo:
+ luego ponga ls y ya lo verá allí, ejemplo:
 
 ```
 (.venv) wachin@netinst:~/.venv$ ls
@@ -148,15 +179,15 @@ bin  include  lib  pyvenv.cfg  test_venv.py
 *   Imprime la respuesta JSON obtenida del servidor para que puedas ver que la solicitud se realizó correctamente.
 *   Maneja cualquier excepción que pueda ocurrir durante la solicitud.
 
- Si el paquete **requests** está correctamente instalado y no hay problemas de conexión a internet, deberías ver un mensaje indicando que está funcionando, junto con los datos obtenidos de la solicitud.
+ Si el paquete **requests** está correctamente instalado y no hay problemas de conexión a internet, deberías ver un mensaje indicando que está funcionando, junto con los datos obtenidos de la solicitud.
 
- Entonces para ejecutarlo pongo en la terminal:
+ Entonces para ejecutarlo pongo en la terminal:
 
 ```
 python3 test_venv.py
 ```
 
- claro que debe entener el lugar donde estámos ubicados, bueno aquí pongo todo:
+ claro que debe entener el lugar donde estámos ubicados, bueno aquí pongo todo:
 
 ```
 (.venv) wachin@netinst:~/.venv$ python3 test_venv.py
@@ -166,42 +197,42 @@ Respuesta del servidor:
 (.venv) wachin@netinst:~/.venv$
 ```
 
- Funciona bien.
+ Funciona bien.
 
 # Script en BASH para abrir el entorno virtual si el código del script en PYTHON está en .venv
 
- Si usted como en este ejemplo con estas indicación por algún motivo debe tener su script python en su home/usuario dentro de la carpeta oculta:
+ Si usted como en este ejemplo con estas indicación por algún motivo debe tener su script python en su home/usuario dentro de la carpeta oculta:
 
- .venv
+ .venv
 
 **Nota:** la ruta completa desde la raíz de linux es: /home/wachin/.venv donde wachin es el nombre de mi usuario.
 
- que en este caso se llama:
+ que en este caso se llama:
 
- test\_venv.py
+ test\_venv.py
 
- o sea por todo estaría así:
+ o sea por todo estaría así:
 
- /home/wachin/.venv/test\_venv.py
+ /home/wachin/.venv/test\_venv.py
 
- podemos acceder fácilmente a el desde un script en **BASH** desde HOME, ejemplo:
+ podemos acceder fácilmente a el desde un script en **BASH** desde HOME, ejemplo:
 
- /home/wachin/venv\_home\_launcher.sh
+ /home/wachin/venv\_home\_launcher.sh
 
- Desactíve el entorno virtual si lo tenía activado, ponga en su HOME:
+ Desactíve el entorno virtual si lo tenía activado, ponga en su HOME:
 
 ```
 deactivate
 ```
 
- o sea así:
+ o sea así:
 
 ```
 (.venv) wachin@netinst:~$ deactivate
 wachin@netinst:~$
 ```
 
- Créelo con el siguiente contendo, copielo:
+ Créelo con el siguiente contendo, copielo:
 
 ```
 #! /bin/bash
@@ -216,21 +247,21 @@ cd .venv
 python3 test_venv.py
 ```
 
- Guarde este script con ejemplo el nombre ( si desea puede ponerle otro nombre):
+ Guarde este script con ejemplo el nombre ( si desea puede ponerle otro nombre):
 
 ```
 wachin@netinst:~$ nano venv_home_launcher.sh
 ```
 
- y allí pegue el codigo, y guardelo con Ctrl + O, luego de Enter y Ctrl + X para sarlir.
+ y allí pegue el codigo, y guardelo con Ctrl + O, luego de Enter y Ctrl + X para sarlir.
 
- y desde una terminal abierta en HOME láncelo así:
+ y desde una terminal abierta en HOME láncelo así:
 
 ```
 bash ./venv_home_launcher.sh
 ```
 
- así logrará hacerlo funcionar:
+ así logrará hacerlo funcionar:
 
 ```
 wachin@netinst:~$ bash ./venv_home_launcher.sh
@@ -241,40 +272,40 @@ Respuesta del servidor:
 
 # Scritp en bash para abrir el entorno virtual VENV desde cualquier lugar donde esté el script en python (pero no tiene opción para desactivar VENV)
 
- Si usted tiene su script en python que depende para funcionar de un paquete pip y lo tiene ejemplo en **Documentos**, para este ejemplo usemos el ya hecho, aquí les pongo el lugar donde lo tengo:
+ Si usted tiene su script en python que depende para funcionar de un paquete pip y lo tiene ejemplo en **Documentos**, para este ejemplo usemos el ya hecho, aquí les pongo el lugar donde lo tengo:
 
 ```
 wachin@netinst:~/Documentos$ tree
 .
 ├── e-Sword
-│   ├── Bookmarks.lstx
-│   ├── journal.jnlx
-│   ├── markup.ovlx
-│   ├── study.notx
-│   └── topic.topx
+│   ├── Bookmarks.lstx
+│   ├── journal.jnlx
+│   ├── markup.ovlx
+│   ├── study.notx
+│   └── topic.topx
 ├── FeatherNotes
-│   └── 2024-07-15-wachi.fnx
+│   └── 2024-07-15-wachi.fnx
 └── test_venv.py
 
 3 directories, 7 files
 ```
 
- navego hasta donde está donde quiero crear el script en bash, en este caso:
+ navego hasta donde está donde quiero crear el script en bash, en este caso:
 
 ```
 wachin@netinst:~$ cd Documentos
 wachin@netinst:~/Documentos$
 ```
 
- y ponga lo siguiente y de Enter:
+ y ponga lo siguiente y de Enter:
 
 ```
 wachin@netinst:~/Documentos$ nano venv_dir_launcher.sh
 ```
 
- **Nota:** Además usted puede abrir una terminal allí donde esté su script en python desde su administrador de archivos en vez de hacer eso desde la terminal.
+ **Nota:** Además usted puede abrir una terminal allí donde esté su script en python desde su administrador de archivos en vez de hacer eso desde la terminal.
 
- copie el siguiente contenido:
+ copie el siguiente contenido:
 
 ```
 #! /bin/bash
@@ -292,18 +323,18 @@ source $HOME/.venv/bin/activate
 python3 test_venv.py
 ```
 
- y allí pegue el codigo, y guardelo con Ctrl + O, luego de Enter y Ctrl + X para sarlir.
+ y allí pegue el codigo, y guardelo con Ctrl + O, luego de Enter y Ctrl + X para sarlir.
 
 ## Poner permisos de ejecución desde el administrador de archivos
 
- A este script pongale permisos de ejecución puede ser desde el administrador de archivoss con clic derecho y clic la pestaña permisos marcandolo como ejecutable
+ A este script pongale permisos de ejecución puede ser desde el administrador de archivoss con clic derecho y clic la pestaña permisos marcandolo como ejecutable
 
 ## Poner permisos de ejecución desde la terminal
 
- Para otorgar permisos de ejecución a un script en Linux desde la terminal, puedes utilizar el comando **chmod**. Aquí tienes dos opciones comunes:
+ Para otorgar permisos de ejecución a un script en Linux desde la terminal, puedes utilizar el comando **chmod**. Aquí tienes dos opciones comunes:
 
 1.  **Usando el parámetro **+x**:**
-2.   Para asignar permisos de ejecución al archivo **venv\_dir\_launcher.sh**, ejecuta:
+2.   Para asignar permisos de ejecución al archivo **venv\_dir\_launcher.sh**, ejecuta:
 
 ```
 $ chmod +x venv_dir_launcher.sh
@@ -311,7 +342,7 @@ $ chmod +x venv_dir_launcher.sh
 
     Esto permitirá que el archivo se ejecute.
 
-3.   **Asignando valores numéricos:**
+3.   **Asignando valores numéricos:**
 
 4.  Si prefieres asignar permisos específicos, puedes usar valores numéricos. Por ejemplo, para dar permisos de ejecución al usuario propietario y solo permisos de lectura al grupo y al invitado:
 
@@ -321,24 +352,24 @@ $ chmod 0755 venv_dir_launcher.sh
 
     En este caso, el **0** indica que no se asignan permisos al grupo y al invitado.
 
- Puedes verificar los permisos con **ls -la venv\_dir\_launcher.sh**.
+ Puedes verificar los permisos con **ls -la venv\_dir\_launcher.sh**.
 
- Bueno, con esto hemos puesto creado el script en bash junto al script en python, puedo verificarlo con ls:
+ Bueno, con esto hemos puesto creado el script en bash junto al script en python, puedo verificarlo con ls:
 
- Para ejecutarlo no debe estar usando venv, desactívelo si tenía activado:
+ Para ejecutarlo no debe estar usando venv, desactívelo si tenía activado:
 
 ```
 deactivate
 ```
 
- aquí les pongo el ejemplo:
+ aquí les pongo el ejemplo:
 
 ```
 (.venv) wachin@netinst:~$ deactivate
 wachin@netinst:~$
 ```
 
- y navego hasta el lugar donde está el script o abro una terminal allí, ejemplo para este caso:
+ y navego hasta el lugar donde está el script o abro una terminal allí, ejemplo para este caso:
 
 ```
 wachin@netinst:~$ cd Documentos
@@ -346,7 +377,7 @@ wachin@netinst:~/Documentos$ ls
 e-Sword  FeatherNotes  test_venv.py
 ```
 
- y allí ejecutelo abriendo una terminal allí y poniendo:
+ y allí ejecutelo abriendo una terminal allí y poniendo:
 
 ```
 bash ./venv_dir_launcher.sh
@@ -374,7 +405,7 @@ source $HOME/.venv/bin/activate
 python3 test_venv.py
 ```
 
- por el nombre de su script en python, ejemplo:
+ por el nombre de su script en python, ejemplo:
 
 ```
 #! /bin/bash
@@ -392,7 +423,7 @@ source $HOME/.venv/bin/activate
 python3 su_script.py
 ```
 
- y guarde el script en bash
+ y guarde el script en bash
 
 
 
@@ -545,14 +576,14 @@ Dios les bendiga
 
 ## Consultas
 
- Python Software Foundation. (2023). The Python Standard Library: venv. Recuperado de [https://docs.python.org/3/library/venv.html.](https://docs.python.org/3/library/venv.html.) 
+ Python Software Foundation. (2023). The Python Standard Library: venv. Recuperado de [https://docs.python.org/3/library/venv.html.](https://docs.python.org/3/library/venv.html.) 
 
- Kenneth Reitz & Python Software Foundation. (2023). Requests: HTTP for Humans. Recuperado de [https://docs.python-requests.org/en/latest/](https://docs.python-requests.org/en/latest/)
+ Kenneth Reitz & Python Software Foundation. (2023). Requests: HTTP for Humans. Recuperado de [https://docs.python-requests.org/en/latest/](https://docs.python-requests.org/en/latest/)
 
- How to determine if Python is running inside a virtualenv? [https://stackoverflow.com/questions/1871549/how-to-determine-if-python-is-running-inside-a-virtualenv](https://stackoverflow.com/questions/1871549/how-to-determine-if-python-is-running-inside-a-virtualenv)
+ How to determine if Python is running inside a virtualenv? [https://stackoverflow.com/questions/1871549/how-to-determine-if-python-is-running-inside-a-virtualenv](https://stackoverflow.com/questions/1871549/how-to-determine-if-python-is-running-inside-a-virtualenv)
 
- Issues using the Python Plugin with a Virtual Environment (venv) [https://discourse.orthanc-server.org/t/issues-using-the-python-plugin-with-a-virtual-environment-venv/4258](https://discourse.orthanc-server.org/t/issues-using-the-python-plugin-with-a-virtual-environment-venv/4258)
+ Issues using the Python Plugin with a Virtual Environment (venv) [https://discourse.orthanc-server.org/t/issues-using-the-python-plugin-with-a-virtual-environment-venv/4258](https://discourse.orthanc-server.org/t/issues-using-the-python-plugin-with-a-virtual-environment-venv/4258)
 
- Python Virtual Environments: A Primer [https://realpython.com/python-virtual-environments-a-primer](https://realpython.com/python-virtual-environments-a-primer)/
+ Python Virtual Environments: A Primer [https://realpython.com/python-virtual-environments-a-primer](https://realpython.com/python-virtual-environments-a-primer)/
 
- Understanding Python virtual environments using venv and virtualenv [https://medium.com/@sukul.teradata/understanding-python-virtual-environments-using-venv-and-virtualenv-283f37d24b13](https://medium.com/@sukul.teradata/understanding-python-virtual-environments-using-venv-and-virtualenv-283f37d24b13)
+ Understanding Python virtual environments using venv and virtualenv [https://medium.com/@sukul.teradata/understanding-python-virtual-environments-using-venv-and-virtualenv-283f37d24b13](https://medium.com/@sukul.teradata/understanding-python-virtual-environments-using-venv-and-virtualenv-283f37d24b13)
