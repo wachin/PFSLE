@@ -19,6 +19,8 @@ python3 -m venv .venv
  y se creará el entorno virtual
 
  Un entorno virtual es una herramienta que permite mantener dependencias y paquetes específicos para un proyecto aislado del sistema global de Python. Esto es especialmente útil para evitar conflictos entre versiones de paquetes en diferentes proyectos.
+ 
+Puedes crear múltiples entornos virtuales con diferentes nombres para aislar diferentes proyectos y sus dependencias. Esto es una práctica muy común en el desarrollo de Python para mantener un mejor control sobre los paquetes y evitar conflictos entre proyectos.
 
 ## Activar el entorno virtual
 
