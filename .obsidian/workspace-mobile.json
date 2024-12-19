@@ -11,12 +11,35 @@
             "id": "2eaeb3a975e33944",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Investigaciones/Vista de carpetas y subcarpetas en archivos markdown/101 vista de carpetas y subcarpetas en markdown en github con imagenes de carpetas.png"
+                "file": "Tutoriales/nnn/Ayuda nnn en español mejorada con tablas.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "101 vista de carpetas y subcarpetas en markdown en github con imagenes de carpetas"
+              "icon": "lucide-file",
+              "title": "Ayuda nnn en español mejorada con tablas"
+            },
+            "group": "e6dab9a7f8ddfa44"
+          }
+        ]
+      },
+      {
+        "id": "7b0b72320c8baeba",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "74834b74eb63c671",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tutoriales/nnn/Ayuda nnn en español mejorada con tablas.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ayuda nnn en español mejorada con tablas"
             },
             "group": "e6dab9a7f8ddfa44"
           }
@@ -30,37 +53,14 @@
             "id": "2f210c81142ba364",
             "type": "leaf",
             "state": {
-              "type": "localgraph",
+              "type": "markdown",
               "state": {
-                "file": "Investigaciones/Vista de carpetas y subcarpetas en archivos markdown/101 vista de carpetas y subcarpetas en markdown en github con imagenes de carpetas.png",
-                "options": {
-                  "collapse-filter": true,
-                  "search": "",
-                  "localJumps": 1,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": false,
-                  "showTags": false,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": true,
-                  "showArrow": false,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 1,
-                  "close": true
-                }
+                "file": "Tutoriales/nnn/Ayuda nnn en español mejorada con tablas.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
+              "icon": "lucide-file",
+              "title": "Ayuda nnn en español mejorada con tablas"
             },
             "group": "e6dab9a7f8ddfa44"
           }
@@ -138,7 +138,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Tutoriales/vnote/151546 Primer inicio vnote.png",
+            "file": "Tutoriales/nnn/Ayuda nnn en español mejorada con tablas.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -192,6 +192,12 @@
   },
   "active": "2eaeb3a975e33944",
   "lastOpenFiles": [
+    "Tutoriales/nnn/Ayuda nnn en español mejorada.md",
+    "Tutoriales/AACircuit/AACircuit Editor de Circuitos Markdown.md",
+    "Tutoriales/AACircuit/vx_images/474524512289374.webp",
+    "Tutoriales/AACircuit/vx_images/140413119289373.webp",
+    "img/101 Navigate in Dolphin File Manager with script that send to other folder.png",
+    "Investigaciones/Vista de carpetas y subcarpetas en archivos markdown/101 vista de carpetas y subcarpetas en markdown en github con imagenes de carpetas.png",
     "Investigaciones/deb/Cómo instalar deb desde Release en gitHub añadiendo al Apt/Cómo fue añadido.md",
     "Tutoriales/Fluxbox/Ejecutar script python al inicio de Fluxbox/Ejecutar script python al inicio de Fluxbox.md",
     "Tutoriales/Fluxbox/Ejecutar script python al inicio de Fluxbox/20240911-Script-python-al-inicio-de-fluxbox.webp",
