@@ -256,9 +256,6 @@ Puedes crear subcarpetas dentro de las carpetas principales para organizar mejor
 
 Para usar el buscador hágalo desde arriba en la esquina izquierda dando clic en el icono que abre el contenido del Vault (Bóveda) y de clic en medio del "Explorador de archivos" y se abrirá un submenú y de clic en "Search" para buscar y encontrar rápidamente notas o temas específicos.
 
-## Cambia de Bóveda / Vault
-
-
 ### Consejos finales
 
 Aprovecha la interconexión: Al enlazar notas, puedes construir una red de ideas interconectadas.
