@@ -89,7 +89,7 @@ Para configurar Obsidian en Android y sincronizarlo con un repositorio de GitHub
 Para evitar problemas en la sincronización que se podrían dar por los archivos de configuración de Obsidian (.obsidian) que cambian frecuentemente, lo que podría causar conflictos o corrupción en el repositorio si no están correctamente excluidos, agrega un archivo .gitignore para evitar que estos archivos sean rastreados por Git.
 
 **Crea archivo .gitignore manualmente**
-Crea un archivo .gitignore en el directorio raíz del repositorio (tu-repo/.gitignore) con el siguiente contenido:
+Crea un archivo .gitignore con algún editor de texto o con nano en el directorio raíz del repositorio (tu-repo/.gitignore) con el siguiente contenido:
 
 ```
 # Ignorar configuraciones específicas de Obsidian
@@ -110,6 +110,7 @@ Thumbs.db
 # Ignorar cachés y otros directorios que no son necesarios
 .cache/
 ```
+Guardar y cerrar.
 
 **O Crea el archivo .gitignore: desde Termux:**
 Si deseas crearlo con un solo comando pon en Termux:
@@ -117,7 +118,6 @@ Si deseas crearlo con un solo comando pon en Termux:
 ```
 echo -e "# Ignorar configuraciones específicas de Obsidian\n.obsidian/\n\n# Ignorar archivos temporales del sistema\n.DS_Store\nThumbs.db\n\n# Ignorar archivos de respaldo\n*.bak\n*.tmp\n\n# Ignorar cualquier archivo temporal generado por la aplicación\n*.swp\n*.lock\n\n# Ignorar cachés y otros directorios que no son necesarios\n.cache/" > .gitignore
 ```
-
 
 **Explicación**
 - .obsidian/: Ignora todo el directorio de configuración de Obsidian. Si deseas sincronizar temas o plugins específicos, puedes incluirlos manualmente.
@@ -127,7 +127,7 @@ echo -e "# Ignorar configuraciones específicas de Obsidian\n.obsidian/\n\n# Ign
 **Actualizar el repositorio:**  
 ```
 git add .gitignore
-git commit -m "Add .gitignore to exclude Obsidian config files"
+git commit -m "Añado .gitignore para excluir archivos de configuración de Obsidian"
 git push
 ```
 
@@ -135,7 +135,7 @@ git push
 Los cambios en el directorio .obsidian/ ya no deben aparecer en los resultados de git status.
 
 
-5. **Configurar Obsidian con el repositorio clonado**:
+4. **Configurar Obsidian con el repositorio clonado**:
    - Abre Obsidian en tu dispositivo Android.
    - Durante la configuración inicial da clic en "Open folder as vault >" o si ya estás dentro de un vault da clic al icono del **libro** que está arriba a la izquierda que abre el panel lateral izquierdo y clic al lado izquierdo de la tuerca en el signo ∨ y da clic en la opción **Administrar bóvedas. .**, selecciona la carpeta local donde se encuentra el repositorio que has clonado el cual será usado como lo que Obsidian llama "Vault" (Bóveda), además puedes buscar otra carpeta local y seleccionarla como vault. Ejemplo yo tengo dos carpetas donde tengo tutoriales y me intercambio a veces entre uno y otro vault.
    - A partir de este momento, cuando agregues notas o carpetas en Obsidian podrán sincronizarse con GitHub usando `git` en Termux.
