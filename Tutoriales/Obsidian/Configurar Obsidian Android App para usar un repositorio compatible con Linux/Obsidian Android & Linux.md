@@ -2,7 +2,7 @@
 # Obsidian: Sincronización con GitHub y Uso en Android y Linux
 
 ## ¿Qué es Obsidian?
-Obsidian puede ser una poderosa base de conocimientos pues uno puede guardar en la carpeta local archivos Markdown de texto con escritos y notas, tutoriales y demás, lo cual puede llegar a funcionar como un "segundo cerebro", permitiendo a los usuarios organizar y gestionar su conocimiento de forma flexible y eficaz. Además, Obsidian está disponible para Android, facilitando su uso en dispositivos móviles.
+Obsidian puede ser una poderosa base de conocimientos pues uno puede guardar en la carpeta local archivos Markdown de texto con escritos y notas, tutoriales y demás, lo cual puede llegar a funcionar como un "segundo cerebro", permitiendo a los usuarios organizar y gestionar todo tipo de conocimiento de forma flexible y eficaz. Además, Obsidian está disponible para Android, facilitando su uso en dispositivos móviles tanto como para ordenadores:
 
 [Descargar Obsidian para Android](https://play.google.com/store/apps/details?id=md.obsidian)
 
@@ -137,7 +137,7 @@ Los cambios en el directorio .obsidian/ ya no deben aparecer en los resultados d
 
 5. **Configurar Obsidian con el repositorio clonado**:
    - Abre Obsidian en tu dispositivo Android.
-   - Durante la configuración inicial o al darle clic al icono del **libro** que está arriba a la izquierda que abre el panel lateral izquierdo y clic en el signo parecido a una flecha abajo, desde la opción **Administrar bóvedas. .**, selecciona la carpeta local donde se encuentra el repositorio que has clonado el cual será usado como lo que Obsidian llama "Vault" (Bóveda).
+   - Durante la configuración inicial da clic en "Open folder as vault >" o si ya estás dentro de un vault da clic al icono del **libro** que está arriba a la izquierda que abre el panel lateral izquierdo y clic al lado izquierdo de la tuerca en el signo ∨ y da clic en la opción **Administrar bóvedas. .**, selecciona la carpeta local donde se encuentra el repositorio que has clonado el cual será usado como lo que Obsidian llama "Vault" (Bóveda), además puedes buscar otra carpeta local y seleccionarla como vault. Ejemplo yo tengo dos carpetas donde tengo tutoriales y me intercambio a veces entre uno y otro vault.
    - A partir de este momento, cuando agregues notas o carpetas en Obsidian podrán sincronizarse con GitHub usando `git` en Termux.
 
 ### Paso 2: Configuración de Obsidian en Android
@@ -150,7 +150,7 @@ Los cambios en el directorio .obsidian/ ya no deben aparecer en los resultados d
 
 2. **Desactivar los "Wikilinks"**:
    - En **Opciones** en la sección **Archivos y Enlaces**.
-   - Desmarca la opción **Usar [[Wikilinks]]** esto es para poder editar los archivos Markdown en Linux con editores como Typora, Ghostwriter, VNote, etc.
+   - Desmarca la opción **Usar [[Wikilinks]]** esto es para poder editar los archivos Markdown en Linux con editores como Typora, Ghostwriter, VNote, etc. (Si cambias de vault, en ese otro también tienes que configurar esto).
 
 3. **Detectar todas las extensiones de archivo (Opcional)**:
    - También en **Archivos y Enlaces**, activa la opción **Detectar todas las extensiones de archivo** si deseas que Obsidian reconozca una mayor variedad de archivos.
