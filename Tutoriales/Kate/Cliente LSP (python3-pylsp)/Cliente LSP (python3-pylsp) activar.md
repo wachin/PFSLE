@@ -26,7 +26,7 @@ Además este paquete sugiere otros paquetes:
 ![](vx_images/466971604635915.webp)
 
 
-La descripción de esos paquetes es la siguiente:
+La descripción de esos paquetes es la siguiente los cuales si usted desea lo spuede instalar allí con clic derecho:
 
 
 **flake8**
@@ -139,18 +139,27 @@ Este paquete proporciona los módulos para Python 3.
 
 
 ## Activar el Cliente LSP en Kate
+después de instalar el paquete indicado cierre Kate si lo tenía abierto y vuelvalo a abrir y debería aparecer este mensaje en una ventana:
 
-Para activar el plugin en Kate ir y marcar en:
+![20250102 en kate desea iniciar el servidor LSP](vx_images/395797017394898.png)
 
-Preferencias > Configurar Kate >  Complementos > (*) Cliente LSP
+pongale que si y aparecerá así:
+
+![20250102 Cliente LSP Iniciado en Kate](vx_images/224306080524487.png)
+
+
+pero si no aparece lo puede instalar así, en Kate ir y marcar en:
+
+**Preferencias > Configurar Kate >  Complementos > (*) Cliente LSP**
 
 Al hacer esto en el panel izquierdo aparecerá un icono que al pasar encima el cursor dice:
 
 Esquema de Simbolos
 
+![20250102 Esquema de símbolos activo en Kate](vx_images/371558213251077.png)
 
-## Añadir el código para que funcione
-Estoy usando una instalación de Debian que no es KDE, digo pues puede ser que en un Sistema Operativo Linux como KDE, Plasma y otros construidos así ya tengan ese archivo con el código, pero en mi caso está vacío ese archivo, así que debo poner en la terminal:
+## Añadir el código lspclient manualmente para que funcione en no KDE Linux
+Si usas un Sistema Operativo ejemplo Debian que no es KDE, puede ser que no funcione, si fuera así verifíquelo al poner en la terminal:
 
 ```
 kate ~/.config/kate/lspclient/settings.json
@@ -161,11 +170,11 @@ dejo abierto ese archivo y de la siguiente dirección copiar todo el contenido (
 [https://github.com/KDE/kate/blob/master/addons/lspclient/settings.json
 ](https://github.com/KDE/kate/blob/master/addons/lspclient/settings.json)
 
-**Nota:** Ese archivo contiene las url de las paginas web con las instrucciones para instalar esos lenguajes de programación.
+**Nota:** Ese archivo contiene las url de las paginas web con las instrucciones para instalar esos lenguajes de programación arriba mencionados.
 
-una vez que he copiado el contenido debo pegar el contenido en el archivo que dejamos abierto y guardar y cerrar esa pestaña en Kate
+una vez que he copiado el contenido debe pegar el contenido en el archivo que dejamos abierto y guardar y cerrar esa pestaña en Kate
 
-Cuando usted cierre Kate y lo abra otra vez a Kate y abra un script en python se verá el esquema del script en la izquierda de Kate, solo que se demora un poco en activarse, pero solo es de esperar. Además si abra ejemplo un archivo .m markdown se verá a la izquierda abajo un botón en Kate llamado "Salida" que al darle clic está la url donde debemos ir para instalar el lenguaje de programación
+Cuando usted cierre Kate y lo abra otra vez a Kate y abra un script en python se verá el esquema del script en la izquierda de Kate, solo que se demora un poco en activarse, pero solo es de esperar. Además si abra ejemplo un archivo .m markdown se verá a la izquierda abajo un botón en Kate llamado "Salida" que al darle clic está la url donde debemos ir para instalar el lenguaje de programación pues allí estarán las instrucciones.
 
 
 ## Marksman (64 bit)

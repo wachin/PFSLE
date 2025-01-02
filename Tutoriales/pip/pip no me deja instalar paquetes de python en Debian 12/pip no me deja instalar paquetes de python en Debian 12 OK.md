@@ -16,6 +16,12 @@ sudo apt install python3 python3-pip python3.*-venv
 python3 -m venv .venv
 ```
 
+si quieres que se vea la carpeta:
+
+```
+python3 -m venv venv
+```
+
  y se creará el entorno virtual
 
  Un entorno virtual es una herramienta que permite mantener dependencias y paquetes específicos para un proyecto aislado del sistema global de Python. Esto es especialmente útil para evitar conflictos entre versiones de paquetes en diferentes proyectos.
@@ -25,6 +31,12 @@ Puedes crear múltiples entornos virtuales con diferentes nombres para aislar di
 ## Activar el entorno virtual
 
  Ahora allí en HOME en la termial ponga:
+
+```
+source .venv/bin/activate
+```
+
+y si has creado la carpeta para que se vea:
 
 ```
 source .venv/bin/activate
