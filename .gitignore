@@ -3,3 +3,21 @@
 
 # Ada Library Information
 *.ali
+
+# Ignorar configuraciones específicas de Obsidian
+.obsidian/
+
+# Ignorar archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de respaldo
+*.bak
+*.tmp
+
+# Ignorar cualquier archivo temporal generado por la aplicación
+*.swp
+*.lock
+
+# Ignorar cachés y otros directorios que no son necesarios
+.cache/

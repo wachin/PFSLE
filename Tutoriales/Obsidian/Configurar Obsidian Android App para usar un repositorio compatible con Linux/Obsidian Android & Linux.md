@@ -2,7 +2,7 @@
 # Obsidian: Sincronización con GitHub y Uso en Android y Linux
 
 ## ¿Qué es Obsidian?
-Obsidian puede ser una poderosa base de conocimientos pues uno puede guardar en la carpeta local archivos Markdown de texto con escritos y notas, tutoriales y demás, lo cual puede llegar a funcionar como un "segundo cerebro", permitiendo a los usuarios organizar y gestionar su conocimiento de forma flexible y eficaz. Además, Obsidian está disponible para Android, facilitando su uso en dispositivos móviles.
+Obsidian puede ser una poderosa base de conocimientos pues uno puede guardar en la carpeta local archivos Markdown de texto con escritos y notas, tutoriales y demás, lo cual puede llegar a funcionar como un "segundo cerebro", permitiendo a los usuarios organizar y gestionar todo tipo de conocimiento de forma flexible y eficaz. Además, Obsidian está disponible para Android, facilitando su uso en dispositivos móviles tanto como para ordenadores:
 
 [Descargar Obsidian para Android](https://play.google.com/store/apps/details?id=md.obsidian)
 
@@ -79,28 +79,78 @@ Para configurar Obsidian en Android y sincronizarlo con un repositorio de GitHub
    - Instala Termux, vea el siguiente tutorial [Instalar-git-en-Android-con-Termux ](https://github.com/wachin/Instalar-git-en-Android-con-Termux)
 
 2. **Clonar tu repositorio de GitHub**:
-   - Una vez que tenga acceso a su almacenamiento Interno, en Termux, clona tu repositorio de GitHub donde almacenarás tus notas de Obsidian:
+   - Una vez que tenga acceso a su almacenamiento Interno, en Termux, clona tu repositorio de GitHub (debes tener uno) donde almacenarás tus notas de Obsidian:
      ```bash
      git clone https://github.com/tu-usuario/tu-repositorio
      ```
    - Asegúrate de que el repositorio ya tenga al menos un **push** realizado previamente (es decir, debe tener contenido subido a GitHub).
 
-3. **Configurar Obsidian con el repositorio clonado**:
+3. **Crear el archivo .gitignore** 
+Para evitar problemas en la sincronización que se podrían dar por los archivos de configuración de Obsidian (.obsidian) que cambian frecuentemente, lo que podría causar conflictos o corrupción en el repositorio si no están correctamente excluidos, agrega un archivo .gitignore para evitar que estos archivos sean rastreados por Git.
+
+**Crea archivo .gitignore manualmente**
+Crea un archivo .gitignore con algún editor de texto o con nano en el directorio raíz del repositorio (tu-repo/.gitignore) con el siguiente contenido:
+
+```
+# Ignorar configuraciones específicas de Obsidian
+.obsidian/
+
+# Ignorar archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de respaldo
+*.bak
+*.tmp
+
+# Ignorar cualquier archivo temporal generado por la aplicación
+*.swp
+*.lock
+
+# Ignorar cachés y otros directorios que no son necesarios
+.cache/
+```
+Guardar y cerrar.
+
+**O Crea el archivo .gitignore: desde Termux:**
+Si deseas crearlo con un solo comando pon en Termux:
+
+```
+echo -e "# Ignorar configuraciones específicas de Obsidian\n.obsidian/\n\n# Ignorar archivos temporales del sistema\n.DS_Store\nThumbs.db\n\n# Ignorar archivos de respaldo\n*.bak\n*.tmp\n\n# Ignorar cualquier archivo temporal generado por la aplicación\n*.swp\n*.lock\n\n# Ignorar cachés y otros directorios que no son necesarios\n.cache/" > .gitignore
+```
+
+**Explicación**
+- .obsidian/: Ignora todo el directorio de configuración de Obsidian. Si deseas sincronizar temas o plugins específicos, puedes incluirlos manualmente.
+- Archivos temporales: Se agregan patrones para ignorar archivos comunes que no son relevantes para el control de versiones, como *.swp, *.lock, y archivos de respaldo.
+- Archivos del sistema: Excluye archivos como .DS_Store y Thumbs.db generados automáticamente por el sistema operativo.
+
+**Actualizar el repositorio:**  
+```
+git add .gitignore
+git commit -m "Añado .gitignore para excluir archivos de configuración de Obsidian"
+git push
+```
+
+**Verificar el estado:** 
+Los cambios en el directorio .obsidian/ ya no deben aparecer en los resultados de git status.
+
+
+4. **Configurar Obsidian con el repositorio clonado**:
    - Abre Obsidian en tu dispositivo Android.
-   - Durante la configuración inicial o desde la opción de **abrir una carpeta de Obsidian**, selecciona la carpeta local donde se encuentra el repositorio que has clonado el cual será usado como lo que Obsidian llama "Vault" (Bóveda).
-   - A partir de este momento, cualquier cambio que hagas en Obsidian podrá sincronizarse con GitHub usando `git` en Termux.
+   - Durante la configuración inicial da clic en "Open folder as vault >" o si ya estás dentro de un vault da clic al icono del **libro** que está arriba a la izquierda que abre el panel lateral izquierdo y clic al lado izquierdo de la tuerca en el signo ∨ y da clic en la opción **Administrar bóvedas. .**, selecciona la carpeta local donde se encuentra el repositorio que has clonado el cual será usado como lo que Obsidian llama "Vault" (Bóveda), además puedes buscar otra carpeta local y seleccionarla como vault. Ejemplo yo tengo dos carpetas donde tengo tutoriales y me intercambio a veces entre uno y otro vault.
+   - A partir de este momento, cuando agregues notas o carpetas en Obsidian podrán sincronizarse con GitHub usando `git` en Termux.
 
 ### Paso 2: Configuración de Obsidian en Android
 
 1. **Cambiar el idioma a español**:
    - Abre Obsidian.
-   - Haz clic en el ícono de un **libro** que se encuentra en la parte superior izquierda.
+   - Haz clic en el ícono del **libro** que se encuentra en la parte superior izquierda.
    - Luego, haz clic en el **ícono de engranaje** para acceder a la configuración.
-   - Ve a la sección **General** y cambia el idioma de "English" a **Español**. Después, selecciona **Relaunch** para aplicar los cambios.
+   - En **Opciones** en la sección **Acerca de** y cambia el idioma mostrado de "English" a **Español**. Después, selecciona **Relaunch** para aplicar los cambios o cierra y vuelve a abrir Obsidian App
 
 2. **Desactivar los "Wikilinks"**:
-   - En la misma sección de configuración, selecciona **Archivos y Enlaces**.
-   - Desmarca la opción **Usar [[Wikilinks]]** esto es para poder editar los archivos Markdown en Linux con editores como Typora, Ghostwriter, VNote, etc.
+   - En **Opciones** en la sección **Archivos y Enlaces**.
+   - Desmarca la opción **Usar [[Wikilinks]]** esto es para poder editar los archivos Markdown en Linux con editores como Typora, Ghostwriter, VNote, etc. (Si cambias de vault, en ese otro también tienes que configurar esto).
 
 3. **Detectar todas las extensiones de archivo (Opcional)**:
    - También en **Archivos y Enlaces**, activa la opción **Detectar todas las extensiones de archivo** si deseas que Obsidian reconozca una mayor variedad de archivos.
@@ -114,25 +164,25 @@ Para editar tus notas en Linux, tienes varias opciones:
 ### Opción 1: Instalar Obsidian en Linux
 Aunque no es mi objetivo, si tienes un Sistema Operativo Linux de 64 bit puedes instalar la versión de 64 bits de Obsidian directamente desde su sitio web oficial:
 - [Descargar Obsidian](https://obsidian.md/download)
-Y debes registrarte y acceder en uno de sus planes
 
 ### Opción 2: Editar tus notas en Linux usando otros editores
-Si prefieres editar tus notas de Obsidian utilizando otros editores de Markdown en Linux, ejemplo si usas un Linux de 32 puedes clonar tu repositorio de GitHub en tu sistema Linux y utilizar uno de los siguientes programas:
+Si prefieres editar tus notas de Obsidian utilizando otros editores de Markdown en Linux, ejemplo si usas un Linux de 32 bit puedes clonar tu repositorio de GitHub en tu sistema Linux y utilizar uno de los siguientes programas:
 
 - **VNote**: Editor de Markdown con excelente soporte para notas y carpetas [Info aquí](https://facilitarelsoftwarelibre.blogspot.com/search/label/VNote)
 - **Ghostwriter**: Editor de Markdown minimalista.[Info](https://facilitarelsoftwarelibre.blogspot.com/search/label/Ghostwriter)
-- **Typora**: Editor de Markdown que renderiza el formato en tiempo real [Info](https://facilitarelsoftwarelibre.blogspot.com/search/label/Typora)
+- **Typora**: Editor de Markdown que renderiza el formato en tiempo real, de pago, pero ellos hicieron unas versiones beta que todavía funcionan y son gratis: [Info](https://facilitarelsoftwarelibre.blogspot.com/search/label/Typora)
 - **Retext** [Info](https://github.com/retext-project/retext)
 - Otros Editores [Info](https://facilitarelsoftwarelibre.blogspot.com/search/label/Markdown)
-- **StackEdit** es un editor de texto en línea que te permite crear documentos utilizando un formato simple llamado Markdown. Es como un procesador de textos, pero más fácil de usar y sin tantas distracciones. Con StackEdit puedes crear documentos profesionales: Desde simples notas hasta informes más complejos, exportar a diferentes formatos: Puedes guardar tu trabajo como HTML, PDF, o incluso como un documento de Word. Sincronizar con la nube: Conecta tu cuenta de Google Drive o Dropbox para tener tus documentos siempre a mano. [Info](https://stackedit.io/)
+- **StackEdit** es un editor de texto en línea que te permite crear documentos utilizando Markdown. Con StackEdit puedes crear documentos profesionales: Desde simples notas hasta informes más complejos, exportar a diferentes formatos: Puedes guardar tu trabajo como HTML, PDF, o incluso como un documento de Word. Sincronizar con la nube: Conecta tu cuenta de Google Drive o Dropbox para tener tus documentos siempre a mano. [Info](https://stackedit.io/)
 - **Dillinger** Parecido al anterior, es online, es una plataforma habilitada para la nube, compatible con dispositivos móviles y con almacenamiento fuera de línea. [Info](https://dillinger.io/)
+- **HACKMD** Parecido al anterior, se puede hacer login con Google., Facebook Twitter, GitHub, Dropbox, Wallet [Info](https://hackmd.io/?nav=overview/)
 
 Para clonar tu repositorio en Linux, ejecuta:
 ```bash
 git clone https://github.com/tu-usuario/tu-repositorio
 ```
 
-Una vez clonado, abre los archivos Markdown con el editor que prefieras.
+Una vez clonado, abre los archivos Markdown con el editor que prefieras. Sincronizalo con los comandos `git`
 
 ---
 
@@ -147,16 +197,17 @@ El siguiente es un pequeño tutorial para usar Obsidian:
 ## Crear una carpeta dentro de tu Vault (Bóveda)
 Para organizar tus notas, puedes crear carpetas. Esto es útil si quieres separar temas, como clases, ideas o tu diario personal (por ejemplo por fechas).
 
-1. En Obsidian Apps en la esquina superior izquierda da clic en el icono que abre la vista principal de tu Vault (Bóveda)
+1. En Obsidian Apps en la esquina superior izquierda da clic en el icono del **libro** que abre el panel lateral izquierdo (la vista principal de tu Vault - Bóveda)
 2. Abajo pulsa en el icono en forma de carpeta que tiene un + en medio. 
 3. Escribe un nombre para tu carpeta, por ejemplo, "Diario", "Ideas" o "Clases".
-4. Pulsa OK para guardar la carpeta.
+4. Pulsa OK
+5. Da Enter para guardar la carpeta.
 
 ### Crear una nota dentro de una carpeta
 
-1. En Obsidian Apps en la esquina superior izquierda da clic en el icono que abre la vista principal de tu Vault (Bóveda) elige la carpeta (en el paso anterior vimos como crear una) donde quieres crear la nota. Pulsala y sueltala y aparecerá un submenú y pulsa en "Nueva nota"
+1. En Obsidian App en la esquina superior izquierda da clic en el icono del **libro** que abre el panel lateral izquierdo, la vista principal de tu Vault (Bóveda), elige la carpeta (en el paso anterior vimos como crear una) donde quieres crear la nota. Pulsala y sueltala y aparecerá una "Nueva nota"
 2. Dale un nombre a la nota, por ejemplo, "Clase de hoy" o "Ideas para el proyecto".
-3. Ahora puedes empezar a escribir directamente en tu nueva nota.
+3. Debajo del título ahora puedes empezar a escribir directamente en tu nueva nota.
 
 
 ## Mover notas entre carpetas
@@ -189,13 +240,13 @@ No estamos usando el siguiente formato de Wikilinks:
 ~~~~
 porque lo he configurado para poder usar el formato que entiende Git en Linux y sus editores de markdown
 
-1. Tomar una foto desde la nota:
+2. Tomar una foto desde la nota:
 
 No es posible hacerlo directamente desde Obsidian, pero puedes usar la cámara del teléfono y guardar la imagen en la carpeta de tu bóveda. Luego, insértala en la nota como en el paso anterior.
 
 3. Sugerencias para organizar tus notas
 
-Usa etiquetas: En cualquier parte de la nota, escribe #Etiqueta pero debes escribir el asterisco seguido del nombre de la etiqueta pues de lo contrario lo tomará como un título. Esto te permite agrupar notas similares, como #Diario, #Ideas, o #Clases. Para buscarlas por este criterio en Obsidian App arriba en la esquina izquierda de clic al botón que abre el contenido del Vault (Bóveda) y de clic en medio de "Explorador de archivos" y se abrirá un submenú y de clic en "Etiquetas" y allí las encontrará
+Usa etiquetas: En cualquier parte de la nota, escribe #Etiqueta pero debes escribir el asterisco seguido del nombre de la etiqueta pues de lo contrario lo tomará como un título. Esto te permite agrupar notas similares, como #Diario, #Ideas, o #Clases. Para buscarlas por este criterio en Obsidian App arriba en la esquina izquierda de clic al icono del **libro** que abre el contenido del Vault (Bóveda) y de clic en medio de "Explorador de archivos" y se abrirá un submenú y de clic en "Etiquetas" y allí las encontrará
 
 4. Carpetas y subcarpetas: 
 
