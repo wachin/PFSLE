@@ -1,36 +1,48 @@
 
-### Most Used Openbox Shortcuts
-
-| Action | Openbox Shortcut keys |
-| --- | --- |
-| Close the active window | Alt + F4 |
-| Show the client menu for the active window | Alt + Spacebar |
-| Cycle between windows on the desktop | Alt + Tab |
-| Cycle between windows on the desktop in reverse order | Alt + Shift + Tab |
-| Cycle between the panel and desktop windows on the desktop | Ctrl + Alt + Tab |
-| Hide all windows to show the desktop | Win + D |
-| Run the Konqueror file manager | Win + E |
-| Lower the active window behind other windows, and activate the last window that was in use | Alt + Esc |
-| Go to the first desktop instantly | Win + F1 |
-| Go to the second desktop instantly | Win + F2 |
-| Go to the third desktop instantly | Win + F3 |
-| Go to the fourth desktop instantly | Win + F4 |
-| Go to the desktop to the left of the current one | Ctrl + Alt + Left Arrow key |
-| Go to the desktop to the right of the current one | Ctrl + Alt + Right Arrow key |
-| Go to the desktop above the current one | Ctrl + Alt + Up Arrow key |
-| Go to the desktop below the current one | Ctrl + Alt + Down Arrow key |
-| Go to the desktop to the left of the current one, and bring the active window with you | Shift + Alt + Left Arrow key |
-| Go to the desktop to the right of the current one, and bring the active window with you | Shift + Alt + Right Arrow key |
-| Go to the desktop above the current one, and bring the active window with you | Shift + Alt + Up Arrow key |
-| Go to the desktop below the current one, and bring the active window with you | Shift + Alt + Down Arrow key |
-| Move a window | Alt + Left Mouse Click |
-| Resize a window | Alt + Right Mouse Click |
-| Change desktops forward and backward | Alt + Mouse Scroll |
+### Atajos de teclado más usados de Openbox
 
 
-Openbox shortcuts 
-https://tutorialtactic.com/keyboard-shortcuts/openbox-shortcuts/
 
-Openbox keyboard shortcuts 
-https://defkey.com/openbox-shortcuts#
 
+|                                                                   Acción                                                                   |          Teclas rápidas de Openbox           |
+| -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| Cerrar la ventana activa                                                                                                       | Alt + F4                                                     |
+| Mostrar el menú del cliente para la ventana activa                                                          | Alt + Barra espaciadora                          |
+| Cambiar entre ventanas en el escritorio                                                                            | Alt + Tab                                                   |
+| Cambiar entre ventanas en el escritorio en orden inverso                                              | Alt + Shift + Tab                                       |
+| Alternar entre el panel y las ventanas del escritorio                                                         | Ctrl + Alt + Tab                                         |
+| Ocultar todas las ventanas para mostrar el escritorio                                                      | Win + D                                                     |
+| Enviar la ventana activa detrás de otras ventanas y activar la última ventana en uso | Alt + Esc                                                    |
+| Ir al primer escritorio al instante                                                                                        | Win + F1                                                   |
+| Ir al segundo escritorio al instante                                                                                     | Win + F2                                                   |
+| Ir al tercer escritorio al instante                                                                                          | Win + F3                                                   |
+| Ir al cuarto escritorio al instante                                                                                         | Win + F4                                                   |
+| Ir al escritorio a la izquierda del actual                                                                              | Ctrl + Alt + Flecha izquierda                   |
+| Ir al escritorio a la derecha del actual                                                                                | Ctrl + Alt + Flecha derecha                     |
+| Ir al escritorio encima del actual                                                                                         | Ctrl + Alt + Flecha arriba                         |
+| Ir al escritorio debajo del actual                                                                                          | Ctrl + Alt + Flecha abajo                          |
+| Ir al escritorio a la izquierda del actual y llevar la ventana activa contigo                     | Shift + Alt + Flecha izquierda                 |
+| Ir al escritorio a la derecha del actual y llevar la ventana activa contigo                       | Shift + Alt + Flecha derecha                   |
+| Ir al escritorio encima del actual y llevar la ventana activa contigo                                | Shift + Alt + Flecha arriba                       |
+| Ir al escritorio debajo del actual y llevar la ventana activa contigo                                 | Shift + Alt + Flecha abajo                        |
+| Mover una ventana                                                                                                               | Sostener Alt + Clic izquierdo del ratón |
+| Cambiar el tamaño de una ventana                                                                                    | Sostener Alt + Clic derecho del ratón   |
+| Cambiar de escritorios hacia adelante y hacia atrás                                                         | Sostener Alt + Rueda del ratón              |
+
+Los siguientes atajos de teclado los he añadido yo
+
+|                                  Acción                                   | Teclas rápidas Personalizadas |
+| ---------------------------------------------------------------- | ------------------------------------------ |
+| Abrir xfce4-appfinder                                           | Ctrl + A                                        |
+|                                                                                 |                                                     |
+| Abrir el administrador de archivos Konqueror | Win + E                                        |
+
+
+
+# Consultas
+
+**Openbox shortcuts** 
+[https://tutorialtactic.com/keyboard-shortcuts/openbox-shortcuts/](https://tutorialtactic.com/keyboard-shortcuts/openbox-shortcuts/)
+
+**Openbox keyboard shortcuts** 
+[https://defkey.com/openbox-shortcuts#](https://defkey.com/openbox-shortcuts#)
