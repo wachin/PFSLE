@@ -116,7 +116,7 @@ Guardar y cerrar.
 Si deseas crearlo con un solo comando pon en Termux:
 
 ```
-echo -e "# Ignorar configuraciones específicas de Obsidian\n.obsidian/\n\n# Ignorar archivos temporales del sistema\n.DS_Store\nThumbs.db\n\n# Ignorar archivos de respaldo\n*.bak\n*.tmp\n\n# Ignorar cualquier archivo temporal generado por la aplicación\n*.swp\n*.lock\n\n# Ignorar cachés y otros directorios que no son necesarios\n.cache/" > .gitignore
+echo -e "# Ignorar configuraciones específicas de Obsidian\n.obsidian/\n\n# Ignorar archivos temporales del sistema\n.DS_Store\nThumbs.db\n\n# Ignorar archivos de respaldo\n*.bak\n*.tmp\n\n# Ignorar cualquier archivo temporal generado por la aplicación\n*.swp\n*.lock\n\n# Ignorar cachés y otros directorios que no son necesarios\n.cache/\n.trash/" > .gitignore
 ```
 
 **Explicación**
