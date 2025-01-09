@@ -15,7 +15,7 @@
               "state": {
                 "file": "Tutoriales/Obsidian/Configurar Obsidian Android App para usar un repositorio compatible con Linux/Obsidian Android & Linux.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
               "title": "Obsidian Android & Linux"
@@ -192,8 +192,9 @@
   },
   "active": "2eaeb3a975e33944",
   "lastOpenFiles": [
-    "Tutoriales/Blogger/Temas/Sin título.md",
+    "Categorías/Quienes son los judíos.md",
     "Tutoriales/Obsidian/Configurar Obsidian Android App para usar un repositorio compatible con Linux/Obsidian Android & Linux.md",
+    "Tutoriales/Blogger/Temas/Sin título.md",
     "Tutoriales/Blogger/Temas",
     "Tutoriales/nnn/Ayuda nnn en español mejorada con tablas.md",
     "Tutoriales/nnn/Ayuda nnn en español mejorada.md",

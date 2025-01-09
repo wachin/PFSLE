@@ -67,7 +67,6 @@ para crear un enlace directo a otra nota en tu bóveda. También puedes usar par
 ~~~
 para agregar imágenes dentro de la nota. También puedes usar para esto el icono: clip
 
-
 ## Cómo usar Obsidian sincronizado con GitHub
 Antes de seguir les explico el porqué de este tutorial, sucede que yo uso Linux Debian de 32 bit y Obsidian para Linux no tiene una versión 32 bit sino sólo de 64 entonces por eso se me ocurrió ver si Obsidian puede usar un repositorio de GitHub pues si fuera así en Android usando Obsidian con un repositorio git (instalado en Termux) podría yo tener los archivos sincronizados en la nube, y luego en Linux de 32 bit con git podría clonar ese repositorio y abrir los archivos .md con algún editor de Markdown como VNote, Ghostwriter, etc, etc que funcionan en Linux de 32 bit, y luego hacer alguna modificación y enviar los cambios a la nube, y luego viceversa sincronizando entre ambos Android y Linuxen  el repositorio para tener sincronizados mis archivos en la nube y en local, y si se puede, es posible
 
@@ -216,14 +215,62 @@ Para organizar tus notas, puedes crear carpetas. Esto es útil si quieres separa
 3. Aparecerá una opción que ttdice "Mover archivo a..". ttTócala y selecciona la carpeta de destino.
 
 ## Insertar imágenes en tus notas
+Obsidian, por defecto, guarda los archivos adjuntos (como imágenes) en la raíz de la bóveda, a menos que configures un comportamiento diferente en sus ajustes, puedes personalizar la ubicación de los archivos adjuntos para que las imágenes se guarden en la misma subcarpeta donde está la nota para que cuando desee ver las imágenes desde un navegador web en la página de github las imágenes carguen.
 
-Obsidian permite agregar imágenes en las notas, ya sea fotos o capturas de pantalla.
+### Configurando Obsidian para que guarde las imágenes en la misma carpeta de la nota
+Haga lo siguiente:
 
-1. Insertar una imagen desde el dispositivo:
+1. Abrir configuración:
 
-Copia la imagen en la carpeta de tu bóveda usando un explorador de archivos de Android.
+Haz clic en el ícono de "Configuración" (⚙️) en la barra lateral izquierda de Obsidian.
 
-Luego, dentro de la nota, puedes usar el icono de clip para buscarla e insertarla o tmanualmente usa el siguiente formato para insertar la: 
+2. Ir a la sección de **"Archivos y Enlaces"**:
+
+En Obsidian App 1.7.7 en Android en busca: 
+
+"Ubicación predeterminada para los archivos adjuntos nuevos"
+
+Dale clic all selector y escoge entre las opciones:
+
+"Misma carpeta donde está el archivo"
+
+
+
+3. Guardar los cambios:
+
+Una vez seleccionada tu preferencia, Obsidian aplicará esta configuración para futuros archivos adjuntos, y solo debe salir de allí cerrando las opciones por donde llegó.
+
+### **Opcional: Mover imágenes existentes**
+
+Si ya tienes imágenes en la raíz de tu bóveda que quieres mover a las subcarpetas correspondientes, puedes hacerlo manualmente:
+
+1. Mover archivos:
+
+Usa tu explorador de archivos para mover las imágenes a las carpetas correspondientes.
+
+2. Actualizar enlaces:
+
+Si los enlaces a las imágenes dejan de funcionar, puedes usar la función Buscar y reemplazar en Obsidian para actualizar las rutas.
+
+**Ejemplo práctico:**
+
+Si moviste las imágenes a una carpeta imagenes dentro de la subcarpeta Tutoriales, y antes estaban en la raíz:
+
+Ruta antigua: ](imagen.png)
+
+Ruta nueva: ](Tutoriales/imagenes/imagen.png)
+
+En el campo de reemplazo, escribirías algo como:
+
+Buscar: ](imagen.png)
+
+Reemplazar con: ](Tutoriales/imagenes/imagen.png
+
+### Insertando una imagen desde el dispositivo:
+
+Una vez cundido Obsidian, copia la imagen en la carpeta deseada de tu bóveda usando un explorador de archivos de Android.
+
+Luego, dentro de la nota, puedes usar el icono de clip para buscarla e insertarla (recomendado) o manualmente usa el siguiente formato para insertar la: 
 
 ~~~~
 ![](nombre-de-la-imagen.jpg)
@@ -233,38 +280,49 @@ Ejemplo una foto con mi amigo Fulco en Octubre 2024:
 
 ![](20241025-en-la-casa-de-Fulco.jpg)
 
-No estamos usando el siguiente formato de Wikilinks:
+Es así porque No estamos usando el siguiente formato de Wikilinks:
 
 ~~~~
  ![[nombre-de-la-imagen.jpg]]
 ~~~~
-porque lo he configurado para poder usar el formato que entiende Git en Linux y sus editores de markdown
+porque lo he configurado para poder usar el formato que entiende Git en Linux y los editores de markdown
 
-2. Tomar una foto desde la nota:
+## Tomar una foto desde la nota:
 
 No es posible hacerlo directamente desde Obsidian, pero puedes usar la cámara del teléfono y guardar la imagen en la carpeta de tu bóveda. Luego, insértala en la nota como en el paso anterior.
 
-3. Sugerencias para organizar tus notas
+## Sugerencias para organizar tus notas
 
-Usa etiquetas: En cualquier parte de la nota, escribe #Etiqueta pero debes escribir el asterisco seguido del nombre de la etiqueta pues de lo contrario lo tomará como un título. Esto te permite agrupar notas similares, como #Diario, #Ideas, o #Clases. Para buscarlas por este criterio en Obsidian App arriba en la esquina izquierda de clic al icono del **libro** que abre el contenido del Vault (Bóveda) y de clic en medio de "Explorador de archivos" y se abrirá un submenú y de clic en "Etiquetas" y allí las encontrará
+Usa etiquetas: En cualquier parte de la nota, escribe #Etiqueta pero debes escribir el asterisco seguido del nombre de la etiqueta pues de lo contrario lo tomará como un título. Esto te permite agrupar notas similares, como #Diario, #Ideas, o #Clases. Para buscarlas por este criterio en Obsidian App arriba en la esquina izquierda de clic al icono del **libro** que abre el contenido del Vault (Bóveda) y de clic en medio de "Explorador de archivos" y se abrirá un submenú y de clic en "Etiquetas" y allí las encontrará.
 
-4. Carpetas y subcarpetas: 
+Puedes crear categorías específicas como "Ideas para libros", "Resúmenes de clase", o "Notas diarias".
+
+## Carpetas y subcarpetas: 
 
 Puedes crear subcarpetas dentro de las carpetas principales para organizar mejor la información.
 
-5. Búsqueda: 
+## Búsqueda: 
 
-Para usar el buscador hágalo desde arriba en la esquina izquierda dando clic en el icono que abre el contenido del Vault (Bóveda) y de clic en medio del "Explorador de archivos" y se abrirá un submenú y de clic en "Search" para buscar y encontrar rápidamente notas o temas específicos.
+Para usar el buscador hágalo desde arriba en la esquina izquierda dando clic en el icono que abre el contenido del Vault (Bóveda) y de clic en medio del "Explorador de archivos" y se abrirá un submenú y de clic en "Buscar" para buscar y encontrar rápidamente notas o temas específicos.
 
-### Consejos finales
+## Consejos finales
 
 Aprovecha la interconexión: Al enlazar notas, puedes construir una red de ideas interconectadas.
 
-Organiza tus notas según tus intereses: Puedes crear categorías específicas como "Ideas para libros", "Resúmenes de clase", o "Notas diarias".
+### Gráfico local o segundo cerebro
+Un Youtube hizo un vídeo bastante interesante sobre este tema: 
 
+Tu propio diario inteligente II Obsidian
+https://youtu.be/ASTsSyPoUWQ?si=02aFFqXR7NCKlxnR
+
+En el celular en Android yo creo está opción dando clic arriba a la derecha en los tres puntos verticales y clic abajo en: 
+
+Abrir gráfico local 
+
+Para cerrarlo clic en los tres puntos verticales y clic en Cerrar
 
 ## Conclusión
-Con esta configuración, puedes tener tus notas de Obsidian sincronizadas entre Android y Linux mediante GitHub. No lo he probado entre Windows o MAC y sé que se pueden instalar allí (buscar en Google), y si a alguien les sirve allí que bueno.
+Con esta configuración, puedes tener tus notas de Obsidian sincronizadas entre Android y Linux mediante GitHub, y ver las publicaciones allí y si tienen imágenes las podrá ver en cada publicación. No lo he probado entre Windows o MAC y sé que se pueden instalar allí (buscar en Google), y si a alguien les sirve allí que bueno.
 
 # Quien inventó Markdown
 Markdown fue creado en 2004 por John Gruber, con contribuciones de Aaron Swartz. Gruber, un escritor y desarrollador de software, diseñó Markdown con el objetivo de que los textos sin formato se leyeran de manera similar a como se verían formateados, para que los escritores pudieran enfocarse en el contenido sin preocuparse por la complejidad del formato.
