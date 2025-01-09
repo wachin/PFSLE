@@ -108,6 +108,7 @@ Thumbs.db
 
 # Ignorar cachés y otros directorios que no son necesarios
 .cache/
+.trash/
 ```
 Guardar y cerrar.
 
